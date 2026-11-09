@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PR Tracker Mail Archive</title>
+    <link>https://kaswary.github.io/PR-Tracker-pages/</link>
+    <description>Recent content on PR Tracker Mail Archive</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://kaswary.github.io/PR-Tracker-pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-11-09/</link>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-11-09/</guid>
+      <description>Summary 本次汇总覆盖 2026-11-02 – 2026-11-09 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, sgl-project/sgl-flash-attn, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepSpec, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/EPLB, deepseek-ai/DeepSeek-V3, deepseek-ai/DeepSeek-R1, deepseek-ai/awesome-deepseek-integration, deepseek-ai/ESFT, deepseek-ai/DeepSeek-Prover-V1.5, deepseek-ai/DualPipe, deepseek-ai/3FS, deepseek-ai/DeepSeek-OCR, deepseek-ai/LPLB, deepseek-ai/DeepSeek-Math-V2, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent, deepseek-ai/DeepJIT, deepseek-ai/DeepSelect, deepseek-ai/deepseek-recipe, deepseek-ai/DeepGEMM-Ascend, deepseek-ai/DeepEP-Ascend, deepseek-ai/DeepInfer，共计 3071 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：#49188: [Fix] whisper: Build fc1 and fc2 with the quantization config；#49187: [Fix] qwen3_moe: Build the router with the compressed-tensors config；#49184: [Perf] sparsity: Vectorize BaseSparseAlgorithmImpl.retrieve_topk across active requests；.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-11-03/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-11-03/</guid>
+      <description>Summary 本次汇总覆盖 2026-10-27 – 2026-11-03 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepSpec, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-V3, deepseek-ai/DeepSeek-V3.2-Exp, deepseek-ai/awesome-deepseek-integration, deepseek-ai/DualPipe, deepseek-ai/3FS, deepseek-ai/DeepSeek-OCR-2, deepseek-ai/LPLB, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent, deepseek-ai/DeepJIT, deepseek-ai/DeepSelect, deepseek-ai/deepseek-recipe, deepseek-ai/DeepGEMM-Ascend, deepseek-ai/DeepEP-Ascend, deepseek-ai/DeepInfer, deepseek-ai/dsh-superagent-prototype，共计 2993 个 PR。&#xA;deepseek发布了新仓库：dsh-superagent-prototype&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：#48120: [Feat] disaggregation: Gate Mooncake session recovery on one real transfer trial；#48119: [Refactor] tokenizer: Fold `TokenizerWorker` into `TokenizerManager`；#48118: [Perf] [AMD] gdn: Add an aiter backend for linear-chain target verify；.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-10-26/</link>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-10-26/</guid>
+      <description>Summary 本次汇总覆盖 2026-10-19 – 2026-10-26 时间范围，涉及仓库 deepseek-ai/DeepInfer, sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, sgl-project/sgl-flash-attn, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-VL2, deepseek-ai/DeepSeek-V3, deepseek-ai/DeepSeek-R1, deepseek-ai/DeepSeek-Coder, deepseek-ai/awesome-deepseek-integration, deepseek-ai/Janus, deepseek-ai/3FS, deepseek-ai/Engram, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent, deepseek-ai/DeepJIT, deepseek-ai/DeepSelect, deepseek-ai/deepseek-recipe, deepseek-ai/DeepGEMM-Ascend, deepseek-ai/DeepEP-Ascend，共计 3191 个 PR。&#xA;deepseek发布了新仓库：DeepInfer&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - deepseek-ai/DeepInfer：强化输入与采样校验，修复设备分配、缓存、调度及结构化输出问题，并扩展 ROCm、SM90、Trainium 等后端。&#xA;- sgl-project/sglang：持续优化多模态、KV 缓存、投机解码与调度性能，增强 Rust 前端、ROCm/NPU/XPU 支持及服务稳定性。&#xA;- vllm-project/vllm：完善多模态、LoRA、量化、推测解码和 KV offload 能力，强化前端兼容性、安全校验及多硬件性能。&#xA;- NVIDIA/nccl：修复 GIN/QP 错误处理、通信器并发与设备注册问题，增强 NVLS 尾部一致性及相关文档。&#xA;- sgl-project/sgl-flash-attn：新增 Hopper FP8 FlashAttention 前向路径，修复 FP8 累加精度问题并支持稀疏 MLA 分组查询。</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-10-19/</link>
+      <pubDate>Mon, 19 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-10-19/</guid>
+      <description>Summary 本次汇总覆盖 2026-10-12 – 2026-10-19 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, ai-dynamo/aiconfigurator, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/awesome-deepseek-integration, deepseek-ai/smallpond, deepseek-ai/DualPipe, deepseek-ai/Engram, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent, deepseek-ai/DeepJIT, deepseek-ai/DeepGEMM-Ascend, deepseek-ai/DeepEP-Ascend，共计 2783 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：修复限流泄漏、权限绕过、缓存与调度崩溃，扩展多模态、LoRA、MTP及多硬件支持，并优化通信与推理性能。&#xA;- vllm-project/vllm：强化请求校验、缓存一致性、权限与稳定性，新增模型及量化支持，优化推测解码、MoE、KV传输和多硬件性能。&#xA;- NVIDIA/nccl：增强线程创建失败、集合通信初始化和内存注册的错误处理，修复多任务 profiler 归因及跨拓扑 NVLink 检测问题。&#xA;- ai-dynamo/aiconfigurator：修正 AFD 跨池通信建模与路由估算，新增 A 侧分发模式并扩展 MoE Pareto 搜索能力。&#xA;- huggingface/transformers：修复 RoPE、Mamba、视觉模型、分词器及分布式训练问题，新增 UltraVBERT、决策模型和多种平台支持。&#xA;- ggml-org/llama.cpp：扩展模型、量化、推测解码及多模态能力，优化 CUDA、Metal、Vulkan、OpenCL、CPU 和 NPU 性能与稳定性。&#xA;- ROCm/mori：扩展异步 EP 通信与 SDMA 能力，完善设备拓扑、staging、内存池和跨节点传输的正确性与性能。&#xA;- deepseek-ai/FlashMLA：新增 SM90/SM100/SM103 的稀疏注意力、打包 KV 与 MegaAttention 能力，扩展量化布局并修复边界兼容性。</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-10-17/</link>
+      <pubDate>Sat, 17 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-10-17/</guid>
+      <description>Summary 本次汇总覆盖 2026-10-16 – 2026-10-17 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/awesome-deepseek-integration, deepseek-ai/awesome-deepseek-agent, deepseek-ai/DeepJIT，共计 358 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：本周期改动密集，涵盖调度与缓存正确性修复（HRRN 调度工作量口径、chunked prefill 预算超发、SWA 与 radix cache 确定性冲突、多模态嵌入缓存清理）、大量 XPU/ROCm 优化（Gemma4 融合算子、gfx950 FlyDSL 内核系列、LoRA 原生后端）、CUDA graph 与 bounded replay 内存及正确性增强、多模态与 diffusion 支持扩展（Qwen-Image INT8、ComfyUI 对齐、Beam 模型 serving）、NVFP4/FP8 量化修复、日志与安全强化（请求脱敏、dumper RCE 修复、聊天模板覆盖拦截），以及分布式追踪可观测性系列重构。&#xA;- vllm-project/vllm：重点在 CUDA graph 下 FP8/INT8 数值确定性与输出一致性修复、注意力后端选择与 batch-invariant 支持增强、KV cache 布局与跨引擎传输扩展（NVFP4 KV、分离 head slot）、NIXL/MoRIIO P/D 分离链路修复与性能优化、Reflection Beam 模型 day-0 支持及 MegaMoE DP/EP 路径、投机解码多层 MTP 修复、内存加载与 CPU offload 显存优化，并持续迁移 CI 到自动分片与持久化编译缓存。</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-10-12/</link>
+      <pubDate>Mon, 12 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-10-12/</guid>
+      <description>Summary 本次汇总覆盖 2026-10-05 – 2026-10-12 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-VL2, deepseek-ai/DeepSeek-V3, deepseek-ai/awesome-deepseek-integration, deepseek-ai/DeepSeek-OCR-2, deepseek-ai/awesome-deepseek-agent, deepseek-ai/DeepJIT, deepseek-ai/deepseek-recipe，共计 2438 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：#43713: [Multimodal] Keep Pillow&#39;s decompression-bomb guard in NanoNemotron processor；#43712: [Bugfix] Restore DeepGEMM warmup state after failures；#43711: Capture KV host transfer buffers；...等1016个重要PR&#xA;- vllm-project/vllm：#61093: [ROCm][CI][BugFix][AITER ON] Make LM Eval Small Models tests pass on MI300/MI355 and ensure they can work with vllm serve and vllm bench serve with AITER on and off；#61092: [Bugfix] Size Gemma 4 encoder CUDA graph capture rows by token budget；#61091: [ROCm][Perf] Add native per-token FP8 Triton linear backend and RDNA4 tuning；.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-10-05/</link>
+      <pubDate>Mon, 05 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-10-05/</guid>
+      <description>Summary 本次汇总覆盖 2026-09-28 – 2026-10-05 时间范围，涉及仓库 deepseek-ai/DeepGEMM-Ascend, deepseek-ai/DeepEP-Ascend, sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-VL2, deepseek-ai/DeepSeek-V3, deepseek-ai/DeepSeek-Coder, deepseek-ai/awesome-deepseek-integration, deepseek-ai/3FS, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent, deepseek-ai/DeepJIT, deepseek-ai/DeepSelect, deepseek-ai/clangd-ascend, deepseek-ai/dsh-node-addon-require-builtin, deepseek-ai/dsh-libreoffice-kit，共计 2236 个 PR。&#xA;deepseek发布了新仓库：clangd-ascend, DeepGEMM-Ascend, DeepEP-Ascend, dsh-node-addon-require-builtin, dsh-libreoffice-kit&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - deepseek-ai/DeepGEMM-Ascend：修复多设备编译线程设备上下文、GEMM累加参数约束及分组调度下溢，提升多NPU编译与内核调度稳定性。&#xA;- deepseek-ai/DeepEP-Ascend：支持无权重分发路径，修复事件回调重入生命周期，并确保构建脚本正确传播失败状态。&#xA;- sgl-project/sglang：大幅完善缓存、调度、工具调用、安全脱敏及多硬件后端；新增多项推理性能优化与模型兼容性修复。&#xA;- vllm-project/vllm：强化分离式KV传输、量化/注意力后端、推测解码与多模态能力，并修复多项调度、认证和缓存正确性问题。&#xA;- NVIDIA/nccl：修复非阻塞通信器参数错误污染异步状态、shrink非法rank校验及环境变量空配置导致的初始化崩溃。&#xA;- vllm-project/flash-attention：补齐SM100高维注意力支持，修复SM90跨warpgroup同步、滑窗长度计算及变长分页KV的split-KV写回。&#xA;- huggingface/transformers：修复FSDP2加载内存膨胀、RoPE低精度转换、工具参数版本传递及多模态/生成路径的正确性问题。&#xA;- ggml-org/llama.cpp：持续增强多硬件后端、稀疏注意力和MTP能力，修复多模态、量化矩阵计算、内存安全与调度重分配问题。&#xA;- ROCm/mori：优化NUMA主机内存预触和HBM传输策略，新增RDNA4专家并行支持，并暴露RDMA对端故障状态。&#xA;- deepseek-ai/DeepGEMM：升级CUTLASS以支持Rubin，新增SM90直接gather的BF16分组GEMM，并修复cuBLASLt描述符异常泄漏。&#xA;- deepseek-ai/DeepEP：新增Docker交付方式，修复调试环境变量解析与NCCL通信器复用，并提供零拷贝接收视图以降低分发拷贝开销。&#xA;- deepseek-ai/FlashMLA：迁移至Torch dispatcher与稳定ABI，统一多后端接口；新版聚焦DeepSeek-V4.1及SM100/Ascend量化稀疏注意力。&#xA;- deepseek-ai/DeepSeek-VL2：修复DeepSeek-V2提示模板的用户角色识别，恢复用户消息正确的SFT边界封装。&#xA;- deepseek-ai/DeepSeek-V3：统一并行FP8线性层缩放格式，并在转换前严格校验FP8 scale依赖，避免生成不完整或错误的BF16检查点。</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-09-28/</link>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-09-28/</guid>
+      <description>Summary 本次汇总覆盖 2026-09-21 – 2026-09-28 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/awesome-deepseek-integration, deepseek-ai/DeepSeek-OCR, deepseek-ai/DeepSeek-OCR-2, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent, deepseek-ai/DeepJIT, deepseek-ai/DeepSelect, deepseek-ai/deepseek-recipe，共计 2271 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：#41475: [AMD] Add GLM-5.3-Flash MI30x nightly GSM8K accuracy gate；#41473: [Diffusion] Avoid busy-polling idle scheduler ranks；#41472: Fix CancelledError handling on client disconnect；...等848个重要PR&#xA;- vllm-project/vllm：#58924: [Bugfix][CPU] Reuse selected memory node for KV cache sizing；#58923: [ROCm][Bugfix] Fall back to default GEMM for CPU tensors on ROCm builds；#58921: [Bugfix][Spec Decode] Per-module LM heads for multi-layer MTP on Model Runner V2；.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-09-21/</link>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-09-21/</guid>
+      <description>Summary 本次汇总覆盖 2026-09-14 – 2026-09-21 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-V3, deepseek-ai/DeepSeek-MoE, deepseek-ai/awesome-deepseek-integration, deepseek-ai/DeepSeek-Prover-V1.5, deepseek-ai/3FS, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent, deepseek-ai/DeepJIT, deepseek-ai/DeepSelect, deepseek-ai/deepseek-recipe，共计 2393 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：#40480: Make PLE logical clearing safe while KV memory is offloaded；#40479: Add checkpoint-driven response-template adapters；#40478: Enrich chat_parsing streaming events；...等956个重要PR&#xA;- vllm-project/vllm：#57816: [Bugfix][KV Offload] Reset SimpleCPU eager-store placement state on MRV2 resume；#57815: [Bugfix][Determinism] Refuse batch-invariant mode on the sparse indexer；#57814: [Bugfix][API] Materialize tool_calls in TokenizeChatRequest to fix unpicklable ValidatorIterator (#57738)；.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-09-17/</link>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-09-17/</guid>
+      <description>Summary 本次汇总覆盖 2026-09-07 – 2026-09-16 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, sgl-project/sgl-flash-attn, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/awesome-deepseek-integration, deepseek-ai/awesome-deepseek-agent, deepseek-ai/DeepJIT, deepseek-ai/DeepSelect, deepseek-ai/deepseek-recipe，共计 3484 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - deepseek-ai/DeepGEMM: PR6, PR10, PR2, PR5, PR8, PR9, PR3, PR4, PR1, PR11&#xA;- deepseek-ai/DeepEP: PR3, PR5, PR1, PR4, PR2&#xA;- deepseek-ai/DeepSeek-V3.2-Exp: 无&#xA;- huggingface/transformers: PR56, PR85, PR155, PR52, PR4, PR38, PR66, PR40, PR37, PR10&#xA;- vllm-project/vllm: PR145, PR93, PR68, PR27, PR54, PR12, PR56, PR48, PR23, PR14</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-09-14/</link>
+      <pubDate>Mon, 14 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-09-14/</guid>
+      <description>Summary 本次汇总覆盖 2026-09-07 – 2026-09-14 时间范围，涉及仓库 deepseek-ai/DeepJIT, deepseek-ai/DeepSelect, deepseek-ai/deepseek-recipe, sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, sgl-project/sgl-flash-attn, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/awesome-deepseek-integration, deepseek-ai/DeepSeek-Prover-V1.5, deepseek-ai/DeepSeek-Math-V2, deepseek-ai/Engram, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent，共计 2408 个 PR。&#xA;deepseek发布了新仓库：DeepJIT, DeepSelect, deepseek-recipe&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：优化调度、缓存与多模态路径，增强 CUDA/ROCm/NPU 兼容性，并修复确定性、量化、工具调用及多项稳定性问题。&#xA;- vllm-project/vllm：增强 DeepSeek、MoE、多模态及量化模型支持，优化显存与 ROCm 性能，并修复工具调用、错误传播和推测解码问题。&#xA;- NVIDIA/nccl：强化 P2P、IB、EFA 与 UDS 传输的错误检测、资源回收和事件处理，修复缓存一致性及多类崩溃风险。&#xA;- sgl-project/sgl-flash-attn：修复 SM80/SM86/SM89 注意力内核的共享内存超限与局部 KV 坐标错误，降低资源占用并完善测试覆盖。&#xA;- huggingface/transformers：新增 DeepSeek V4.1-Flash 完整推理支持，改进 ExecuTorch 后端扩展、工具参数解析、量化及多模态兼容性。&#xA;- ROCm/mori：修正 TDM 元数据规划中的地址对齐与 warp 覆盖问题，确保 128B 对齐传输和跨 rank 路由校验正确。</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-09-07/</link>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-09-07/</guid>
+      <description>Summary 本次汇总覆盖 2026-08-31 – 2026-09-07 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepSpec, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/DeepSeek-VL2, deepseek-ai/DeepSeek-V3, deepseek-ai/DeepSeek-Coder, deepseek-ai/awesome-deepseek-integration, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent，共计 795 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：补齐多项模型与后端兼容修复，涵盖 NPU 卷积、KV/缓存调度、FP8/FlashInfer 路径及多处性能优化，整体提升稳定性与部署可用性。&#xA;- vllm-project/vllm：围绕多模态、MoE、KV cache、graph capture 和服务端稳定性做了密集修复与优化，同时补强测试与 CI，降低 OOM、错配和回归风险。&#xA;- NVIDIA/nccl：主要修复 IB/SHM/拓扑融合等并发与兼容性问题，完善 Get 路径并增强异常回退，提升多节点通信稳定性。&#xA;Contents sgl-project/sglang vllm-project/vllm NVIDIA/nccl vllm-project/flash-attention ai-dynamo/aiconfigurator huggingface/transformers ggml-org/llama.cpp ROCm/mori deepseek-ai/DeepSpec deepseek-ai/DeepGEMM deepseek-ai/DeepEP deepseek-ai/DeepSeek-VL2 deepseek-ai/DeepSeek-V3 deepseek-ai/DeepSeek-Coder deepseek-ai/awesome-deepseek-integration deepseek-ai/TileKernels deepseek-ai/awesome-deepseek-agent Details sgl-project/sglang ○ #38256: [AMD] Cherry-pick aiter commit for dsv4 a8w8 bpreshuffle gemm config [open] 该 PR 主要是为 a8w8 blockscale bpreshuffle 的 GEMM 配置同步上游 aiter 的最新修复，同时清理掉一个已经被后续 aiter 更新覆盖的旧 cherry-pick。它的目标是让 `aiter/configs/model_configs/dsv4_a8w8_blockscale_bpreshuffle_tuned_gemm.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-08-31/</link>
+      <pubDate>Mon, 31 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-08-31/</guid>
+      <description>Summary 本次汇总覆盖 2026-08-24 – 2026-08-31 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, sgl-project/sgl-flash-attn, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepSpec, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/awesome-deepseek-integration, deepseek-ai/3FS, deepseek-ai/awesome-deepseek-agent，共计 821 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：围绕解码、KV/cache、MoE 和 ROCm 路径做多项优化与修复，同时加强超时一致性和安全加固。&#xA;- vllm-project/vllm：补齐多模态、spec decode、量化与分布式支持，修复多处缓存、加载、路由和异常处理问题。&#xA;- NVIDIA/nccl：修复 NVLS、bootstrap、communicator 生命周期与 profiling 计数问题，增强异常清理和资源安全。&#xA;- sgl-project/sg-flash-attn：统一 FP8 KV cache 的 decode/prefill 配置，修正 logprob 不一致并保持 bf16 行为不变。&#xA;- vllm-project/flash-attention：同步上游并补齐 SM100/110 调度、页式 KV 边界与编译依赖，维持接口兼容。&#xA;- ai-dynamo/aiconfigurator：增强异构池、MoE 流行度与调度建模，补齐 CLI/文档并收敛生成器的失败关闭策略。&#xA;- huggingface/transformers：补充多模型与多模态支持，修正加载、量化、缓存、生成测试及若干后端兼容问题。&#xA;- ggml-org/llama.cpp：新增多模型与多模态支持，优化 KV、调度、量化和 speculative 路径，并修复多处后端问题。</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-08-28/</link>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-08-28/</guid>
+      <description>Summary 本次汇总覆盖 2026-08-21 – 2026-08-28 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-V3, deepseek-ai/awesome-deepseek-integration, deepseek-ai/3FS, deepseek-ai/awesome-deepseek-agent，共计 854 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：强化多后端与新模型支持，优化缓存/调度/图捕获/量化路径并修复多项稳定性问题。&#xA;- vllm-project/vllm：推进V2 runner、ROCm/XPU/EP与spec decode能力，修复调度、协议、缓存和工具解析问题。&#xA;- NVIDIA/nccl：修复NVLS排序、socket/fd/abort资源泄漏和弱内存序竞态，增强异常路径稳定性。&#xA;- vllm-project/flash-attention：同步上游并修复varlen offset、FP8一致性、SM100共享内存和TMEM同步问题。&#xA;- ai-dynamo/aiconfigurator：增强异构AFD建模、专家热度数据、DeepEP-LL延迟和性能数据库版本治理。&#xA;- huggingface/transformers：新增文档布局与多模型支持，强化TP/FSDP/CB/量化/生成一致性及加载稳定性。&#xA;- ggml-org/llama.cpp：扩展新模型、spec/MTP、多后端内核与服务端能力，修复缓存、媒体、量化和CI问题。&#xA;- ROCm/mori：优化EP低延迟通信、CCO/Triton集成与rail隔离，修复调度表、校验和benchmark偏移。&#xA;- deepseek-ai/DeepGEMM：补齐SM90/SM100 MegaMoE与FP8路径，修复graph capture、分派和环境解析问题。&#xA;- deepseek-ai/DeepEP：改进NCCL/RDMA探测与构建兼容，修复环境解析、压力测试和CUDA版本编译问题。&#xA;- deepseek-ai/FlashMLA：更新README接口示例并降低decode metadata kernel共享内存占用。&#xA;- deepseek-ai/DeepSeek-V3：新增后端部署CLI，并修复FP8转BF16索引metadata丢失。&#xA;- deepseek-ai/awesome-deepseek-integration：扩充DeepSeek生态集成列表，新增Agent框架、Provider、网关和插件资源。&#xA;- deepseek-ai/3FS：修复FUSE read初始化失败时异常被清理逻辑掩盖及资源泄漏。&#xA;- deepseek-ai/awesome-deepseek-agent：补充多款工具与DSH插件的DeepSeek V4双语集成和配置指南。&#xA;Contents sgl-project/sglang vllm-project/vllm NVIDIA/nccl vllm-project/flash-attention ai-dynamo/aiconfigurator huggingface/transformers ggml-org/llama.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-08-24/</link>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-08-24/</guid>
+      <description>Summary 本次汇总覆盖 2026-08-17 – 2026-08-24 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-V3, deepseek-ai/awesome-deepseek-integration, deepseek-ai/DeepSeek-OCR, deepseek-ai/awesome-deepseek-agent，共计 873 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：强化多后端推理、量化与diffusion加载，提升KV/PD稳定性、NPU/ROCm兼容与安全性。&#xA;- ROCm/mori：增强RDMA/SSD/EP数据面，支持range读、GDS直通、多后端策略、rail-only与dispatch优化。&#xA;- deepseek-ai/DeepGEMM：新增SM90/SM100 MegaMoE低精度路径，支持MXFP4/NVFP4与shared expert融合。&#xA;- deepseek-ai/DeepEP：提升EP部署健壮性，改进EFA探测、unordered hybrid、top16/3584支持和P2P预检。&#xA;- deepseek-ai/FlashMLA：同步MLA decode文档与签名校验，精简metadata kernel共享内存占用。&#xA;- deepseek-ai/DeepSeek-V3：改进推理工具链，保留转换metadata，新增部署CLI并强化输入校验。&#xA;- deepseek-ai/awesome-deepseek-integration：扩充DeepSeek Harness社区集成与应用索引，覆盖手册、插件和客户端。&#xA;- deepseek-ai/DeepSeek-OCR：新增可选hllset_cortex中间层，以不透明encoding ID处理编码结果。&#xA;- deepseek-ai/awesome-deepseek-agent：补充DeepSeek Harness生态双语指南，覆盖客户端、插件、设备管理和资源手册。&#xA;Contents sgl-project/sglang vllm-project/vllm NVIDIA/nccl vllm-project/flash-attention ai-dynamo/aiconfigurator huggingface/transformers ggml-org/llama.cpp ROCm/mori deepseek-ai/DeepGEMM deepseek-ai/DeepEP deepseek-ai/FlashMLA deepseek-ai/DeepSeek-V3 deepseek-ai/awesome-deepseek-integration deepseek-ai/DeepSeek-OCR deepseek-ai/awesome-deepseek-agent Details sgl-project/sglang ○ #36117: chore: update CI test est_time values [open] 该 PR 更新 CI 测试分区所依赖的静态耗时模型，以解决现有 est_time 字面量与近期 main 分支成功运行数据不一致、可能影响 LPT 负载均衡准确性的问题。其目标是用 sglang-ci-stats 中 model.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-08-17/</link>
+      <pubDate>Mon, 17 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-08-17/</guid>
+      <description>Summary 本次汇总覆盖 2026-08-10 – 2026-08-17 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/deepseek-harness, deepseek-ai/DeepSpec, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/DeepSeek-V3, deepseek-ai/awesome-deepseek-integration, deepseek-ai/3FS, deepseek-ai/awesome-deepseek-agent，共计 855 个 PR。&#xA;deepseek发布了新仓库：deepseek-harness&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：围绕投机解码、KV/HiCache、配置发布与多后端兼容完成稳定性和性能收敛。&#xA;- ROCm/mori：重构UMBP介质与传输，增强GPUDirect检查、SDMA/EP路径和gfx1250支持。&#xA;- deepseek-ai/deepseek-harness：初始化DeepSeek Harness monorepo，建立DeepSeek Code与Cordis开发约定入口。&#xA;- deepseek-ai/DeepSpec：修正训练数据生成的repetition penalty透传语义，并补充校验与回归测试。&#xA;- deepseek-ai/DeepGEMM：补充SM100 MegaMoE融合路径、SM120校准工具与scale-factor布局校验，并加入可选权重缓存策略。&#xA;- deepseek-ai/DeepEP：修复NCCL复用与RoCE配置问题，增强大hidden路径诊断和Normal模式追踪。&#xA;- deepseek-ai/DeepSeek-V3：新增部署前环境预检脚本，并修正文档中失效或过时链接。&#xA;- deepseek-ai/awesome-deepseek-integration：扩充DeepSeek生态工具、应用和Provider索引，提升集成可发现性。&#xA;- deepseek-ai/3FS：修复Python异步IO引用生命周期、sdist版本获取和恢复流量约束一致性问题。&#xA;- deepseek-ai/awesome-deepseek-agent：补充多款Agent工具的双语DeepSeek V4接入指南，统一模型与reasoning配置。&#xA;Contents sgl-project/sglang vllm-project/vllm NVIDIA/nccl vllm-project/flash-attention ai-dynamo/aiconfigurator huggingface/transformers ggml-org/llama.cpp ROCm/mori deepseek-ai/deepseek-harness deepseek-ai/DeepSpec deepseek-ai/DeepGEMM deepseek-ai/DeepEP deepseek-ai/DeepSeek-V3 deepseek-ai/awesome-deepseek-integration deepseek-ai/3FS deepseek-ai/awesome-deepseek-agent Details sgl-project/sglang ○ #35065: docs(cookbook): Qwen3.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-08-10/</link>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-08-10/</guid>
+      <description>Summary 本次汇总覆盖 2026-08-03 – 2026-08-10 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-V3, deepseek-ai/awesome-deepseek-integration, deepseek-ai/DeepSeek-Prover-V1.5, deepseek-ai/LPLB, deepseek-ai/awesome-deepseek-agent，共计 610 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：大量优化推理内核、调度、缓存与多模态链路，强化稳定性与 CI 覆盖。&#xA;- vllm-project/vllm：强化调度、KV 传输、多模态、ROCm/CPU 后端与安全边界，修复多项崩溃。&#xA;- NVIDIA/nccl：修复 GIN/EFA 通信挂起与超大 RDMA 写入问题，并优化底层内存顺序。&#xA;- vllm-project/flash-attention：为 SM90 引入可选 FA4，并修复 FA2 speculative decode 的 split-K 退化。&#xA;- ai-dynamo/aiconfigurator：改进容量推荐、性能数据库、FPM 采集与闭环延迟建模准确性。&#xA;- huggingface/transformers：新增多模型支持，修复 tokenizer、安全、缓存、生成与多模态处理问题。&#xA;- ROCm/mori：重构 EP 调度与 GPU/SSD/RDMA 路径，提升跨 dtype 覆盖、性能与内存安全。&#xA;- deepseek-ai/DeepGEMM：增强 SM120 scale 转换、JIT 缓存复用、native core 与离线部署能力。</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-08-03/</link>
+      <pubDate>Mon, 03 Aug 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-08-03/</guid>
+      <description>Summary 本次汇总覆盖 2026-07-27 – 2026-08-03 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, sgl-project/sgl-flash-attn, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ROCm/mori, deepseek-ai/DeepSpec, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-V3, deepseek-ai/awesome-deepseek-integration, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent，共计 617 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：强化硬件/模型适配、推测解码、配置命名空间、CI与多模态服务稳定性。&#xA;- vllm-project/vllm：扩展异构并行、KV/PD、ROCm/Kimi优化，并修复多模态、解析与CI问题。&#xA;- NVIDIA/nccl：增强网络故障切换、LAG亲和与事件复用，修复并发 flush 挂起。&#xA;- sgl-project/sgl-flash-attn：新增 head_dim=512 支持，并加强 FA3 varlen 元数据设备侧校验。&#xA;- vllm-project/flash-attention：推进 FA2 与 PyTorch 稳定 ABI 适配，降低集成兼容风险。&#xA;- ai-dynamo/aiconfigurator：Rust 引擎覆盖 FPM/large-EP，完善性能库语义、PP建模与发布流程。&#xA;- huggingface/transformers：修复生成、多模态、分布式与量化加载问题，并新增多模型原生支持。&#xA;- ROCm/mori：改进 XGMI/RDMA、MI300/MI355 调优、SDMA正确性和性能可观测性。&#xA;- deepseek-ai/DeepSpec：修复空 JSONL 与预取异常传播，并补充 Qwen3.6-27B 训练配置。&#xA;- deepseek-ai/DeepGEMM：新增 SiTU、packet layout 与 torch.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-07-28/</link>
+      <pubDate>Tue, 28 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-07-28/</guid>
+      <description>Summary 本次汇总覆盖 2026-07-21 – 2026-07-28 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ROCm/mori, deepseek-ai/DeepSpec, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-V3, deepseek-ai/awesome-deepseek-integration, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent，共计 604 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：大量推理后端、KV/HiCache、MoE、MLX/NPU/XPU兼容与性能修复，路由观测增强。&#xA;- vllm-project/vllm：强化KV offload/DCP、ROCm/FP8/MoE、多模态与CI稳定性，新增观测和安全修复。&#xA;- NVIDIA/nccl：优化Blackwell通信选择、低延迟协议可靠性，并增强IB容灾与Inspector丢失观测。&#xA;- vllm-project/flash-attention：同步上游修复并推进FA4/FA3调度、batch-invariant与构建兼容改进。&#xA;- ai-dynamo/aiconfigurator：改进性能数据库、SOL/FLOPS建模、speculative估算和支持矩阵准确性。&#xA;- huggingface/transformers：集中修复生成、tokenizer、多模态、分布式与模型兼容性，并推进v5/API清理。&#xA;- ROCm/mori：升级ROCm基线，优化SDMA/CCO路径，增强QoS、RDMA事件和多区域UMBP支持。&#xA;- deepseek-ai/DeepSpec：修复checkpoint恢复健壮性，并规范DSpark Qwen3 draft RoPE配置声明。&#xA;- deepseek-ai/DeepGEMM：迁移到TORCH_LIBRARY注册，修复Mega MoE共享内存竞态并优化断言策略。&#xA;- deepseek-ai/DeepEP：强化legacy IBGDA/NVSHMEM协议兼容、CQ轮询、诊断与测试边界。&#xA;- deepseek-ai/FlashMLA：新增SM90 packed sparse-decode实验路径，并扩展高split decode调度范围。&#xA;- deepseek-ai/DeepSeek-V3：提升CLI路径参数对首尾空白的容错性。&#xA;- deepseek-ai/awesome-deepseek-integration：补充DeepSeek生态应用、安全与浏览器扩展集成目录。&#xA;- deepseek-ai/TileKernels：修复TileLang导入兼容和no-grad RMSNorm权重遗漏问题。&#xA;- deepseek-ai/awesome-deepseek-agent：补充多款Agent工具的DeepSeek接入指南并修正文档端点。&#xA;Contents sgl-project/sglang vllm-project/vllm NVIDIA/nccl vllm-project/flash-attention ai-dynamo/aiconfigurator huggingface/transformers ROCm/mori deepseek-ai/DeepSpec deepseek-ai/DeepGEMM deepseek-ai/DeepEP deepseek-ai/FlashMLA deepseek-ai/DeepSeek-V3 deepseek-ai/awesome-deepseek-integration deepseek-ai/TileKernels deepseek-ai/awesome-deepseek-agent Details sgl-project/sglang ○ #32526: [Spec][DSV4] perf: Skip inactive target-verify metadata tails [open] 该 PR 主要针对 DSV4 MTP target verification 在 CUDA graph replay 中的元数据初始化开销过高问题：`_page_table_positions_kernel` 和 `_init_compressed_attn_metadata_kernel` 即使在当前序列较短时，也会按 1M token 的捕获上限遍历完整尾部，导致两个内存受限的元数据 kernel 成为可观的 GPU 时间开销。为此，PR 目标是在保持 CUDA graph 静态 launch 形态的前提下，让这两类元数据 kernel 只处理 device 端的 live prefix，避免对未使用尾部进行重复写入。核心改动是为 Triton 元数据 kernel 增加 CUDA-graph-safe 的 live-prefix 执行路径，同时保留标量元数据更新和空序列所需的 C128 sentinel。该优化仅对验证过的默认 SM100 路径启用，而 alternative indexer、top-k、HiSparse 以及非 CUDA 路径仍维持完整尾部初始化行为。当前验证显示相关 live-prefix 测试和既有 DSV4 attention 测试均通过，并补充了 B200 replay 与 poisoned-tail 消费者测试，以及本地非 CI 的 CUDA-graph 基准数据。 ○ #32525: fix(sampling): reject conflicting structural tag constraints [open] 该 PR 修复了 SamplingParams.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-07-20/</link>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-07-20/</guid>
+      <description>Summary 本次汇总覆盖 2026-07-13 – 2026-07-20 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ROCm/mori, deepseek-ai/DeepSpec, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-Coder, deepseek-ai/awesome-deepseek-integration, deepseek-ai/DeepSeek-Coder-V2, deepseek-ai/DeepSeek-OCR-2, deepseek-ai/awesome-deepseek-agent，共计 615 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：完善调度、KV/LoRA/CP、服务与观测，修复多处并发和兼容性问题。&#xA;- vllm-project/vllm：补齐 MoE、量化、并行、缓存与 tokenizer/日志等路径的正确性和性能。&#xA;- NVIDIA/nccl：增强集体通信、设备端 profiler 与枚举/超时/同步处理，提升大规模稳定性。&#xA;- ai-dynamo/aiconfigurator：推进 FPM、MTP 建模、collector V3 与推荐/矩阵能力统一。&#xA;- huggingface/transformers：修复 tokenizer、配置序列化、加载校验、FSDP/训练与多模态行为。&#xA;- ROCm/mori：补强 RDMA/IB/Fabric 传输、JIT 与 EP 调度，提升 ROCm 部署与运行稳定性。&#xA;- deepseek-ai/DeepSpec：仅做常量模块导入异常收敛，降低初始化失败风险。&#xA;- deepseek-ai/DeepGEMM：优化 JIT 缓存、MegaMoE/MQA/FP8 路径与 SM100 相关性能。&#xA;- deepseek-ai/FlashMLA：补齐 MLA 训练/稀疏/块稀疏能力，扩展长上下文与 backward 支持。</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-07-13/</link>
+      <pubDate>Mon, 13 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-07-13/</guid>
+      <description>Summary 本次汇总覆盖 2026-07-06 – 2026-07-13 时间范围，涉及仓库 deepseek-ai/DeepSpec, sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-V3, deepseek-ai/awesome-deepseek-integration, deepseek-ai/Janus, deepseek-ai/awesome-deepseek-agent，共计 665 个 PR。&#xA;deepseek发布了新仓库：DeepSpec&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - deepseek-ai/DeepSpec：增强训练数据、checkpoint、校准、长上下文、安全与打包可靠性。&#xA;- sgl-project/sglang：大规模优化推理内核、KV/cache、投机解码、多模态、ROCm 与 CI 稳定性。&#xA;- vllm-project/vllm：强化 KV offload、量化、MoE、工具解析、多模态与 CI/文档兼容性。&#xA;- NVIDIA/nccl：增强 GIN 并发与 EFA GDA 支持，并降低 profiler proxy 空闲 CPU 占用。&#xA;- vllm-project/flash-attention：修复 scheduler metadata 一致性，扩展 FA4 warmup 与回退有问题变更。&#xA;- ai-dynamo/aiconfigurator：推进性能数据库、CODEOWNERS、包拆分、EPD/AFD 与发布合规建设。&#xA;- huggingface/transformers：修复多模型训练/生成/量化/多模态问题，并优化测试、文档与安全路径。&#xA;- ROCm/mori：扩展 CCO、UMBP、SDMA 与 FP8/FP4 combine，提升 ROCm 通信稳定性和性能。</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-07-06/</link>
+      <pubDate>Mon, 06 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-07-06/</guid>
+      <description>Summary 本次汇总覆盖 2026-06-29 – 2026-07-06 时间范围，涉及仓库 deepseek-ai/DeepSpec, sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/awesome-deepseek-integration, deepseek-ai/smallpond, deepseek-ai/awesome-deepseek-agent，共计 629 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - deepseek-ai/DeepSpec：补强 DSpark/Eagle3 训练与缓存链路，提升兼容性、内存效率与数据生成可靠性。&#xA;- sgl-project/sglang：大规模优化多后端推理、缓存、spec decoding、CI 与配置解析，增强稳定性和硬件覆盖。&#xA;- vllm-project/vllm：修复多后端推理、量化、spec decoding、工具解析与 CI 问题，并扩展监控和模型支持。&#xA;- NVIDIA/nccl：修复 IB/CollNet/插件资源泄漏与诊断问题，新增 GIN NIC 亲和性配置能力。&#xA;- vllm-project/flash-attention：修复 SM80/SM120 FA4 前向实例化与 tracing 崩溃，恢复常见 causal 路径。&#xA;- ai-dynamo/aiconfigurator：重构性能插值与采集器，补齐硬件数据、生成器参数传播和发布打包兼容性。&#xA;- huggingface/transformers：新增模型与多模态支持，修复生成、mask、量化、训练 loss、tokenizer 与 CI 稳定性。&#xA;- ROCm/mori：合入 CCO 通信层，增强 SDMA、UMBP 缓存、RDMA 批处理与 CI 平台支持。</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-06-29/</link>
+      <pubDate>Mon, 29 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-06-29/</guid>
+      <description>Summary 本次汇总覆盖 2026-06-22 – 2026-06-29 时间范围，涉及仓库 deepseek-ai/DeepSpec, sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, sgl-project/sgl-flash-attn, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-V2, deepseek-ai/DeepSeek-V3, deepseek-ai/awesome-deepseek-integration, deepseek-ai/awesome-deepseek-agent，共计 618 个 PR。&#xA;deepseek发布了新仓库：DeepSpec&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - deepseek-ai/DeepSpec：#10: test: add pytest suite + CI; fix empty-shard crash in JsonLineDataset；#8: [WIP] Add Ascend NPU support for DSpark training；#2: [feat] add support for D2SD-mode VP-Drafter training&#xA;- sgl-project/sglang：#29589: fa3/fa4: sync-free for all backends and phases；#29588: Fix HashTopK routed experts capture；#29587: [Speculative] DFlash tree drafting: host-side tree-construction core (#29524)；.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-06-24/</link>
+      <pubDate>Wed, 24 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-06-24/</guid>
+      <description>Summary 本次汇总覆盖 2026-06-17 – 2026-06-24 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, sgl-project/sgl-flash-attn, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepSeek-V3, deepseek-ai/awesome-deepseek-integration, deepseek-ai/awesome-deepseek-agent，共计 587 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：#29114: Strip unset tool-schema defaults before apply_chat_template (fixes #29061)；#29112: Support for mixed precision models produced by modelopt that combine mxfp8 linears with nvfp4 experts.；#29105: [NPU] perf: precompute mamba conv-state track indices once per batch；...等82个重要PR&#xA;- vllm-project/vllm：#46571: [WIP][Model Runner V2][Spec Decode] Enable local argmax reduction for greedy drafting；#46570: [Draft] Add MRV2 virtual-batch PCP for MLA；#46567: Fix model info cache for package models；.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-06-22/</link>
+      <pubDate>Mon, 22 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-06-22/</guid>
+      <description>Summary 本次汇总覆盖 2026-06-15 – 2026-06-22 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/DeepSeek-V3, deepseek-ai/awesome-deepseek-integration, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent，共计 1340 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：集中修复接口校验、工具调用、Diffusion、AMD/ROCm 与推理后端问题，并优化部分 CI 与内核路径。&#xA;Contents sgl-project/sglang vllm-project/vllm NVIDIA/nccl vllm-project/flash-attention ai-dynamo/aiconfigurator huggingface/transformers ROCm/mori deepseek-ai/DeepGEMM deepseek-ai/DeepEP deepseek-ai/DeepSeek-V3 deepseek-ai/awesome-deepseek-integration deepseek-ai/TileKernels deepseek-ai/awesome-deepseek-agent Details sgl-project/sglang ○ #28865: [NPU] Support chunked prefill for DeepSeek-V4 [open] 该 PR 标题显示旨在为 NPU 支持 DeepSeek-V4 的 chunked prefill。PR 当前处于 open 状态，由 JiaruiChang5268 创建。描述中的 Motivation、Modifications、Accuracy Tests、Speed Tests and Profiling 均未填写实质内容，无法确认具体实现方式、测试结果或性能影响。目前基础与额外 PR 测试均显示失败。 ○ #28864: [Bugfix] Reject empty lora_name/lora_path in load_lora_adapter [open] 该 PR 修复了 load_lora_adapter 接受空字符串 lora_name 或 lora_path 的问题。此前后端仅判断参数是否为 None，导致空字符串会被接受，并可能通过 /v1/models 暴露为空字符串的 adapter id。修改后会明确拒绝空的 lora_name 和 lora_path，同时在 load_lora_adapter_from_tensors 中也拒绝空 lora_name，并复用现有 ValueError 转 success=False 的处理流程。PR 新增了 test/registered/unit/managers/test_load_lora_adapter_validation.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-06-15/</link>
+      <pubDate>Mon, 15 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-06-15/</guid>
+      <description>Summary 本次汇总覆盖 2026-06-08 – 2026-06-15 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, sgl-project/sgl-flash-attn, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-LLM, deepseek-ai/awesome-deepseek-integration, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent，共计 1486 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：增强 AMD、MoE、diffusion、spec decoding 与缓存能力，修复多项 CI、加载、安全和性能问题。&#xA;Contents sgl-project/sglang vllm-project/vllm NVIDIA/nccl sgl-project/sgl-flash-attn vllm-project/flash-attention ai-dynamo/aiconfigurator huggingface/transformers ROCm/mori deepseek-ai/DeepGEMM deepseek-ai/FlashMLA deepseek-ai/DeepSeek-LLM deepseek-ai/awesome-deepseek-integration deepseek-ai/TileKernels deepseek-ai/awesome-deepseek-agent Details sgl-project/sglang ○ #28216: [AMD] Feat/dp moe reduce scatter [closed] 该 PR 为 AMD 场景下 DeepSeek-V4 的 DP attention + TP-MoE 路径引入可选的 ATOM 风格对称 all_gatherv 与 reduce_scatterv 通信方案，通过环境变量 SGLANG_DP_USE_GATHERV 控制且默认关闭，保持现有行为不变。其核心改动是在 attn_tp_size == 1 且 tp_size == dp_size 的布局中，用变长 all_gatherv 替代带 padding 的 gather 路径，并在 MoE combine 阶段用 reduce_scatterv 合并 TP 分片输出求和与按 DP rank scatter，替代原有 all_reduce + dp_scatter，同时跳过 MoE 内部 post-experts all-reduce 以避免重复规约。相关实现涉及 dp_attention.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-06-08/</link>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-06-08/</guid>
+      <description>Summary 本次汇总覆盖 2026-06-01 – 2026-06-08 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/awesome-deepseek-integration, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent，共计 1348 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：集中修复推测解码、HiCache、多模态与CI问题，并新增多项后端和评测支持。&#xA;Contents sgl-project/sglang vllm-project/vllm NVIDIA/nccl vllm-project/flash-attention ai-dynamo/aiconfigurator huggingface/transformers ROCm/mori deepseek-ai/DeepGEMM deepseek-ai/DeepEP deepseek-ai/FlashMLA deepseek-ai/awesome-deepseek-integration deepseek-ai/TileKernels deepseek-ai/awesome-deepseek-agent Details sgl-project/sglang ○ #27514: Fix causal_conv1d Triton compile error when conv_states dtype != activation dtype [open] 该 PR 修复了 AWQ 混合线性注意力模型在 causal_conv1d Triton 编译时因 conv_states dtype 与 activation dtype 不一致导致的崩溃。问题出在 _causal_conv1d_fwd_kernel 中初始化状态分支从 bf16 conv_states 读取，而另一分支及后续赋值使用 fp16 x，触发 Triton 对 if 分支类型一致性的要求。修改将 init-state 分支中从 conv_states 加载的值转换为 x 的 dtype，使两条分支类型一致；当 dtype 已一致时该转换为无操作，不影响常见 bf16/fp8 路径。PR 还新增了 fp16 x 与 bf16 conv_states 的回归测试，用于复现并验证修复该编译错误。作者报告相关 causal_conv1d 测试 248 项通过，并在 AWQ Qwen3.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-06-01/</link>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-06-01/</guid>
+      <description>Summary 本次汇总覆盖 2026-05-25 – 2026-06-01 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, sgl-project/sgl-flash-attn, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-V3, deepseek-ai/DeepSeek-V3.2-Exp, deepseek-ai/awesome-deepseek-integration, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent，共计 1213 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：集中修复推理、缓存、benchmark 与观测问题，增强 Qwen3.5、KV-canary、AMD/FlashInfer 支持。&#xA;Contents sgl-project/sglang vllm-project/vllm sgl-project/sgl-flash-attn vllm-project/flash-attention ai-dynamo/aiconfigurator huggingface/transformers ROCm/mori deepseek-ai/DeepGEMM deepseek-ai/DeepEP deepseek-ai/FlashMLA deepseek-ai/DeepSeek-V3 deepseek-ai/DeepSeek-V3.2-Exp deepseek-ai/awesome-deepseek-integration deepseek-ai/TileKernels deepseek-ai/awesome-deepseek-agent Details sgl-project/sglang ○ #26868: Add comprehensive SGLang &amp; SGLang Omni study plan [closed] ○ #26867: [AMD] Add support for AMD 7900XTX (gfx1100) [closed] 该 PR 为 SGLang 增加 AMD 7900XTX（gfx1100）支持，目标是在这类 RDNA 消费级 GPU 上启动 sglang 及其 Docker 环境。作者说明现有代码实际上已可在该 GPU 上运行，但入口代码中存在禁用逻辑，因此本次修改包括在多个位置跳过 aiter 导入、调整编译脚本以支持 gfx1100，并在 Docker 中跳过 gfx1100 不使用的构建内容。作者已在 7900XTX 上使用 Qwen/Qwen3.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-05-25/</link>
+      <pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-05-25/</guid>
+      <description>Summary 本次汇总覆盖 2026-05-18 – 2026-05-25 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/DeepSeek-V3, deepseek-ai/DeepSeek-Coder, deepseek-ai/awesome-deepseek-integration, deepseek-ai/awesome-deepseek-agent，共计 601 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：#26285: Use full chat history for PD cache-aware routing text；#26283: Optimize AMD GQA verify attention path；#26275: [Bug Fix] Fix tensor dump not saving when model uses .forward() calls；...等88个重要PR&#xA;- vllm-project/vllm：#43584: Add CuTe DSL sparse compressor support；#43582: [Rust Frontend] Add reasoning/tool parser &amp; renderer roundtrip tests；#43581: [Model][Bugfix] Rename weight_mapper to hf_to_vllm_mapper in LlamaNemotronVL pooling models；.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-05-19/</link>
+      <pubDate>Tue, 19 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-05-19/</guid>
+      <description>Summary 本次汇总覆盖 2026-05-12 – 2026-05-19 时间范围，涉及仓库 deepseek-ai/awesome-deepseek-agent, sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ai-dynamo/aiconfigurator, huggingface/transformers, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/DeepSeek-V3, deepseek-ai/DeepSeek-Coder, deepseek-ai/awesome-deepseek-integration, deepseek-ai/DeepSeek-Math，共计 646 个 PR。&#xA;deepseek发布了新仓库：TileKernels, awesome-deepseek-agent&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - deepseek-ai/awesome-deepseek-agent：#122: docs: update Pi npm package name；#120: Add Cherry Studio integration guide；#111: docs: add Deep Copilot integration guide (EN + ZH)&#xA;- sgl-project/sglang：#25762: Enhance DeepGEMM warmup with multi-process compilation；#25759: [BugFix][EPD]Fix Qwen3VLMoe encoder-only AttributeError；#25757: fix: Guard sgl_kernel.kvcacheio import for out-of-tree platforms；...等75个重要PR&#xA;- vllm-project/vllm：#43074: [Bugfix] Qwen3Coder streaming: emit args when whole tool body lands in one delta；#43072: [CI] Fix &#34;</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-05-18/</link>
+      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-05-18/</guid>
+      <description>Summary 本次汇总覆盖 2026-05-11 – 2026-05-18 时间范围，涉及仓库 deepseek-ai/awesome-deepseek-agent, sgl-project/sglang, deepseek-ai/awesome-deepseek-integration, deepseek-ai/DeepSeek-Math，共计 120 个 PR。&#xA;deepseek发布了新仓库：TileKernels, awesome-deepseek-agent&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - deepseek-ai/awesome-deepseek-agent：#118: docs: add dotcraft integration guide；#117: docs: add DeepSeekX integration guide；#115: Add GoAgent integration guide；...等14个重要PR&#xA;- sgl-project/sglang：#25550: [WIP][Gemma4] Triton `extend_attention` tuning to improve TTFT and TPOT；#25548: Quiet test_bs_1_speed CI log；#25547: Respect user override for Gemma4 attention backend；...等93个重要PR&#xA;- deepseek-ai/awesome-deepseek-integration：#623: Add Doco Translate to Applications；#614: docs: update oai-compatible-copilot with DeepSeek V4 models</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-05-11/</link>
+      <pubDate>Mon, 11 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-05-11/</guid>
+      <description>Summary 本次汇总覆盖 2026-05-04 – 2026-05-11 时间范围，涉及仓库 deepseek-ai/awesome-deepseek-agent，共计 22 个 PR。&#xA;deepseek发布了新仓库：TileKernels, awesome-deepseek-agent&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - deepseek-ai/awesome-deepseek-agent：引入 @codeproxy/cli 简化桥接设置，新增 Roo Code 集成指南支持 DeepSeek V4 模型配置。&#xA;Contents deepseek-ai/awesome-deepseek-agent Details deepseek-ai/awesome-deepseek-agent ○ #91: Add GitHub repo link for Co-Pilot extension installation [open] ○ #90: Add zot integration guide [open] ○ #89: docs: add SolonCode guide [open] ○ #88: docs: add @codeproxy/cli as lightweight alternative for Codex integration [open] 当前 Codex 集成指南要求用户安装 Go 1.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-05-04/</link>
+      <pubDate>Mon, 04 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-05-04/</guid>
+      <description>Summary 本次汇总覆盖 2026-04-27 – 2026-05-04 时间范围，涉及仓库 deepseek-ai/awesome-deepseek-agent，共计 19 个 PR。&#xA;deepseek发布了新仓库：TileKernels, awesome-deepseek-agent&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - deepseek-ai/awesome-deepseek-agent：新增 LangBot、Claude Code 和 MateClaw 的集成指南，优化文档同步和配置说明，提升用户集成和使用体验。&#xA;Contents deepseek-ai/awesome-deepseek-agent Details deepseek-ai/awesome-deepseek-agent ○ #55: docs: add CCX integration guide for Codex CLI &amp; Codex App [open] ○ #54: Add deepclaude — Claude Code agent loop with DeepSeek V4 Pro [open] ○ #53: docs: add LangBot integration guide [open] 此 PR 添加了 LangBot 的集成指南，LangBot 是一个支持多种大模型和部署平台的生产级即时通信机器人平台。目标是为用户提供详细的集成文档，以便更好地使用和部署 LangBot。核心改动包括新增英文和中文的集成指南文档，并在 README 文件中添加 LangBot 的索引。这些改动不会影响现有的构建或使用方式，但会提供更丰富的文档支持。当前 PR 已完成所有必要的文档更新，状态良好。 ○ #52: docs: add dscli integration guide [open] ○ #50: refactor: modify the Claude Code Guide with `settings.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-04-27/</link>
+      <pubDate>Mon, 27 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-04-27/</guid>
+      <description>Summary 本次汇总覆盖 2026-04-20 – 2026-04-27 时间范围，涉及仓库 deepseek-ai/TileKernels, sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, ai-dynamo/aiconfigurator, huggingface/transformers, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-Coder, deepseek-ai/awesome-deepseek-integration，共计 587 个 PR。&#xA;deepseek发布了新仓库：TileKernels&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - deepseek-ai/TileKernels：#13: [AMD] Add MI350 (gfx950 / HIP) support for TileKernels operators ；#12: fix(tests/pytest_random_plugin.py): also seed Python&#39;s `random`；#10: fix(mhc): MHCPreNormFn.backward returns wrong number of gradients；...等6个重要PR&#xA;- sgl-project/sglang：#23827: [NPU] Support shared expert dual stream optimization；#23826: [Bugfix] Reject prefill_max_requests &amp;lt;= 0 to prevent silent scheduler deadlock；#23825: [api_server] Plumb runtime multimodal kwargs；.</description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-24 00:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-24_00-00/</link>
+      <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-24_00-00/</guid>
+      <description>2026-04-24 00:00 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (5个) ○ #45609: make it possible to ser/deser HF MoE models with torchao [open] ○ #45608: Python code in model docs [open] ○ #45607: Add regression test for Gemma4 audio relative positional range [open] ○ #45606: [gemma4] infer from config instead of hardcoding [open] ○ #45605: Processing Utils: continue when content is a string [closed] 该 PR 解决了在调用 `apply_chat_template` 方法时，由于 `messages` 结构中的 `content` 字段包含非字符串类型而导致的崩溃问题。目标是确保该方法能够正确处理包含不同类型内容的消息结构。核心改动是修改了 `apply_chat_template` 方法中的内容处理逻辑，使其能够正确识别和处理 `content` 字段中的不同数据类型。此改动不会影响现有使用方式，但解决了特定输入结构下的崩溃问题。当前 PR 已经通过了初步讨论，并更新了相关文档。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-24 02:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-24_02-00/</link>
+      <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-24_02-00/</guid>
+      <description>2026-04-24 02:00 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45610: Fix configuration reading and error handling for kernels [open] 该 PR 解决了在运行 Qwen3.6 FP8 模型时遇到的多个问题，包括缺少必要的 `WeightConverter`、未安装 `kernels` 时的不明确错误以及配置名称在初始化时的提前读取问题。通过引入 `getattr` 方法和改进配置读取逻辑，确保了在缺少特定属性时能够正确处理，避免了不友好的错误信息。这些改动提高了模型的稳定性和易用性，当前 PR 已通过审查并准备合并。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-24 04:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-24_04-00/</link>
+      <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-24_04-00/</guid>
+      <description>2026-04-24 04:00 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45612: [docs] update model cards [open] ○ #45611: Raise clear error for `problem_type=&#34;single_label_classification&#34;` with `num_labels=1` [open] 该 PR 解决了在 `problem_type=&#34;single_label_classification&#34;` 且 `num_labels=1` 时构建序列分类模型导致的零交叉熵损失问题。目标是通过在 `PreTrainedConfig.__post_init__` 中添加验证，防止这种无效配置，并提供明确的错误信息指导用户。核心改动是在配置初始化时检查 `num_labels` 和 `problem_type` 的组合，如果检测到无效配置则抛出 `ValueError`。这一改动不影响有效配置的使用，但会阻止包含无效配置的模型加载，确保用户不会遇到无声失败的情况。当前状态是所有相关测试通过，且与现有配置的兼容性得到验证。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-24 06:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-24_06-00/</link>
+      <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-24_06-00/</guid>
+      <description>2026-04-24 06:00 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45613: [New Model] Add MiniCPM3 support [open] 该 PR 旨在为 Hugging Face Transformers 库添加对 MiniCPM3 模型架构的支持。MiniCPM3 结合了 DeepSeek-V2 的多头潜在注意力（MLA）机制和标准的密集 MLP，同时引入了三种缩放机制：嵌入缩放（scale_emb）、残差连接缩放（scale_depth）和 logits 缩放（dim_model_base）。通过继承 Llama 和 DeepSeek-V2 的模块化设计，该 PR 实现了 MiniCPM3 的配置和建模类，并将其注册到 AutoConfig、AutoModel 及相关类中。此 PR 已通过小规模配置的前向传递验证，建议在合并前运行指定的 CircleCI 测试任务。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 00:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_00-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_00-00/</guid>
+      <description>2026-04-23 00:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (4个) ○ #45582: generate: drop stale num_return_sequences warning on continuous batching path [open] 在 `generate` 的 continuous-batching 分支中，`num_return_sequences` 与 `num_beams` 一起使用时会触发警告，尽管 `generate_batch()` 已经支持 `num_return_sequences`。该 PR 去除了 `num_return_sequences` 相关的警告，保留了 `num_beams` 的限制，以避免误导用户并减少日志中的冗余信息。此改动不会影响现有功能的使用，但会改善用户体验。当前 PR 已修复 #45563。 ○ #45581: Add automated reviewer assignment script [open] ○ #45579: Update assign_reviewers.py [open] ○ #45580: [`Privacy Filter`] Add model [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 02:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_02-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_02-00/</guid>
+      <description>2026-04-23 02:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45583: Update dev version [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 04:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_04-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_04-00/</guid>
+      <description>2026-04-23 04:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45586: Add Audio-Visual Flamingo model [open] ○ #45585: qa: bumped mlinter and allow local override [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 08:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_08-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_08-00/</guid>
+      <description>2026-04-23 08:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45587: [docs] cb memory management [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 10:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_10-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_10-00/</guid>
+      <description>2026-04-23 10:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (3个) ○ #45591: [nemotron_h] respect _no_reinit flag on dt_bias and out_proj.weight [open] 在 `NemotronHPreTrainedModel._init_weights` 方法中，每次调用时都会无条件地重置 `dt_bias` 和 `out_proj.weight` 参数，导致加载预训练模型时这些参数被随机值覆盖，从而影响模型的输出。该 PR 的目标是修复这一问题，确保在加载预训练模型时这些参数的训练值得以保留。核心改动包括在 `dt_bias` 分支中添加早期返回机制，以及在 `out_proj.weight` 分支中添加条件跳过和设置 `_no_reinit` 标志。这些改动不影响新模型的初始化，仅确保加载预训练模型时的参数一致性。测试计划已验证未打补丁和打补丁后的模型行为，确保问题得到解决。 ○ #45590: fix #45588: guard s_aux against None in flash_attention_forward [open] ○ #45589: Fix `AttributeError` on `s_aux=None` in `flash_attention_forward` [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 12:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_12-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_12-00/</guid>
+      <description>2026-04-23 12:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45592: fix padding side issue for fast_vlm tests [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 16:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_16-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_16-00/</guid>
+      <description>2026-04-23 16:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (4个) ○ #45597: Add Granite 4.1 Vision (granite4_vision) [open] 该 PR 为 Hugging Face Transformers 库添加了对 IBM 的 Granite 4.1 Vision 模型的支持。目标是集成这一多模态视觉-语言模型，以增强企业文档理解能力。核心改动包括引入 SigLIP2 作为视觉编码器、4×4 窗口 Q-Former 投影器、以及通过 LayerDeepstack 和 SpatialDeepstack 机制在多个层面上注入视觉特征。这些改动对模型的构建和使用方式产生了影响，新增了多个文件和配置，同时通过自动注册和测试确保了集成的完整性和正确性。当前状态是所有单元测试通过，建议在合并前运行特定的 CircleCI 任务以进一步验证。 ○ #45596: fix 2 failed test cases for blt model on XPU [open] ○ #45595: Add unified Cache-layer management for GLM-5 DSA Indexer keys [open] 该 PR 将 GLM-5 DSA IndexCache 的自管理缓存机制迁移到标准的 `past_key_values` 缓存层中，以解决现有实现中的生命周期管理、缓存卸载和逻辑重复问题。通过在 `CacheLayerMixin` 和 `DynamicLayer` 中引入 `indexer_keys` 属性和相关方法，确保缓存键与注意力缓存同步管理。这不仅简化了下游模型的开发，还增强了对 beam-search 重排序、缓存裁剪、批量选择和重复等操作的支持。此改动对公共 API 无影响，现有检查点保持兼容。 ○ #45594: fix(utils): Resolve backbone utils test regressions [open] 该 PR 修复了两个回归问题。首先，删除了 `load_backbone` 中的 `use_pretrained_backbone` 参数，改为通过 `from_pretrained` 加载预训练权重，并更新了相关测试以匹配新的设计。其次，修正了 `out_indices` 始终返回列表的断言，使其与之前的 PR 改动一致。这些修复提高了 CI 覆盖率，并确保了测试的正确性。当前 PR 已通过 CI 测试，确认修复了预期的问题。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 18:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_18-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_18-00/</guid>
+      <description>2026-04-23 18:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (3个) ○ #45601: fix: compute auxiliary losses when denoising is disabled in D-FINE [open] 在 num_denoising=0 的情况下，DFineForObjectDetectionLoss 跳过了所有辅助损失，因为它们被包含在 if denoising_meta_values 语句中。该 PR 的目标是确保辅助损失在配置允许时始终计算，而不会因 denoising_meta_values 为空而被跳过。核心改动是将张量分割逻辑与辅助损失计算分离，仅在 denoising_meta_values 不为空时进行张量分割，而辅助损失始终在 config.auxiliary_loss=True 时计算。此改动不影响默认行为，但确保了辅助损失在 num_denoising=0 时仍能正确计算。测试验证了辅助损失键在 num_denoising=0 时存在。 ○ #45599: qa: more lazy loading [open] ○ #45598: Align latest model attention function dispatch [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 20:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_20-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_20-00/</guid>
+      <description>2026-04-23 20:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45602: [AMD CI] Fix expectations for Gemma3n [open] ○ #45603: [Auto] Pass kwargs to fixed_cross_entropy (cluster-43240-3): merged 2 of 2 PRs [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 22:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_22-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_22-00/</guid>
+      <description>2026-04-23 22:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45604: Agent first cli with skill [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-22 00:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_00-00/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_00-00/</guid>
+      <description>2026-04-22 00:00 周三 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45552: Remove warnings for modernbert [open] ○ #45551: Add ForSequenceClassification heads for the OLMo family [open] 该 PR 解决了 Olmo、Olmo2 和 Olmo3 模型在使用 `AutoModelForSequenceClassification` 时无法正确加载的问题。通过引入 `ForSequenceClassification` 类并注册到 `MODEL_FOR_SEQUENCE_CLASSIFICATION_MAPPING_NAMES`，确保了这些模型可以用于序列分类任务。核心改动包括在 `modular_olmo.py`、`modular_olmo2.py` 和 `modular_olmo3.py` 中定义相应的子类，并通过 `make fix-repo` 生成更新的 `modeling_*.py` 文件。这些改动不影响现有使用方式，但新增了对序列分类的支持。当前状态为所有测试通过，包括 GPU 验证和 LoRA 微调测试。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-22 02:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_02-00/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_02-00/</guid>
+      <description>2026-04-22 02:00 周三 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45554: [docs] multi-turn tool calling [open] ○ #45553: [docs] per-request sampling params [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-22 04:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_04-00/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_04-00/</guid>
+      <description>2026-04-22 04:00 周三 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45556: Add image processors refactor to v5 migration guide [open] ○ #45555: perf(`gemma3`): Avoid recomputing `rotary_emb` for each layer [open] 该 PR 旨在优化 `self.rotary_emb` 的调用效率，减少不必要的重复调用。通过将多次调用优化为仅两次调用（全注意力机制和滑动窗口注意力机制），提高了模型的推理速度，特别是在 4B 模型中，推理速度可提升约 10%。核心改动是通过避免重复写入相同的字典键来实现效率提升。此优化对使用 `config.layer_types` 的模型特别有效，且已在部分模型中验证了其效果。当前状态良好，建议在合并前运行特定的测试任务以确保兼容性。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-22 14:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_14-00/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_14-00/</guid>
+      <description>2026-04-22 14:00 周三 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (4个) ○ #45567: Move some conversion mappings to PrefixChange [open] ○ #45566: fix: raise clear error when tokenizer config uses v5 list format on older versions [open] 在 transformers 版本低于 5.0 时，加载使用 v5 样式列表格式的 `extra_special_tokens` 的模型会导致 `_set_model_specific_special_tokens()` 方法抛出误导性的 `AttributeError`。该 PR 的目标是通过在 `_set_model_specific_special_tokens()` 方法中添加一个 `isinstance(special_tokens, list)` 检查，来明确提示用户升级到 transformers 5.0.0 或更高版本。这一改动将帮助用户更快地识别和解决版本不匹配问题，避免不必要的调试路径。当前 PR 已被标记为需要维护者审核。 ○ #45565: fix: remove stale num_return_sequences warning in paged generate [open] ○ #45564: Gemma3n and Gemma4 cannot use rotary kernel [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-22 18:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_18-00/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_18-00/</guid>
+      <description>2026-04-22 18:00 周三 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45570: Fix whisper long-form generation when eos_token_id is a list [open] 该 PR 修复了 Whisper 生成代码中的一个 bug，当 `generation_config.eos_token_id` 是 `list[int]` 而不是 `int` 时会出现问题，这种情况可能在调用 `align_special_tokens` 后发生。修复方法是将 `eos_token_id` 规范化为列表，并使用成员检查而不是等值检查。此更改不会影响现有使用方式，但解决了特定情况下的错误。当前状态为等待审查，建议运行的测试包括 run-slow: whisper。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-22 20:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_20-00/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_20-00/</guid>
+      <description>2026-04-22 20:00 周三 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (4个) ○ #45575: fix(generation): remove stale warning for num_return_sequences in paged generate [open] 在当前实现中 generate 函数在使用 paged 缓存时错误地警告 num_return_sequences 不支持连续批处理 但实际上 generate_batch 已经支持通过 generation_config.num_return_sequences 扩展请求数量 该 PR 的目标是修正这一错误警告 通过在 src/transformers/generation/utils.py 中拆分 guard 逻辑 保留 num_beams &gt; 1 时的警告 而移除 num_return_sequences 的警告 这一改动不会影响现有行为 但消除了不必要的警告信息 当前 PR 已经通过测试验证了预期行为 ○ #45574: Fix typos [open] ○ #45573: fix transformers + torchao nvfp4 serialization [open] 该 PR 解决了 torchao 在 NVIDIA B200 上的 NVFP4 序列化问题，并修复了 float8 测试的预期输出。同时，改进了 torchao 序列化测试的命名，使其更易于调试。这些改动确保了所有 torchao 配置的测试命令都能通过。此 PR 由 Claude 协助开发，测试计划已验证通过。当前状态良好，未发现相关问题。 ○ #45572: refactor(Dots1): drop Dots1MoE override to `pass` (inherits from DSV3 MoE) [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-22 22:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_22-00/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_22-00/</guid>
+      <description>2026-04-22 22:00 周三 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (3个) ○ #45578: Remove attribute_map from GptOssConfig [open] ○ #45577: Allow for registered experts from kernels hub [open] ○ #45576: docs(pipeline): fix num_workers docstring default from 8 to 0 [open] 该 PR 解决了文档与实际运行时行为不一致的问题。具体来说，`build_pipeline_init_args()` 中 `num_workers` 的默认值在文档中描述为 8，而实际运行时默认值为 0。此 PR 更新了文档字符串，使其准确反映运行时行为，避免用户在性能调优时产生混淆。此更改不会影响现有代码的行为，但会提高文档的准确性。该 PR 已通过社区审查，无需进一步讨论。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-21 00:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_00-00/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_00-00/</guid>
+      <description>2026-04-21 00:00 周二 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45534: ALM base model class [open] ○ #45533: Fix AMD CI: rebuild torchvision with libjpeg + refresh expectations [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-21 08:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_08-00/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_08-00/</guid>
+      <description>2026-04-21 08:00 周二 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45537: NVFP4 quantization: streaming loader, fused MoE experts (Qwen + Llama… [open] 该 PR 引入了对 NVIDIA 4 位浮点量化格式（NVFP4）的支持，旨在解决在 Blackwell 类硬件上加载和微调大型 Mixture-of-Experts (MoE) 模型时的内存问题和格式不兼容问题。核心改动包括实现 NVFP4 线性层模块、融合的 MoE 专家容器、流式权重放置工具以及对不同模型格式的量化尺度处理。这些改动显著降低了加载大型模型时的内存峰值，并确保了不同模型家族的兼容性。当前状态包括对 Qwen 3.5 和 Llama-4 模型的验证，但 LoRA 适配器仅支持注意力层，且流式加载器尚未集成到 `from_pretrained` 中。 ○ #45535: [Sam3LiteText] Remove unnecessary modules/configs [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-21 10:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_10-00/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_10-00/</guid>
+      <description>2026-04-21 10:00 周二 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (3个) ○ #45541: Fix local_files_only tokenizer fallback when tokenizer files are missing (Issue 45538) [open] 该 PR 解决了在使用 `from_pretrained(..., local_files_only=True)` 时，如果缺少 tokenizer 文件，会错误地初始化一个带有巨大 `model_max_length` 的 stub tokenizer 的问题。目标是确保在这种情况下抛出 `OSError` 而不是继续初始化。核心改动是在 `PreTrainedTokenizerBase.from_pretrained` 中添加了一个检查，确保所有必要的 tokenizer 资产文件都已解析，否则抛出异常。这一改动影响了使用 `local_files_only=True` 参数加载 tokenizer 的行为，使其更加严格和可靠。当前状态是 PR 已通过本地测试，等待社区成员审查。 ○ #45540: Fix cross-attention cache layer type for T5Gemma2 long inputs [open] 该 PR 解决了在 `T5Gemma2ForConditionalGeneration` 模型中，当输入长度超过滑动窗口大小（默认 4096）时生成过程中出现的 `RuntimeError`。问题的根源在于 `T5Gemma2ForConditionalGeneration._prepare_cache_for_generation` 方法中错误地删除了 `cross_attn_config` 的 `sliding_window` 和 `layer_types` 属性，导致缓存的跨注意力层在更新时截断了编码器的 K/V 状态。为了解决这个问题，PR 明确设置了 `sliding_window` 为 `None` 并将 `layer_types` 设置为全注意力层。此外，PR 添加了测试用例以验证修复效果，并确认了修复后的模型在不同输入长度下均能正常运行。 ○ #45539: Revert #45045: changes break modular&#39;s purpose [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-21 16:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_16-00/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_16-00/</guid>
+      <description>2026-04-21 16:00 周二 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45544: fix table upate versions [open] 在本地运行 `3.10.19` 时，`make fix-repo` 命令跳过了表更新，导致 `mlinter` 分割时依赖项未正确更新。此 PR 修复了这一行为并更新了表。修复后，`make fix-repo` 将在 `3.10.19` 版本中正确更新表。当前状态为已修复，无已知限制。 ○ #45543: ci: OTEL support [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-21 18:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_18-00/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_18-00/</guid>
+      <description>2026-04-21 18:00 周二 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45547: Add disable_mmap kwarg to from_pretrained with hf-mount auto-detection [open] 该 PR 解决了在 FUSE 文件系统上加载 safetensors 模型时可能导致 Python 进程死锁的问题。通过引入 `disable_mmap` 参数，用户可以选择禁用内存映射，从而避免因并发页面故障导致的死锁。核心改动包括添加 `_is_on_hf_mount` 辅助函数来检测路径是否在特定的 FUSE 挂载点上，并在 `load_state_dict` 和 `LoadStateDictConfig` 中引入 `disable_mmap` 参数。这些改动对现有用户的行为没有影响，除非他们在 FUSE 文件系统上使用该参数。测试用例确保了新功能的正确性和兼容性。 ○ #45546: feat: Add GGUF loading support for Llama 4 (text) [open] 该 PR 解决了 Llama 4 文本模型不支持 GGUF 格式加载的问题。通过添加对 GGUF 格式的支持，用户现在可以使用 `AutoModelForCausalLM.from_pretrained` 方法加载 Llama 4 模型的 GGUF 文件。此改动与现有的 gemma3_text GGUF 路径保持一致，仅支持文本部分，不包括视觉张量。此 PR 已经得到了相关维护者的关注和审查请求。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-21 20:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_20-00/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_20-00/</guid>
+      <description>2026-04-21 20:00 周二 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45549: fix: apply channel averaging correctly in audio feature extractors [open] 该 PR 修复了多个音频特征提取器中通道平均计算的错误。错误导致批处理张量输入在最后一个维度上进行平均而不是在通道维度上，以及批处理序列输入的平均结果未正确写回 raw_speech。此更改通过在通道维度上使用 mean(1) 并将单声道转换后的样本写回 raw_speech 来解决这些问题。这些修复不会改变现有 API 的使用方式，但会确保输出的正确性。当前状态为等待指定的测试任务运行。 ○ #45548: Fix EP + DeepSpeed ZeRO-3 loading via accelerate launch [open] 在使用 Expert Parallelism (EP) 和 DeepSpeed ZeRO-3 时，通过 `accelerate launch` 加载模型会因为两者初始化方式的冲突而挂起。该 PR 的目标是解决这一问题，使 EP 和 ZeRO-3 能够兼容工作。核心改动包括在 `from_pretrained` 中为 EP+DS 路径使用标准的非 ZeRO-3 初始化方式，确保 EP 的 sharding hooks 正常工作，并在模型加载后通过 `deepspeed.</description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-21 22:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_22-00/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_22-00/</guid>
+      <description>2026-04-21 22:00 周二 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45550: Add runner selection for mi325 GPU type [open] </description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-04-20/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-04-20/</guid>
+      <description>Summary 本次汇总覆盖 2026-04-20 – 2026-04-20 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, huggingface/transformers，共计 31 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;TL;DR： - sgl-project/sglang：修复路径过滤模式问题，优化 3D 卷积解码性能，解决 CFG-parallel 模式下挂起问题，增强 OpenTelemetry 跟踪，修复 AWQ 量化方法加载错误，调整 CI 测试 `est_time`，提高 Minimax2 稳定性和性能，减少预填充碎片化，优化 TBO 未启用时的计算，提高 gfx950 BF16 模型性能，解决 cu12 到 cu13 迁移问题，优化多节点编译同步。&#xA;- vllm-project/vllm：优化 GPT2 模型权重加载，调整 chat completion API 验证逻辑，修复 CompressedTensors W4A8 MoE 路径问题，减少层级重载机制的内存使用，修复混合键值缓存管理器正确性问题，解决测试中的 `AttributeError`，提高 CI 日志可见性和调试能力。&#xA;- NVIDIA/nccl：确保多播绑定未解除时正确报告错误，避免 CRIU + cuda-checkpoint 环境下产生损坏的进程镜像。&#xA;- huggingface/transformers：增加 `static_graph` 标志配置，提高 PyTorch DDP 模式的灵活性。&#xA;Contents sgl-project/sglang vllm-project/vllm NVIDIA/nccl huggingface/transformers Details sgl-project/sglang ○ #23202: always-on session in UnifiedRadixCache [open] ○ #23201: fix(ci): repair path filters regressed by #21482 [open] 该 PR 修复了 PR #21482 引入的路径过滤模式中的两个问题。这些问题导致某些关键文件（如 `Dockerfile` 和 `CMakeLists.</description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-20 02:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_02-00/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_02-00/</guid>
+      <description>2026-04-20 02:00 周一 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45516: T5Gemma2: fixprepare_decoder_input_ids_from_labels [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-20 14:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_14-00/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_14-00/</guid>
+      <description>2026-04-20 14:00 周一 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45524: utils: handle flash_attn missing from importlib packages_distributions without crashing [open] 在某些环境中，如 Python 3.13 和 ComfyUI 设备上，`flash_attn` 包的导入检查会因 `packages_distributions()` 中缺少相应键而引发 `KeyError`，导致整个导入过程失败。该 PR 的目标是修复这一问题，确保在 `flash_attn` 包未正确安装时不会引发异常。核心改动是将四个引发异常的字典访问替换为 `.get(name, [])`，从而避免 `KeyError`。这一改动不会影响现有行为，仅在 `flash_attn` 包未正确安装时返回 `False`。当前状态良好，无需额外配置或回退机制。 ○ #45523: Fix Seq2SeqLM ExecuTorch export: add encoder_attention_mask to decoder and use static encoder shapes [open] 该 PR 解决了 `src/transformers/integrations/executorch.py` 中的两个 bug，这些 bug 导致 T5 模型在 ExecuTorch 导出时无法正确运行。第一个 bug 是 `encoder_attention_mask` 未传递给解码器，导致输出错误。第二个 bug 是动态编码器维度与静态 KV 缓存冲突，导致运行时错误。为了解决这些问题，PR 修改了相关模块的前向传播方法，添加了 `encoder_attention_mask` 参数，并去除了动态编码器维度。这些改动确保了 T5 模型在 ExecuTorch 导出后的输出与 HuggingFace `model.</description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-20 19:54</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_19-54/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_19-54/</guid>
+      <description>2026-04-20 19:54 周一 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (3个) ○ #45530: [CB] Changes for long generation [open] ○ #45528: chore: fix consistency [open] ○ #45527: Reapply modular to examples [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-20 20:10</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_20-10/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_20-10/</guid>
+      <description>2026-04-20 20:10 周一 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45530: [CB] Changes for long generation [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-20 20:16</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_20-16/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_20-16/</guid>
+      <description>2026-04-20 20:16 周一 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45530: [CB] Changes for long generation [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-20 22:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_22-00/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_22-00/</guid>
+      <description>2026-04-20 22:00 周一 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45532: [Model] Add SLANet Model Support [open] ○ #45531: Revert &#34;Fix: modular image processors (#45492)&#34; [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-19 06:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_06-00/</link>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_06-00/</guid>
+      <description>2026-04-19 06:00 周日 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45508: [Doc] Fix &#39;tokenized&#39; -&gt; &#39;tokenizer&#39; typo in streamer docstrings [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-19 08:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_08-00/</link>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_08-00/</guid>
+      <description>2026-04-19 08:00 周日 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45509: Fix get_device_properties crash when CUDA is installed but no GPU [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-19 16:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_16-00/</link>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_16-00/</guid>
+      <description>2026-04-19 16:00 周日 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45510: cache_utils: fix QuantizedLayer to correctly propagate reorder_cache, crop, and batch ops to quantized buffers [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-19 18:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_18-00/</link>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_18-00/</guid>
+      <description>2026-04-19 18:00 周日 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (3个) ○ #45513: [Qwen3.5] Fix Qwen3.5 linear attention multi-token cached forward [open] ○ #45512: [OutputRecorder] re.search on layer_name [open] ○ #45511: Fix NaN in Gemma3/EmbeddingGemma when batching mixed-length sequences… [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-19 20:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_20-00/</link>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_20-00/</guid>
+      <description>2026-04-19 20:00 周日 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45515: Fix CUDA availability check in get_device_properties() [open] ○ #45514: Fix GraniteMoeHybrid _update_mamba_mask crash on attention-only models [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-18 00:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_00-00/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_00-00/</guid>
+      <description>2026-04-18 00:00 周六 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45494: Fix: propagate quantization_config to text sub-config for composite models in AutoModelForCausalLM [open] 该 PR 解决了加载量化复合模型时出现的问题。问题在于，当使用 `AutoModelForCausalLM.from_pretrained` 加载复合模型时，`auto_factory.py` 会将复合配置替换为文本子配置，导致量化配置丢失。这使得 `modeling_utils.py` 无法正确识别预量化模型，从而引发 `ValueError`。为了解决这个问题，PR 在交换到文本子配置后，如果父复合配置中存在量化配置且文本子配置中没有，则将量化配置传播到文本子配置。这确保了量化方法能够正确识别和处理预量化模型。建议在合并前运行 `run-slow: auto` 以验证修复效果。 ○ #45495: revert sha commit pointing to main for transformers_amd_ci_ workflows [closed] 该 PR 更新了 AMD 调度 CI 工作流，使其引用 `huggingface/hf-workflows` 仓库的 `main` 分支，而不是固定的提交 SHA。这一改动旨在使调度的 CI 运行跟踪最新的上游工作流定义。然而，使用可变引用（如 `@main`）可能会导致 CI 行为在没有本地代码更改的情况下发生变化，影响可重现性并可能意外中断调度运行。当前状态是已更新相关工作流文件，但需要注意潜在的可重现性和安全性问题。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-18 08:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_08-00/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_08-00/</guid>
+      <description>2026-04-18 08:00 周六 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45497: Add V-JEPA 2.1 inference support [open] 该 PR 旨在为 Meta V-JEPA 2.1 预训练模型提供推理支持和检查点转换，扩展了现有的 `VJEPA2Model`。主要目标是支持 V-JEPA 2.1 的四个预训练编码器（ViT-B、ViT-L、ViT-g 和 ViT-G），并确保与 V-JEPA 2.0 的向后兼容性。核心改动包括在配置文件中添加了 8 个新字段，修正了 RoPE 实现，引入了可学习的模态嵌入和分层特征提取，并更新了转换脚本以处理新的模型变体。这些改动对模型的使用方式和行为产生了影响，特别是对预测器的输出和多层预测的支持。当前状态是所有测试通过，且已验证与 Meta 参考实现的一致性。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-18 10:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_10-00/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_10-00/</guid>
+      <description>2026-04-18 10:00 周六 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45499: .4021378118068288:94a295563cf6b5aa7d67bd0f2c0cd7a7_69e2df7342c82e665fe03edd.69e2df7542c82e665fe03ee1.69e2df758b8bd167e2faa23c:Trae CN.T(2026/4/18 09:33:41) [open] ○ #45498: .4021378118068288:98296403e0cd6dedb7b420b80d0fe80b_69e2ce7c42c82e665fe03e0c.69e2ce9842c82e665fe03e10.69e2ce988b8bd167e2faa239:Trae CN.T(2026/4/18 08:21:44) [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-18 12:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_12-00/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_12-00/</guid>
+      <description>2026-04-18 12:00 周六 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (5个) ○ #45504: .4021378118068288:1e40fd96a800b4038c914120b0aa85c2_69e2faf342c82e665fe04170.69e2faf642c82e665fe04174.69e2faf6d18af355a624eac3:Trae CN.T(2026/4/18 11:31:02) [open] ○ #45503: .4021378118068288:aafb9167aaa6b321205f754209b0cbcb_69e2f25642c82e665fe0407f.69e2f43542c82e665fe04083.69e2f435d18af355a624eac1:Trae CN.T(2026/4/18 11:02:13) [open] ○ #45502: .4021378118068288:4da7ed27ccaa5f974fe4a552e2b67bb6_69e2eea842c82e665fe04002.69e2eec142c82e665fe04006.69e2eec18b8bd167e2faa241:Trae CN.T(2026/4/18 10:38:57) [open] ○ #45501: .4021378118068288:e3506c3c5a98ec3a50332c6102362804_69e2e58842c82e665fe03f65.69e2e58c42c82e665fe03f69.69e2e58b8b8bd167e2faa23e:Trae CN.T(2026/4/18 09:59:40) [open] ○ #45500: Add full GGUF loading support for GPT‑OSS (fixes #43366, supersedes #43757) latest [open] 该 PR 解决了 GPT-OSS 模型（20B/120B）在 GGUF 格式下加载时的架构不匹配问题。目标是使 Transformers 和 vLLM 能够直接加载 GPT-OSS GGUF 文件，而不会回退到错误的架构。核心改动包括在 GGUF 映射中注册架构、实现自定义的 GptOssTensorProcessor 以处理 MoE 专家拆分和门/上层交织、从扁平的 GGUF 元数据中重建嵌套的 rope_scaling（YaRN），并添加了快速注册测试和使用真实 20B GGUF 文件的慢速集成测试。这些改动确保了模型加载的正确性和性能，当前状态为等待社区审查，建议在合并前运行 ggml 慢速测试。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-18 18:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_18-00/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_18-00/</guid>
+      <description>2026-04-18 18:00 周六 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45506: Add full GGUF loading support for GPT‑OSS (fixes #43366, supersedes #43757) latest [open] 该 PR 解决了 GPT-OSS 模型在 GGUF 格式下加载时的架构不匹配问题，确保 Transformers 和 vLLM 能够正确加载 20B 和 120B 的 GPT-OSS GGUF 文件。核心改动包括在 GGUF 映射中注册架构、实现自定义的 `GptOssTensorProcessor` 以处理 MoE 专家拆分和门/上层交错，以及从扁平的 GGUF 元数据中重建嵌套的 `rope_scaling`。这些改动对模型加载和推理行为有直接影响，确保了模型的正确性和性能。当前 PR 已通过相关测试，建议运行慢速测试以进一步验证。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-18 20:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_20-00/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_20-00/</guid>
+      <description>2026-04-18 20:00 周六 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (6个) ○ #45504: .4021378118068288:1e40fd96a800b4038c914120b0aa85c2_69e2faf342c82e665fe04170.69e2faf642c82e665fe04174.69e2faf6d18af355a624eac3:Trae CN.T(2026/4/18 11:31:02) [closed] ○ #45503: .4021378118068288:aafb9167aaa6b321205f754209b0cbcb_69e2f25642c82e665fe0407f.69e2f43542c82e665fe04083.69e2f435d18af355a624eac1:Trae CN.T(2026/4/18 11:02:13) [closed] ○ #45502: .4021378118068288:4da7ed27ccaa5f974fe4a552e2b67bb6_69e2eea842c82e665fe04002.69e2eec142c82e665fe04006.69e2eec18b8bd167e2faa241:Trae CN.T(2026/4/18 10:38:57) [closed] ○ #45501: .4021378118068288:e3506c3c5a98ec3a50332c6102362804_69e2e58842c82e665fe03f65.69e2e58c42c82e665fe03f69.69e2e58b8b8bd167e2faa23e:Trae CN.T(2026/4/18 09:59:40) [closed] ○ #45499: .4021378118068288:94a295563cf6b5aa7d67bd0f2c0cd7a7_69e2df7342c82e665fe03edd.69e2df7542c82e665fe03ee1.69e2df758b8bd167e2faa23c:Trae CN.T(2026/4/18 09:33:41) [closed] ○ #45498: .4021378118068288:98296403e0cd6dedb7b420b80d0fe80b_69e2ce7c42c82e665fe03e0c.69e2ce9842c82e665fe03e10.69e2ce988b8bd167e2faa239:Trae CN.T(2026/4/18 08:21:44) [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-17 11:10</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_11-10/</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_11-10/</guid>
+      <description>2026-04-17 11:10 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45487: Fix model parallel issue for altclip model and ChineseClip model [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-17 11:13</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_11-13/</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_11-13/</guid>
+      <description>2026-04-17 11:13 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (5个) ○ #45487: Fix model parallel issue for altclip model and ChineseClip model [open] ○ #45486: fix: return empty tuple from import_protobuf_decode_error when protobuf is unavailable [open] 在某些情况下，`import_protobuf_decode_error()` 会因 protobuf 未安装而引发 `ImportError`，导致实际的 tokenizer 构造器异常被掩盖。该 PR 的目标是确保在 protobuf 未安装时，真实异常能够正确传播。为此，PR 修改了 `import_protobuf_decode_error()`，使其在 protobuf 不可用时返回 `()`，从而使 except 子句不匹配任何异常。此外，PR 添加了两个新测试用例以验证修复效果。当前 PR 已通过测试，状态良好。 ○ #45485: [serve] Update tool call to switch toparse_response [open] ○ #45484: Minor update [closed] ○ #45463: Fix response api support [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-17 11:24</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_11-24/</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_11-24/</guid>
+      <description>2026-04-17 11:23 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (5个) ○ #45487: Fix model parallel issue for altclip model and ChineseClip model [open] ○ #45486: fix: return empty tuple from import_protobuf_decode_error when protobuf is unavailable [open] 在某些情况下，`import_protobuf_decode_error()` 会因 protobuf 未安装而引发 `ImportError`，导致实际的 tokenizer 构造器异常被掩盖。该 PR 的目标是确保在 protobuf 未安装时，真实异常能够正确传播。为此，PR 修改了 `import_protobuf_decode_error()`，使其在 protobuf 不可用时返回 `()`，从而使 except 子句不匹配任何异常。此外，PR 添加了两个新测试用例以验证修复效果。当前 PR 已通过测试，状态良好。 ○ #45485: [serve] Update tool call to switch toparse_response [open] ○ #45484: Minor update [closed] ○ #45463: Fix response api support [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-17 12:12</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_12-12/</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_12-12/</guid>
+      <description>2026-04-17 12:12 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (0个) </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-17 18:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_18-00/</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_18-00/</guid>
+      <description>2026-04-17 18:00 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45489: Align gemma3n cache sharing to gemma4 [open] ○ #45474: chore: bump doc-builder SHA for main doc build workflow [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-17 20:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_20-00/</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_20-00/</guid>
+      <description>2026-04-17 20:00 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45481: Add check-auto in repo-consistency and fix sorting [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-17 22:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_22-00/</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_22-00/</guid>
+      <description>2026-04-17 22:00 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (4个) ○ #45493: [WIP] Major processing refactor [open] ○ #45492: Fix: modular image processors [open] 在最近的图像处理重构中，由于包依赖关系的修复，导致在代码中重复定义了同一个类。该 PR 的目标是删除重复的类定义，以避免潜在的冲突和冗余。核心改动是删除了重复的类定义，确保类在代码中只定义一次。这一改动不会对现有使用方式或行为产生影响。当前状态良好，建议在合并前运行 run-slow: llava_onevision 以确保稳定性。 ○ #45490: Add ctsm model [open] ○ #45461: Remove redundant condition checks inget_image_sizemethod [closed] 该 PR 旨在移除 `get_image_size` 方法中的冗余条件检查。这些检查原本用于避免在不需要调整大小时进行不必要的张量分配，但经过讨论确认这些条件是多余的。核心改动是删除了 `if resize_height == height and resize_width == width` 的条件判断。这一改动可能会在高吞吐量推理管道中增加一些开销，但具体影响需要进一步基准测试。当前 PR 已经通过审核并合并，建议在合并前运行 `make fix-repo` 以确保更改在 `modular` 系统中正确传播。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-16 20:34</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-16_20-34/</link>
+      <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-16_20-34/</guid>
+      <description>2026-04-16 20:31 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;🎯 关键词相关PR (1个) #45441: fix(DSV3): parity between nativeDeepseekV3MoEand remote official implementation&#xA;相关：deepseek v4, deepseek-v4, deepseekv4。PR标题中提到&#34;nativeDeepseekV3MoE&#34;，与deepseek v4系列相关。&#xA;完整PR列表 (42个) ○ #45441: fix(DSV3): parity between nativeDeepseekV3MoEand remote official implementation [open] ○ #45475: chore(qa): split out mlinter [open] ○ #45474: chore: bump doc-builder SHA for main doc build workflow [open] ○ #45473: Fix EP: RouterParallel shape, tp_plan property, grouped_mm sentinels [open] 在使用 TRL 进行 Qwen3-30B-A3B SFT 训练时，发现三个与 Expert Parallelism (EP) 相关的 bug，导致结果错误或损失为 NaN。该 PR 旨在修复这些 bug，确保 EP 模式下的正确性和稳定性。核心改动包括：修复 `RouterParallel` 中的 score 和 index 配对问题，确保权重加载使用正确的计划，以及处理 `grouped_mm_experts_forward` 中的 EP 哨兵值。这些修复引入了多个测试用例，验证了修复效果。当前状态为已通过 8×H100 的端到端验证，与非 EP 模式下的结果一致。 ○ #45471: Add EXAONE 4.</description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-16 20:53</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-16_20-53/</link>
+      <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-16_20-53/</guid>
+      <description>2026-04-16 20:51 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;🎯 关键词相关PR (1个) #45441: fix(DSV3): parity between nativeDeepseekV3MoEand remote official implementation&#xA;相关：deepseek v4, deepseek-v4, deepseekv4。PR标题中提到&#34;nativeDeepseekV3MoE&#34;，与deepseek v4系列相关。&#xA;完整PR列表 (42个) ○ #45441: fix(DSV3): parity between nativeDeepseekV3MoEand remote official implementation [open] ○ #45475: chore(qa): split out mlinter [open] ○ #45474: chore: bump doc-builder SHA for main doc build workflow [open] ○ #45473: Fix EP: RouterParallel shape, tp_plan property, grouped_mm sentinels [open] 在使用 TRL 进行 Qwen3-30B-A3B SFT 训练时，发现三个与 Expert Parallelism (EP) 相关的 bug，导致结果错误或损失为 NaN。该 PR 旨在修复这些 bug，确保 EP 模式下的正确性和稳定性。核心改动包括：修复 `RouterParallel` 中的 score 和 index 配对问题，确保权重加载使用正确的计划，以及处理 `grouped_mm_experts_forward` 中的 EP 哨兵值。这些修复引入了多个测试用例，验证了修复效果。当前状态为已通过 8×H100 的端到端验证，与非 EP 模式下的结果一致。 ○ #45471: Add EXAONE 4.</description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-16 21:20</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-16_21-20/</link>
+      <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-16_21-20/</guid>
+      <description>2026-04-16 21:20 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (6个) ○ #45475: chore(qa): split out mlinter [open] ○ #45474: chore: bump doc-builder SHA for main doc build workflow [open] ○ #45457: Allow loading Qwen Thinker &#39;base&#39; models without generative head [closed] 当前 qwen2_5_omni 和 qwen3_omni_moe 模型仅支持加载包含音频输出的 Talker 变体，限制了这些模型在仅需 token 嵌入的场景中的使用。此 PR 的目标是扩展这些模型的加载方式，使其可以通过 AutoModel 或 AutoModelForImageTextToText 等类加载，而无需使用 `trust_remote_code`。核心改动包括将 Qwen2_5OmniThinkerForConditionalGeneration 类映射到 `MODEL_FOR_MULTIMODAL_LM_MAPPING_NAMES`，从而支持多模态模型的加载。这些改动使得 Sentence Transformers 等工具可以更灵活地使用这些模型，而无需依赖特定的配置。当前状态良好，已通过相关测试，可以合并。 ○ #45455: [fix] Make Qwen2_5OmniProcessor warning a lot less noisy via warning_once [closed] 该 PR 解决了在使用非默认系统提示时，每次输入处理都会重复输出警告的问题。目标是减少不必要的警告信息，提高用户体验。核心改动包括将重复警告改为仅警告一次，并移除了 `apply_chat_template` 函数。这些改动消除了重复警告，简化了代码。当前状态是已删除相关警告和函数，建议在合并前运行特定的测试任务以确保稳定性。 ○ #45444: [fix] Always early return for non-Mistral models in _patch_mistral_regex [closed] 该 PR 解决了在加载非 Mistral 模型时错误地触发 Mistral 相关警告的问题。具体来说，当 `transformers_version` 为 4.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-04-13/</link>
+      <pubDate>Mon, 13 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-04-13/</guid>
+      <description>Summary 本次汇总覆盖 2026-04-05 – 2026-04-13 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, sgl-project/sgl-flash-attn, vllm-project/flash-attention, ai-dynamo/aiconfigurator, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-V3.2-Exp, deepseek-ai/awesome-deepseek-integration, deepseek-ai/smallpond, deepseek-ai/3FS, deepseek-ai/DeepSeek-OCR，共计 165 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/&#xA;TL;DR： - sgl-project/sglang：优化数据并行与专家并行通信路径，减少通信轮次，提升性能 7.7%；为 HiCacheHF3FS 存储后端添加 HybridModel 支持，确保与 V1 API 向后兼容；解决多个模型和后端的兼容性和性能问题。&#xA;- vllm-project/vllm：解决 DeepSeek V3 模型思考模式识别问题，引入无状态解析器；修复缓存请求和 GPU 块池管理问题；优化并行采样策略，提升系统稳定性和正确性；解决多个模型和后端的兼容性和性能问题。&#xA;- NVIDIA/nccl：修复网络接口选择逻辑错误，确保 NCCL 正确绑定到指定网络接口。&#xA;- vllm-project/flash-attention：优化 FA4 的 softmax 步骤，提升 GPT-OSS 模型解码和预填充阶段的性能。&#xA;- ai-dynamo/aiconfigurator：优化性能数据库查询，减少不必要的 3D 插值计算；解决用户指定的 TPOT 和 TTFT 约束未被正确应用的问题。&#xA;- ROCm/mori：重构 UMBP 架构，支持独立和分布式模式；解决 EP 派发/合并内核中处理大量 token 时的溢出问题。</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-04-07/</link>
+      <pubDate>Tue, 07 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-04-07/</guid>
+      <description>Summary 本次汇总覆盖 2026-03-30 – 2026-04-07 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-V3, deepseek-ai/DeepSeek-V3.2-Exp, deepseek-ai/awesome-deepseek-integration, deepseek-ai/smallpond, deepseek-ai/3FS，共计 146 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/&#xA;TL;DR： - sgl-project/sglang：集成 RISC-V 向量扩展内核，优化 ngram 投机解码，修复调度器和 IPC 权重更新中的多个问题，增强错误处理和代码可维护性。&#xA;- vllm-project/vllm：解决 JSON 特性解析、XPU 和 ROCm 后端支持、注意力操作标准化、API 端点错误响应、内存优化和性能提升等问题。&#xA;- NVIDIA/nccl：修复多通信器拓扑一致性、优化 MoE 热循环性能、减少 GPU-CPU 同步、提高 AMD 多插槽系统带宽和延迟，优化内存占用。&#xA;- ROCm/mori：解决大容量 DRAM 缓冲区注册、自动调优配置、XGMI 转移状态和跨进程路由问题，增强 RDMA CQE 失败处理和跨类型性能测量。&#xA;- deepseek-ai/DeepEP：支持 P2P 消息头中的 topk 权重传输，修复 NVLink 布线路径中的主机名检查，重构远程秩可见性问题。&#xA;- deepseek-ai/DeepSeek-V3.2-Exp：提供高效的 Hugging Face FP8 safetensors 转换工具，支持块级去量化和断点续传。</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-03-30/</link>
+      <pubDate>Mon, 30 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-03-30/</guid>
+      <description>Summary 本次汇总覆盖 2026-03-23 – 2026-03-30 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/DeepSeek-V3, deepseek-ai/awesome-deepseek-integration, deepseek-ai/3FS，共计 140 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/&#xA;TL;DR： - sgl-project/sglang：引入多个优化和新功能，包括提升模型加载效率、优化性能瓶颈、解决多模态和多 GPU 问题、支持新模型和 NPU，以及改进调度器和测试工具。&#xA;- vllm-project/vllm：修复多个模型和后端兼容性问题，引入 TurboQuant 压缩方案，优化 KV 缓存管理和性能，增强安全性和测试稳定性。&#xA;- NVIDIA/nccl：解决编译器警告和多 GPU 通信问题，优化带宽度量和内存池管理。&#xA;- ROCm/mori：引入运行时加载机制、JAX 支持、跨类型性能测量、XGMI 内核重构，以及 CI 和 SPDK 后端优化。&#xA;- deepseek-ai/DeepSeek-V3：避免输入张量的原地修改，提高代码的安全性和可组合性。&#xA;- deepseek-ai/3FS：修复 IoRing 超时检查机制的逻辑错误，确保超时机制按预期运行。&#xA;Contents sgl-project/sglang vllm-project/vllm NVIDIA/nccl vllm-project/flash-attention ROCm/mori deepseek-ai/DeepGEMM deepseek-ai/DeepEP deepseek-ai/DeepSeek-V3 deepseek-ai/awesome-deepseek-integration deepseek-ai/3FS Details sgl-project/sglang ○ #21662: [Fix] Fix weight_loader property assignment for qwen3-next FP8 models [open] ○ #21661: feat: load / save model weights from / to mooncake store [open] 该 PR 旨在通过引入 MooncakeStoreConnector 和支持批量传输的 RemoteModelLoader，提升 SGLang 在远程存储后端（如 MooncakeDistributedStore）上的模型权重加载和保存效率。核心改动包括实现 MooncakeStoreConnector，支持零拷贝批量传输，并更新模型加载器以利用这些批量操作。这些改动显著减少了模型加载时间，例如 Qwen3-235B-A22B 的加载时间从原来的单键操作减少到 16 秒。此外，PR 还引入了一个 CLI 脚本 `save_model_remote_loader`，方便用户将模型权重保存到远程存储。当前状态包括修复 `weight_iterator` 的运行时错误，改进 `list` 方法的实现，移除调试打印，并确保 `draft_url` 和 `server_args` 的正确处理。 ○ #21660: [GLM-V and GLM-4.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-03-23/</link>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-03-23/</guid>
+      <description>Summary 本次汇总覆盖 2026-03-16 – 2026-03-23 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/DeepSeek-VL2, deepseek-ai/DeepSeek-V3, deepseek-ai/awesome-deepseek-integration, deepseek-ai/3FS, deepseek-ai/Engram，共计 131 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/&#xA;TL;DR： - sgl-project/sglang：优化多个模型的性能和稳定性，包括 GLM-5、Whisper、Mamba radix 缓存、H100 GPU 上的 FA3 后端、HunYuan-MT1.5 模型的 PCG 重编译问题、AWQ 量化框架的模块化重构、多模态嵌入缓存的固定功能、多模态张量哈希函数的零拷贝优化、SGLang 运行时在 ROCm 设备上的性能优化等。&#xA;- vllm-project/vllm：解决多个硬件平台上的精度和性能问题，包括 gfx90a、ROCm gfx950、gfx12、SM100、A100、SM120 等，优化 Triton 内核、KV 缓存管理、MoE 内核、GDN 层、线性注意力机制、GPU 内存管理等。&#xA;- NVIDIA/nccl：提高代码质量和减少运行时内存占用，通过启用编译器警告标志和启用 `ncclMemOffload`。&#xA;- vllm-project/flash-attention：优化 FP8 注意力机制的预填充性能，减少寄存器溢出。&#xA;- ROCm/mori：优化 XGMI 后端的性能，引入基于 SDMA 的 ReduceScatter 集体操作，提升 UMBP SSD 存储的吞吐量和 IO 控制能力，支持 GET 操作，优化 AsyncLL 派发/组合内核。</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-03-16/</link>
+      <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-03-16/</guid>
+      <description>Summary 本次汇总覆盖 2026-03-02 – 2026-03-16 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, sgl-project/sgl-flash-attn, vllm-project/flash-attention, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-V3, deepseek-ai/awesome-deepseek-integration, deepseek-ai/open-infra-index, deepseek-ai/3FS, deepseek-ai/DeepSeek-OCR，共计 170 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/&#xA;TL;DR： - sgl-project/sglang：#20653: [BugFix] PPMissingLayer in DummyModelLoader；#20651: feat: l2 add l3 meta cache；#20648: [CI] Add Llama 3.1 8B Instruct FP4 CI test on SM120；...等38个重要PR&#xA;- vllm-project/vllm：#37136: [Performance][Model Loader] Skip non-local expert weights during EP model loading；#37135: [Bugfix] Fix FP16 overflow in NVFP4 Marlin kernel epilogue and forward input_global_scale on SM75；#37132: fix: re-record prepare_inputs_event after sample_tokens for spec decode；.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-03-02/</link>
+      <pubDate>Mon, 02 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-03-02/</guid>
+      <description>Summary 本次汇总覆盖 2026-02-09 – 2026-03-02 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/DeepSeek-VL2, deepseek-ai/DeepSeek-V3, deepseek-ai/awesome-deepseek-integration, deepseek-ai/DeepSeek-Math, deepseek-ai/Janus, deepseek-ai/3FS, deepseek-ai/DeepSeek-OCR, deepseek-ai/DeepSeek-OCR-2, deepseek-ai/DeepSeek-Math-V2, deepseek-ai/Engram，共计 161 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/&#xA;TL;DR： - sgl-project/sglang：增强 OpenAI 聊天完成端点功能，优化 Mamba 模型性能，解决多种类型不匹配和运行时错误，提升 speculative decoding 的鲁棒性和性能，优化 FlashInfer RoPE 和内存布局，提高 SGLang Diffusion 模型性能。&#xA;- vllm-project/vllm：支持多模态模型和跨模态模型，优化 AWQ 和 GPTQ 量化模型性能，减少 VRAM 占用，提高 MLA 模型上下文长度，解决多种类型不匹配和内存泄漏问题，优化图像和视频预处理性能，增强 KV 缓存交换机制。&#xA;- NVIDIA/nccl：修复单节点多进程设置中 opCount 不递增的问题，保持与多节点场景的一致性。&#xA;- ROCm/mori：增强 `dispatch_combine` 操作的健壮性，优化节点内调度和组合的延迟，减少节点间通信的内存带宽需求。&#xA;- deepseek-ai/DeepEP：解决 `internode_ll` 和 `intranode` 结合时的性能问题，修正数据偏移和多阶段并发执行。&#xA;- deepseek-ai/DeepSeek-VL2：修复 `VisionTransformer.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-02-09/</link>
+      <pubDate>Mon, 09 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-02-09/</guid>
+      <description>Summary 本次汇总覆盖 2026-02-02 – 2026-02-09 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-V3, deepseek-ai/Janus, deepseek-ai/smallpond, deepseek-ai/3FS, deepseek-ai/DeepSeek-OCR，共计 126 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/&#xA;TL;DR： - sgl-project/sglang：#18454: [Diff]: support SGLANG_TORCH_PROFILER_DIR environment variable for profiler log directory；#18452: [AMD] Fix AMD daily image release；#18451: Use aiter_dsv3_router_gemm kernel if number of experts &amp;lt;= 256.；...等26个重要PR&#xA;- vllm-project/vllm：#34108: [ROCm][Bugfix] Resolve Dynamo tracing crash from amdsmi calls in on_gfx* arch detection；#34107: [CI] Remove empty image_size_factors for fuyu, glm4_1v, glm_ocr；#34102: [DP] Only use DP padding when cudagraphs are actually used；.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-02-02/</link>
+      <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-02-02/</guid>
+      <description>Summary 本次汇总覆盖 2026-01-26 – 2026-02-02 时间范围，涉及仓库 deepseek-ai/DeepSeek-OCR-2, sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, ROCm/mori, deepseek-ai/DeepEP, deepseek-ai/DeepSeek-V3, deepseek-ai/DeepSeek-Coder-V2，共计 119 个 PR。&#xA;deepseek发布了新仓库：DeepSeek-OCR-2&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/&#xA;TL;DR： - deepseek-ai/DeepSeek-OCR-2：修复文件名处理和路径拼接问题，提高跨平台兼容性和代码健壮性。&#xA;- sgl-project/sglang：优化 Mamba 模型推理吞吐量，增强在线权重更新稳定性，支持新模型和功能，提升性能和代码质量。&#xA;- vllm-project/vllm：修复调度器和模型处理中的多个问题，优化性能和内存使用，提高系统吞吐量和稳定性。&#xA;- NVIDIA/nccl：修复 A100 GPU 上的树图搜索问题，提升多节点训练性能。&#xA;- ROCm/mori：引入 VMM 堆支持，优化 RDMA 设备资源释放，提供低开销的 GPU 内核性能分析工具。&#xA;- deepseek-ai/DeepEP：移除自定义 ibgda_device.cu 文件，支持多种传输后端，提高性能和兼容性。&#xA;Contents deepseek-ai/DeepSeek-OCR-2 sgl-project/sglang vllm-project/vllm NVIDIA/nccl ROCm/mori deepseek-ai/DeepEP deepseek-ai/DeepSeek-V3 deepseek-ai/DeepSeek-Coder-V2 Details deepseek-ai/DeepSeek-OCR-2 ○ #14: Fix fragile filename generation in run_dpsk_ocr2_pdf.py [open] 在处理文件名时，发现手动字符串替换导致输出文件名错误，且在 Windows 系统上手动拼接路径可能引发问题。该 PR 的目标是修复这些问题，确保文件名生成的正确性和跨平台兼容性。核心改动是使用 os.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-01-26/</link>
+      <pubDate>Mon, 26 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-01-26/</guid>
+      <description>Summary 本次汇总覆盖 2026-01-19 – 2026-01-26 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/awesome-deepseek-integration, deepseek-ai/3FS, deepseek-ai/Engram，共计 119 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker/&#xA;TL;DR： - sgl-project/sglang：解决了多个运行时错误和性能问题，包括张量配置错误、CI 重建依赖问题、GLM 模型评估准确性、性能仪表盘建立、CLI 本地路径处理、推理块解析、日志可见性、KV 缓存缩放、性能基准测试、注意力计算准确性、MOVA 模型集成、文档组织、区域编译、显示错误修正、模型列表更新、NPU 准确率提升、CPU 卸载控制、csgmv 后端嵌入层支持、矩阵乘法回退、CI 流程改进、认证模块提取、推理解析模块化、性能测试框架、路径计算、依赖组简化、CI 性能指标收集、测试套件改进、流式传输稳定性、LoRA 测试禁用、NSA indexer 测试配置。&#xA;- vllm-project/vllm：优化了 CPU 到 GPU 数据复制、FP8 输入量化、模型复杂逻辑简化、数据并行引擎 ID 分配、权重加载、分布式通信支持、FlashInfer 模块统一、KV 缓存数据类型解析、Llama4 模型输出、MTP 模型加载、EPLB 逻辑专家 ID 捕获、管道并行组判断、M-RoPE 位置计算、模型加载错误、代码重构、批处理不变性验证、KV 缓存卸载、模型运行器故障、测试稳定性、验证异常处理、内存信息获取、随机种子设置、文档注释、Apple silicon 文档、轮子上传脚本、模型兼容性、工作进程优雅终止。&#xA;- deepseek-ai/DeepEP：解决了 NVSHMEM 3.5.19 升级后的定义链接错误，通过条件编译避免主机编译器错误。&#xA;- deepseek-ai/3FS：解决了 `Address` 类型转换的严格别名规则问题，更新了 `speed_up_quit` 函数的测试注释，修复了内存泄漏问题，记录了 `update_chunk` 函数的同步消费假设，解决了 `SimpleRingBuffer` 的多个问题。</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-01-23/</link>
+      <pubDate>Fri, 23 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-01-23/</guid>
+      <description> Summary 本次汇总覆盖 2026-01-20 – 2026-01-23 时间范围，涉及仓库 deepseek-ai/DeepEP, NVIDIA/nccl，共计 2 个 PR。&#xA;往期邮件汇总：https://kaswary.github.io/PR-Tracker/&#xA;TL;DR： - deepseek-ai/DeepEP：通过条件编译解决了 NVSHMEM 3.5.19 升级导致的定义链接错误，确保与 NVSHMEM 设备 API 兼容。&#xA;Contents deepseek-ai/DeepEP NVIDIA/nccl Details deepseek-ai/DeepEP ○ #557: Fix linking error with nvidia-nvshmem-cu12 3.5.19 [closed] 在升级到 NVSHMEM 3.5.19 后，DeepEP 项目遇到了多个定义链接错误，原因是 NVSHMEM 3.5.19 需要使用 `-rdc=true` 编译选项，而 DeepEP 的主机编译器（g++）无法识别该选项。为了解决这一问题，该 PR 通过在 `device_host_transport/nvshmem_common_ibgda.h` 头文件中添加 `#ifdef __CUDACC__` 守卫，确保该头文件仅在 nvcc 编译设备代码时被包含，从而避免了主机编译器错误地定义符号。这一改动消除了重复符号错误，同时保持了与 NVSHMEM 设备 API 的兼容性。当前 PR 已解决该问题，未引入新的限制或配置项。 NVIDIA/nccl ○ #1998: Update issues template [open] </description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-01-19/</link>
+      <pubDate>Mon, 19 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-01-19/</guid>
+      <description>Summary 本次汇总覆盖 2026-01-16 – 2026-01-19 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, deepseek-ai/DeepEP，共计 102 个 PR。&#xA;往期邮件汇总：https://kaswary.github.io/PR-Tracker/&#xA;TL;DR： - sgl-project/sglang：#17310: [TileLang] Align TileLang NSA kernel with current TileLang and stabilize output；#17309: [Refactor] Setfp4-gemm-backend=autoon SM100 and renamefp4-gemm-backendwithflashinfer_prefix；#17307: [Fix] Support string type for extra_config in HiCacheStorageConfig；...等26个重要PR&#xA;- vllm-project/vllm：#32565: [Bugfix] EPLB - Mistral 3 Large；#32564: imports；#32563: benchmark refactor；...等29个重要PR&#xA;- deepseek-ai/DeepEP：#565: mnnvl: normal mode supports mnnvl&#xA;Details sgl-project/sglang ○ #17314: [performance] qwen3 performance acceleration. [open] ○ #17313: [Auto Sync] Update piecewise_cuda_graph_runner.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-01-12/</link>
+      <pubDate>Mon, 12 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-01-12/</guid>
+      <description>Summary 本次汇总覆盖 2026-01-09 – 2026-01-12 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, deepseek-ai/DeepEP，共计 101 个 PR。&#xA;往期邮件汇总：https://kaswary.github.io/PR-Tracker/&#xA;TL;DR： - sgl-project/sglang：增强 Deepseek V3.2 模型文档，集成 PPLX A2A 派发器，优化 MoE 系统性能，解决 CI 稳定性问题，改善代码结构和可维护性，优化多节点环境下的资源利用，提高模型加载和运行的稳定性，修复 FP8 量化内核竞态条件，集成 NVIDIA FP4 量化支持，重构 JIT 内核代码结构，提高 FlashAttention4 测试效率，优化多模态生成运行时的可观察性，增强解码统计信息的准确性，提高代码的模块化和可维护性，解决字符串比较问题，清理未使用的参数，提高代码的可读性和维护性，重构编译框架中的操作注册机制。&#xA;- vllm-project/vllm：引入心跳机制确保 DP 引擎的优雅退出，支持 ServerlessLLM 快速检查点加载，修复多模态模型使用 LoRA 时的非法内存访问，优化模型加载速度，重构 MoE 基线实现，提高测试性能，增强 MoE 专家内核的能力查询机制，解决池化类型配置问题，优化调度器的 token 预算管理，修复 Responses API 中的前言处理问题，优化 M-RoPE 位置计算，提高多 GPU 环境下的性能，支持部分消息生成，修复 ROCm 平台上的批量解码错误，解决远程代码执行漏洞，简化注意力元数据的构建过程，优化 GPU 缓冲区管理和输入准备，支持结构化输出与投机解码的兼容性，优化 QPS 以满足 SLA 要求，解决序列分类模式下的模型加载问题，优化离线聊天推理的输出显示，支持 DeepSeek V3 和 V3.2 模型的投机解码，提高测试的稳定性和可靠性，优化请求中止时的性能，增强模型加载的安全性，引入 64 位索引支持，解决 CPU 设备上的 AOT 编译问题。</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-01-09/</link>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-01-09/</guid>
+      <description>Summary 本次汇总覆盖 2026-01-06 – 2026-01-09 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, deepseek-ai/DeepEP, NVIDIA/nccl，共计 102 个 PR。&#xA;往期邮件汇总：https://kaswary.github.io/PR-Tracker/&#xA;TL;DR： - sgl-project/sglang：优化视频生成性能，提升 Flash Attention 实现，修复 WSL 环境下的 CPU 拓扑解析，支持 AMD GPU 的 `timestep_embedding`，优化稀疏注意力机制，解决 HiCache 调度死锁，增强模型加载时的资源管理，迁移和重构端到端测试，提高测试的组织性和可维护性。&#xA;- vllm-project/vllm：优化代码可读性和维护性，支持 3D MoE 权重加载，增强 FlashInfer 内存访问安全性，恢复模型精度，支持 ROCm 平台，修复多模态模型的注意力机制，改善错误消息的安全性，更新多模态模型的文档，清理过时的兼容性逻辑，修复 LoRA 适配器的计算错误，提高测试覆盖率和可靠性。&#xA;- deepseek-ai/DeepEP：自动检测并启用 Fabric 支持，简化用户和框架的使用流程。&#xA;- NVIDIA/nccl：修复 NCCL Profiler 中 kernelCh 事件的结束时间记录问题，提供准确的性能数据。&#xA;Details sgl-project/sglang ○ #16792: chore: bump mooncake version to 0.3.8.post1 [open] ○ #16790: [BugFix]support torch.compile use flash attention v4 [open] 在使用 sglang 生成视频时，启用 --enable-torch-compile 选项会导致运行结束时出现错误。该 PR 的目标是解决这一问题并提高视频生成的性能。核心改动包括在 flash_attn_varlen_func 函数上添加 @torch.</description>
+    </item>
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-01-08/</link>
+      <pubDate>Thu, 08 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-01-08/</guid>
+      <description>Summary 本次汇总覆盖 2026-01-05 – 2026-01-08 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, deepseek-ai/DeepEP, NVIDIA/nccl，共计 104 个 PR。&#xA;TL;DR： - sgl-project/sglang：#16726: [Fix] Apply --dist-timeout to GroupCoordinator process groups；#16725: support smem in per_token_quant_fp8 kernel；#16720: [diffusion] model: wan tp+usp optimize；...等22个重要PR&#xA;- vllm-project/vllm：#31965: [Model Runner V2] Simplify BlockTables with UVA；#31964: [KVConnector] Support worker -&gt; scheduler metadata；#31962: [Kernel][MoE] fix computation order of MoE weight multiplication and improve flow；...等36个重要PR&#xA;- deepseek-ai/DeepEP：#557: Fix linking error with nvidia-nvshmem-cu12 3.5.19&#xA;- NVIDIA/nccl：#1973: Bug fix: profiler kernelch event type field</description>
+    </item>
+  </channel>
+</rss>

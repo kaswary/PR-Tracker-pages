@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-22 14:00</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-22 14:00</h1>
+  <p><time>2026-04-22</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-22 14:00 周三</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (4个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45567" style="text-decoration: none; color: #007bff;">#45567</a>: Move some conversion mappings to PrefixChange [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45566" style="text-decoration: none; color: #007bff;">#45566</a>: fix: raise clear error when tokenizer config uses v5 list format on older versions [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在 transformers 版本低于 5.0 时，加载使用 v5 样式列表格式的 `extra_special_tokens` 的模型会导致 `_set_model_specific_special_tokens()` 方法抛出误导性的 `AttributeError`。该 PR 的目标是通过在 `_set_model_specific_special_tokens()` 方法中添加一个 `isinstance(special_tokens, list)` 检查，来明确提示用户升级到 transformers 5.0.0 或更高版本。这一改动将帮助用户更快地识别和解决版本不匹配问题，避免不必要的调试路径。当前 PR 已被标记为需要维护者审核。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45565" style="text-decoration: none; color: #007bff;">#45565</a>: fix: remove stale num_return_sequences warning in paged generate [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45564" style="text-decoration: none; color: #007bff;">#45564</a>: Gemma3n and Gemma4 cannot use rotary kernel [<strong>open</strong>]
+</div>
+
+  </div>
+</body>
+</html>

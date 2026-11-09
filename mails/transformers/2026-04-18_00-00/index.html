@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-18 00:00</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-18 00:00</h1>
+  <p><time>2026-04-18</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-18 00:00 周六</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (2个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45494" style="text-decoration: none; color: #007bff;">#45494</a>: Fix: propagate quantization_config to text sub-config for composite models in AutoModelForCausalLM [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了加载量化复合模型时出现的问题。问题在于，当使用 `AutoModelForCausalLM.from_pretrained` 加载复合模型时，`auto_factory.py` 会将复合配置替换为文本子配置，导致量化配置丢失。这使得 `modeling_utils.py` 无法正确识别预量化模型，从而引发 `ValueError`。为了解决这个问题，PR 在交换到文本子配置后，如果父复合配置中存在量化配置且文本子配置中没有，则将量化配置传播到文本子配置。这确保了量化方法能够正确识别和处理预量化模型。建议在合并前运行 `run-slow: auto` 以验证修复效果。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45495" style="text-decoration: none; color: #007bff;">#45495</a>: revert sha commit pointing to main for transformers_amd_ci_  workflows [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 更新了 AMD 调度 CI 工作流，使其引用 `huggingface/hf-workflows` 仓库的 `main` 分支，而不是固定的提交 SHA。这一改动旨在使调度的 CI 运行跟踪最新的上游工作流定义。然而，使用可变引用（如 `@main`）可能会导致 CI 行为在没有本地代码更改的情况下发生变化，影响可重现性并可能意外中断调度运行。当前状态是已更新相关工作流文件，但需要注意潜在的可重现性和安全性问题。
+</div>
+</div>
+</div>
+
+  </div>
+</body>
+</html>

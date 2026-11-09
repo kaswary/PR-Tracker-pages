@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-21 18:00</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-21 18:00</h1>
+  <p><time>2026-04-21</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-21 18:00 周二</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (2个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45547" style="text-decoration: none; color: #007bff;">#45547</a>: Add disable_mmap kwarg to from_pretrained with hf-mount auto-detection [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在 FUSE 文件系统上加载 safetensors 模型时可能导致 Python 进程死锁的问题。通过引入 `disable_mmap` 参数，用户可以选择禁用内存映射，从而避免因并发页面故障导致的死锁。核心改动包括添加 `_is_on_hf_mount` 辅助函数来检测路径是否在特定的 FUSE 挂载点上，并在 `load_state_dict` 和 `LoadStateDictConfig` 中引入 `disable_mmap` 参数。这些改动对现有用户的行为没有影响，除非他们在 FUSE 文件系统上使用该参数。测试用例确保了新功能的正确性和兼容性。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45546" style="text-decoration: none; color: #007bff;">#45546</a>: feat: Add GGUF loading support for Llama 4 (text) [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 Llama 4 文本模型不支持 GGUF 格式加载的问题。通过添加对 GGUF 格式的支持，用户现在可以使用 `AutoModelForCausalLM.from_pretrained` 方法加载 Llama 4 模型的 GGUF 文件。此改动与现有的 gemma3_text GGUF 路径保持一致，仅支持文本部分，不包括视觉张量。此 PR 已经得到了相关维护者的关注和审查请求。
+</div>
+</div>
+</div>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-21 20:00</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-21 20:00</h1>
+  <p><time>2026-04-21</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-21 20:00 周二</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (2个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45549" style="text-decoration: none; color: #007bff;">#45549</a>: fix: apply channel averaging correctly in audio feature extractors [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 修复了多个音频特征提取器中通道平均计算的错误。错误导致批处理张量输入在最后一个维度上进行平均而不是在通道维度上，以及批处理序列输入的平均结果未正确写回 raw_speech。此更改通过在通道维度上使用 mean(1) 并将单声道转换后的样本写回 raw_speech 来解决这些问题。这些修复不会改变现有 API 的使用方式，但会确保输出的正确性。当前状态为等待指定的测试任务运行。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45548" style="text-decoration: none; color: #007bff;">#45548</a>: Fix EP + DeepSpeed ZeRO-3 loading via accelerate launch [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在使用 Expert Parallelism (EP) 和 DeepSpeed ZeRO-3 时，通过 `accelerate launch` 加载模型会因为两者初始化方式的冲突而挂起。该 PR 的目标是解决这一问题，使 EP 和 ZeRO-3 能够兼容工作。核心改动包括在 `from_pretrained` 中为 EP+DS 路径使用标准的非 ZeRO-3 初始化方式，确保 EP 的 sharding hooks 正常工作，并在模型加载后通过 `deepspeed.initialize()` 包装模型。这些改动确保了模型在 EP 和 ZeRO-3 共存时能够正确加载和初始化。当前状态是通过测试验证了该 PR 的有效性，但需要进一步的审查和确认。
+</div>
+</div>
+</div>
+
+  </div>
+</body>
+</html>

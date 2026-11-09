@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-23 16:00</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-23 16:00</h1>
+  <p><time>2026-04-23</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-23 16:00 周四</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (4个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45597" style="text-decoration: none; color: #007bff;">#45597</a>: Add Granite 4.1 Vision (granite4_vision) [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 为 Hugging Face Transformers 库添加了对 IBM 的 Granite 4.1 Vision 模型的支持。目标是集成这一多模态视觉-语言模型，以增强企业文档理解能力。核心改动包括引入 SigLIP2 作为视觉编码器、4×4 窗口 Q-Former 投影器、以及通过 LayerDeepstack 和 SpatialDeepstack 机制在多个层面上注入视觉特征。这些改动对模型的构建和使用方式产生了影响，新增了多个文件和配置，同时通过自动注册和测试确保了集成的完整性和正确性。当前状态是所有单元测试通过，建议在合并前运行特定的 CircleCI 任务以进一步验证。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45596" style="text-decoration: none; color: #007bff;">#45596</a>: fix 2 failed test cases for blt model on XPU [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45595" style="text-decoration: none; color: #007bff;">#45595</a>: Add unified Cache-layer management for GLM-5 DSA Indexer keys [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 将 GLM-5 DSA IndexCache 的自管理缓存机制迁移到标准的 `past_key_values` 缓存层中，以解决现有实现中的生命周期管理、缓存卸载和逻辑重复问题。通过在 `CacheLayerMixin` 和 `DynamicLayer` 中引入 `indexer_keys` 属性和相关方法，确保缓存键与注意力缓存同步管理。这不仅简化了下游模型的开发，还增强了对 beam-search 重排序、缓存裁剪、批量选择和重复等操作的支持。此改动对公共 API 无影响，现有检查点保持兼容。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45594" style="text-decoration: none; color: #007bff;">#45594</a>: fix(utils): Resolve backbone utils test regressions [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 修复了两个回归问题。首先，删除了 `load_backbone` 中的 `use_pretrained_backbone` 参数，改为通过 `from_pretrained` 加载预训练权重，并更新了相关测试以匹配新的设计。其次，修正了 `out_indices` 始终返回列表的断言，使其与之前的 PR 改动一致。这些修复提高了 CI 覆盖率，并确保了测试的正确性。当前 PR 已通过 CI 测试，确认修复了预期的问题。
+</div>
+</div>
+</div>
+
+  </div>
+</body>
+</html>

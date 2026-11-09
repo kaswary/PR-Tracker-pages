@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-20 14:00</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-20 14:00</h1>
+  <p><time>2026-04-20</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-20 14:00 周一</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (2个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45524" style="text-decoration: none; color: #007bff;">#45524</a>: utils: handle flash_attn missing from importlib packages_distributions without crashing [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在某些环境中，如 Python 3.13 和 ComfyUI 设备上，`flash_attn` 包的导入检查会因 `packages_distributions()` 中缺少相应键而引发 `KeyError`，导致整个导入过程失败。该 PR 的目标是修复这一问题，确保在 `flash_attn` 包未正确安装时不会引发异常。核心改动是将四个引发异常的字典访问替换为 `.get(name, [])`，从而避免 `KeyError`。这一改动不会影响现有行为，仅在 `flash_attn` 包未正确安装时返回 `False`。当前状态良好，无需额外配置或回退机制。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45523" style="text-decoration: none; color: #007bff;">#45523</a>: Fix Seq2SeqLM ExecuTorch export: add encoder_attention_mask to decoder and use static encoder shapes [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 `src/transformers/integrations/executorch.py` 中的两个 bug，这些 bug 导致 T5 模型在 ExecuTorch 导出时无法正确运行。第一个 bug 是 `encoder_attention_mask` 未传递给解码器，导致输出错误。第二个 bug 是动态编码器维度与静态 KV 缓存冲突，导致运行时错误。为了解决这些问题，PR 修改了相关模块的前向传播方法，添加了 `encoder_attention_mask` 参数，并去除了动态编码器维度。这些改动确保了 T5 模型在 ExecuTorch 导出后的输出与 HuggingFace `model.generate()` 完全一致。当前状态包括对自定义 T5 检查点的验证，以及对现有测试的扩展。
+</div>
+</div>
+</div>
+
+  </div>
+</body>
+</html>

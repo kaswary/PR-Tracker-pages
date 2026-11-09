@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PR Tracker Weekly Report</title>
+</head>
+<body>
+  <h1>PR Tracker Weekly Report</h1>
+  <p><time>2026-04-20</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    
+
+<h1><strong>Summary</strong></h1>
+<p>本次汇总覆盖 2026-04-20 – 2026-04-20 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, huggingface/transformers，共计 31 个 PR。</p>
+            
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+            
+<h2><strong>TL;DR：</strong></h2>
+<div style="margin-left: 2em;">
+<p>- sgl-project/sglang：修复路径过滤模式问题，优化 3D 卷积解码性能，解决 CFG-parallel 模式下挂起问题，增强 OpenTelemetry 跟踪，修复 AWQ 量化方法加载错误，调整 CI 测试 `est_time`，提高 Minimax2 稳定性和性能，减少预填充碎片化，优化 TBO 未启用时的计算，提高 gfx950 BF16 模型性能，解决 cu12 到 cu13 迁移问题，优化多节点编译同步。<br>- vllm-project/vllm：优化 GPT2 模型权重加载，调整 chat completion API 验证逻辑，修复 CompressedTensors W4A8 MoE 路径问题，减少层级重载机制的内存使用，修复混合键值缓存管理器正确性问题，解决测试中的 `AttributeError`，提高 CI 日志可见性和调试能力。<br>- NVIDIA/nccl：确保多播绑定未解除时正确报告错误，避免 CRIU + cuda-checkpoint 环境下产生损坏的进程镜像。<br>- huggingface/transformers：增加 `static_graph` 标志配置，提高 PyTorch DDP 模式的灵活性。</p>
+</div>
+            
+<h2><strong>Contents</strong></h2>
+<ul style="list-style-type: circle; font-size: 18px; margin-left: 2em; line-height: 1.6;">
+<li><a href="#repo-sgl-project-sglang">sgl-project/sglang</a></li>
+<li><a href="#repo-vllm-project-vllm">vllm-project/vllm</a></li>
+<li><a href="#repo-nvidia-nccl">NVIDIA/nccl</a></li>
+<li><a href="#repo-huggingface-transformers">huggingface/transformers</a></li>
+</ul>
+            
+<h1><strong>Details</strong></h1>
+        
+<h2 name="repo-sgl-project-sglang" id="repo-sgl-project-sglang" style="scroll-margin-top: 20px;"><strong>sgl-project/sglang</strong></h2>
+            
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23202" style="text-decoration: none; color: #007bff;">#23202</a>: always-on session in UnifiedRadixCache [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23201" style="text-decoration: none; color: #007bff;">#23201</a>: fix(ci): repair path filters regressed by #21482 [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 修复了 PR #21482 引入的路径过滤模式中的两个问题。这些问题导致某些关键文件（如 `Dockerfile` 和 `CMakeLists.txt`）未被正确识别，从而影响了构建过程。核心改动是将受影响的路径过滤模式从扩展名级别的否定形式改为基础名级别的否定形式，确保所有相关文件都能正确匹配。这些改动已应用于多个 CI 工作流文件，并通过本地测试验证了正确性。当前状态良好，CI 测试将重新触发以确认修复效果。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23200" style="text-decoration: none; color: #007bff;">#23200</a>: [Diffusion] Enable channels-last 3D VAE convs by default [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在通过默认启用 `SGLANG_DIFFUSION_VAE_CHANNELS_LAST_3D` 来优化 SGLang Diffusion 的 3D 卷积解码性能。具体来说，这一改动通过将 CUDA `nn.Conv3d` 权重转换为 `torch.channels_last_3d` 格式，使得解码过程能够利用 cuDNN/XMMA 内核，从而显著减少 `vol2col_kernel` 的调用时间。性能测试显示，在 H100 硬件上，解码时间平均减少了 50% 以上，整体性能提升了 1.5 到 1.7 倍。用户可以通过设置环境变量 `SGLANG_DIFFUSION_VAE_CHANNELS_LAST_3D=false` 来禁用这一优化。当前状态良好，已通过多项验证测试，未发现明显的正确性回归。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23199" style="text-decoration: none; color: #007bff;">#23199</a>: Add HunyuanVideo ModelOpt FP8 diffusion support [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23198" style="text-decoration: none; color: #007bff;">#23198</a>: [diffusion] Fix --warmup-resolutions hang with --enable-cfg-parallel [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在启用 CFG-parallel 模式下启动 SGLang-diffusion 时出现的 30 分钟静默挂起问题。核心改动包括在合成 warmup 请求时显式设置 `do_classifier_free_guidance=True` 和 `negative_prompt="warmup"`，以确保 rank 1 生成有效的 `noise_pred_uncond`，并添加了对非 CFG 请求的验证机制，防止未来出现类似问题。这些改动消除了 30 分钟的挂起时间，确保了 warmup 和真实请求的正常处理。当前状态包括通过了所有相关单元测试和集成验证，但未来还需进一步优化 `gloo` 超时机制和 `Req` 构造逻辑。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23197" style="text-decoration: none; color: #007bff;">#23197</a>: feat(observability): add OpenTelemetry tracing for all speculative decoding workers [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 OpenTelemetry 跟踪在默认路径（EAGLE + overlap 模式）下缺失的问题。目标是确保所有涉及推测解码的 worker 都能正确记录跟踪信息。核心改动包括在 `eagle_worker_v2.py`、`multi_layer_eagle_worker.py`、`multi_layer_eagle_worker_v2.py` 和 `dflash_worker.py` 中添加了 `set_time_batch` 和 `get_global_tracing_enabled` 仪器化代码。这些改动确保了在跟踪启用时，推测解码的各个阶段都能被正确记录，而在跟踪禁用时不会引入额外开销。当前状态为所有相关文件已修改，代码格式和风格符合 SGLang 指南。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23196" style="text-decoration: none; color: #007bff;">#23196</a>: docs: update model names and fix doc issues (related to #3596) [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23195" style="text-decoration: none; color: #007bff;">#23195</a>: [Bugfix] Guard .weight access in DeepseekV2AttentionMLA for AWQ / compressed-tensors [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在加载使用 `compressed_tensors` 包装的 AWQ 量化方法的 DeepseekV2 架构检查点时，由于 `ReplicatedLinear` 对象缺少 `weight` 属性而导致的 `AttributeError`。为了解决这个问题，PR 引入了一个 `_get_fused_qkv_a_proj_weight` 辅助函数，该函数在三个受影响的初始化调用点中安全地获取 `weight` 属性，如果获取失败则禁用优化路径。这一改动确保了量化模型能够正确加载，而不会影响之前能够成功加载的模型的性能或输出。当前 PR 已通过代码格式检查和单元测试，文档和用户行为没有变化。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23191" style="text-decoration: none; color: #007bff;">#23191</a>: chore: update CI test est_time values [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 更新了 CI 测试注册调用中的 `est_time` 值，基于最近 15 次成功执行的 90th 百分位数，以保持 LPT 负载均衡算法的准确性。核心改动包括对 254 个测试的 `est_time` 值进行调整，其中 28 个测试的时间变化显著。这些调整确保了测试在并行 CI 作业中的高效分配。建议将 `est_time` 的最小值设置为 1 秒，以避免调度问题。当前 PR 已生成并建议进一步审查。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23190" style="text-decoration: none; color: #007bff;">#23190</a>: [NPU] add split_qkv_tp_rmsnorm_rope ops for minimax2 & fix eagle3 hidden states capture in dp attn mode [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在为 Minimax2 添加 split_qkv_tp_rmsnorm_rope 操作，并修复 cudagraph+eagle3+dp-attention 在批量大小大于 1 时的崩溃错误。核心改动包括在 `forward_prepare_npu` 方法中引入了对空 `hidden_states` 的短路逻辑，以防止在分布式设置中出现挂起问题，并移除了不必要的注释代码。这些改动提高了代码质量和稳定性，同时确保了在特定条件下的正确性和性能。当前 PR 已提供准确性和速度测试结果，但需要进一步的代码格式化、单元测试和文档更新。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23189" style="text-decoration: none; color: #007bff;">#23189</a>: Feat/prefill delayer queue trigger [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+现有 `PrefillDelayer` 仅提供基于槽位的触发机制，在大规模部署中几乎不触发，导致预填充碎片化问题。此 PR 引入了基于队列的触发机制，并通过设置 `--prefill-delayer-queue-min-ratio` 和 `--prefill-delayer-max-delay-ms` 来控制预填充延迟，以减少碎片化并提高吞吐量。新机制与现有槽位触发机制叠加使用，通过实验验证在高并发下显著提升了吞吐量，但增加了部分延迟。当前状态良好，已提供详细的性能测试结果和配置选项。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23188" style="text-decoration: none; color: #007bff;">#23188</a>: fix(tbo): skip TBO-only work in MLP-sync when TBO is disabled [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在当前实现中，即使 TBO 未启用，`prepare_mlp_sync_batch_raw` 仍会调用 `TboDPAttentionPreparer.prepare_all_gather`，导致在 `enable_mixed_chunk=True` 时因 `compute_split_seq_index` 未实现而引发错误。该 PR 的目标是修复这一问题，确保在 TBO 未启用时不再调用 `compute_split_seq_index`。核心改动是当 TBO 未启用时，直接返回 `(local_can_run_tbo=False, local_forward_mode)`，避免不必要的计算。这一改动不会影响现有行为，因为 `compute_output` 会忽略 `local_tbo_split_seq_index`。当前 PR 已完成代码格式化、单元测试和文档更新，并通过了准确性和速度测试。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23186" style="text-decoration: none; color: #007bff;">#23186</a>: [AMD] Fused qk rmsnorm bf16 for amd/Kimi-K2.5-MXFP4 [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在 gfx950 (MI355) 上运行 BF16 DeepSeek 模型时，MLA QK layernorm 路径未能使用 aiter 的融合内核，而是回退到 PyTorch。该 PR 通过修改 `forward_mla.py` 中的条件判断，使 gfx950 能够使用 BF16 融合内核，从而提高性能和准确性。核心改动包括调整条件判断逻辑和添加必要的导入语句。此 PR 依赖于 aiter 的相应更改，并通过准确性和速度测试验证了改进效果。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23184" style="text-decoration: none; color: #007bff;">#23184</a>: Cascade attention kernels [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23183" style="text-decoration: none; color: #007bff;">#23183</a>: Fix CUDA 13 cudaMemcpyBatchAsync segfault and restore hicache CI [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 cu12 到 cu13 迁移过程中遇到的三个 CI 问题，确保受影响的测试在 CUDA 13 上正常运行。核心改动包括：修复 `cudaMemcpyBatchAsync` 在 CUDA 13 上的段错误，通过运行时版本检查动态选择函数签名；恢复七个因段错误被移至手动测试的 hicache 测试到 CI 注册套件；解决 CI 安装路径中的两个问题，包括清理残留的 `flashinfer/data/` 目录和卸载遗留的 cu12 运行时库。这些改动确保了 CI 测试在 CUDA 13 上的稳定性和正确性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23187" style="text-decoration: none; color: #007bff;">#23187</a>: fix(tbo): skip TBO-only work in MLP-sync when TBO is disabled [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/23185" style="text-decoration: none; color: #007bff;">#23185</a>: [Bugfix] Fix DeepEP timeout when compiling DeepGeMM in EP+DP+TP [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在编译 DeepGeMM 时，由于各节点编译速度不同，可能导致 DeepEP 超时。该 PR 旨在通过添加 torch distributed 障碍和发送预热请求来解决这一问题。具体改动包括在 EP all-to-all 操作前添加全局同步障碍，以及在预热阶段向所有 DP 节点发送请求，确保每个节点都能编译。这些改动仅在编译阶段生效，以避免运行时的额外开销。当前状态良好，已解决多节点同步问题。
+</div>
+</div>
+                    
+<h2 name="repo-vllm-project-vllm" id="repo-vllm-project-vllm" style="scroll-margin-top: 20px;"><strong>vllm-project/vllm</strong></h2>
+            
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/40317" style="text-decoration: none; color: #007bff;">#40317</a>: [Docs] [QeRL] Layerwise Reloading Documentation [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/40316" style="text-decoration: none; color: #007bff;">#40316</a>: [Docs] Fix thinking_token_budget docs [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/40314" style="text-decoration: none; color: #007bff;">#40314</a>: fix: Do not make function calls when request has no tools for /v1/responses [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/40313" style="text-decoration: none; color: #007bff;">#40313</a>: Revert "Fix MoE backend selection for LoRA (unquantized MoE)" (#40273) [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/40312" style="text-decoration: none; color: #007bff;">#40312</a>: [Model] Use AutoWeightsLoader for GPT2 [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 更新了 GPT2Model.load_weights 方法以使用 AutoWeightsLoader，遵循了相关 GPT2 包装类的现有模式。主要目标是替换手动的权重加载循环，同时保留 Conv1D 权重转置、注意力偏置跳过和管道并行缺失参数过滤的逻辑。这些改动通过本地测试验证，包括预提交检查、单元测试和 LLM 初始化测试，但部分测试因运行环境中的 NVIDIA 驱动问题未能完全通过。当前 PR 需要审查并运行全面的 CI 测试以确保兼容性和稳定性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/40311" style="text-decoration: none; color: #007bff;">#40311</a>: [Bugfix] Align chat completion tool_choice/tools validation with OpenAI spec [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在根据 OpenAI 规范调整 chat completion API 的 tool_choice 和 tools 验证逻辑。主要目标是确保在没有 tools 时，tool_choice 的使用受到限制，并在 tools 为空数组时允许生成文本。核心改动包括更新验证逻辑以符合 OpenAI 的行为，并调整错误消息以保持代码风格一致。这些改动影响了 API 的行为，确保在特定情况下返回正确的错误或生成文本。当前 PR 已通过测试，验证了预期行为。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/40310" style="text-decoration: none; color: #007bff;">#40310</a>: [Bugfix] Fix W4A8_FP8 MoE tp>1 correctness and view() TypeError [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在修复 CompressedTensors W4A8 MoE 路径中的两个潜在问题。首先，解决在 `tensor-parallel-size > 1` 时由于流竞争导致的乱码输出问题，通过在 `process_weights_after_loading` 中添加 `torch.cuda.synchronize()` 来同步流。其次，修复 `convert_bf16_scales_to_fp8` 中 `Tensor.view` 调用的兼容性问题，确保在 PyTorch 2.11+ 版本中不会引发 `TypeError`。这些改动不会影响现有使用方式，但确保了代码在不同 PyTorch 版本中的兼容性和稳定性。当前状态良好，已解决兼容性问题并进行了测试。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/40309" style="text-decoration: none; color: #007bff;">#40309</a>: [QeRL] Add warnings for extra memory buffering  [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+背景问题或现状：当前的层级重载机制在加载权重时，如果权重加载顺序不正确，会导致内存中缓冲过多层的权重，从而引起内存使用量激增。理想情况下，权重应按层顺序加载，以避免不必要的内存占用。
+
+目标：该 PR 旨在通过日志警告用户，当权重加载顺序不正确时，提示用户应按层顺序加载权重，以减少内存使用。
+
+核心改动：引入了一个弱集合 `LOADING_LAYERS` 来跟踪当前正在加载的层。如果同时加载的层数超过两层，将触发警告。警告信息会包含正在加载的层的名称，以帮助用户识别问题。
+
+使用或行为变化：当用户加载权重顺序不正确时，系统将输出警告日志，建议用户按层顺序加载权重。为了避免日志过多，警告逻辑被调整为每层只触发一次，并使用 `layer_name` 属性（如果存在）来提供更具体的层信息。
+
+状态与特征：当前实现已通过测试，确认在从磁盘或 CPU 加载权重时不会触发警告，但在从 GPU 加载时会触发警告。预提交检查失败，需要修复后重新提交。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/40308" style="text-decoration: none; color: #007bff;">#40308</a>: [Bugfix] Fix hybrid KV manager for quantized per-token-head KV cache [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 修复了混合键值缓存管理器在量化每令牌头缓存模式下的正确性问题。主要解决了混合页大小无法统一和调度器块大小计算不正确的问题，并确保在混合管理器禁用时保留量化模式。这些改动对已合并的 int8 路径和即将支持的 int2/int4 路径都至关重要。通过引入最大公约数（GCD）来计算调度器块大小，并使用最小公倍数（LCM）来统一页大小，确保了混合缓存管理器的正确性和通用性。当前状态良好，已通过本地验证和部分测试。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/40306" style="text-decoration: none; color: #007bff;">#40306</a>: [ROCm][CI] Fix `trust_remote_code` AttributeError in EAGLE3 acceptance length test [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 修复了 `test_eagle3_acceptance_length` 测试中的 `AttributeError` 问题。由于 `get_mt_bench_prompts` 辅助函数在调用 `vllm.benchmarks.datasets.get_samples` 时未传递 `trust_remote_code` 参数，导致测试失败。此修复通过在 `SimpleNamespace` 中添加 `trust_remote_code=False` 解决了问题。测试已通过 `pytest` 验证。当前状态为已修复，无已知限制。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/40304" style="text-decoration: none; color: #007bff;">#40304</a>: feat: mla prefill trtllm static fp8 output [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/40305" style="text-decoration: none; color: #007bff;">#40305</a>: [ci] Make ecr authenticate non blocking [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在某些 CI 管道中，使用 `|| true` 来抑制 `docker login` 的错误是一种风险较高的做法，因为它会掩盖潜在的失败原因，如过期的 AWS 凭证或网络问题。该 PR 的目标是通过在登录失败时输出警告信息，提高 CI 日志的可见性和调试能力。核心改动是在 `docker login` 命令后添加 `|| echo "Warning: ECR Public login failed"` 和 `|| echo "Warning: ECR login failed"`，以确保即使登录失败也不会中断后续步骤。这些改动不会改变现有的构建流程，但会在日志中提供更多的上下文信息，帮助快速定位问题。当前 PR 已经实现预期功能，没有已知的限制或回退机制。
+</div>
+</div>
+                    
+<h2 name="repo-nvidia-nccl" id="repo-nvidia-nccl" style="scroll-margin-top: 20px;"><strong>NVIDIA/nccl</strong></h2>
+            
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/NVIDIA/nccl/pull/2116" style="text-decoration: none; color: #007bff;">#2116</a>: Fix cuMulticastUnbind silent swallow in ncclNvlsDeregBuffer [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在 `ncclCommDeregister` 和 `ncclCommDestroy` 调用中，即使驱动级多播绑定未解除，仍返回 `ncclSuccess` 的问题。目标是确保在多播绑定未成功解除时，能够正确报告错误，避免在 CRIU + cuda-checkpoint 环境下产生损坏的进程镜像。核心改动包括在 `ncclNvlsDeregBuffer` 和 `regCleanup` 中捕获并传播 `cuMulticastUnbind` 的失败，避免在多播绑定未解除时进行不安全的内存清理。这些改动不会影响正常情况下的行为，且在 NVIDIA B200 设备上通过了多次测试验证。当前状态良好，作者表示可以后续添加回归测试。
+</div>
+</div>
+                    
+<h2 name="repo-huggingface-transformers" id="repo-huggingface-transformers" style="scroll-margin-top: 20px;"><strong>huggingface/transformers</strong></h2>
+            
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45519" style="text-decoration: none; color: #007bff;">#45519</a>: [Trainer] Add ddp_static_graph option [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在使用 PyTorch DDP 时无法配置 `static_graph` 标志的问题。通过在 `TrainingArguments` 中添加 `ddp_static_graph` 字段，并在 `Trainer` 中传递该字段，用户可以更灵活地控制 DDP 的行为，特别是在处理有未使用参数的模型时。核心改动包括在 `training_args.py` 中新增字段，在 `trainer.py` 中添加条件传递逻辑，并在测试中验证不同配置的正确性。此改动对现有行为无影响，默认情况下 `static_graph` 为 `False`。需要注意的是，该字段仅在 DDP 模式下有效，且不支持与重入激活检查点一起使用。
+</div>
+</div>
+                    
+        
+
+  </div>
+</body>
+</html>

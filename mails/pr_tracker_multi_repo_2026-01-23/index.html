@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PR Tracker Weekly Report</title>
+</head>
+<body>
+  <h1>PR Tracker Weekly Report</h1>
+  <p><time>2026-01-23</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    
+
+<h1><strong>Summary</strong></h1>
+<p>本次汇总覆盖 2026-01-20 – 2026-01-23 时间范围，涉及仓库 deepseek-ai/DeepEP, NVIDIA/nccl，共计 2 个 PR。</p>
+            
+<p><strong>往期邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/">https://kaswary.github.io/PR-Tracker/</a></p>
+            
+<h2><strong>TL;DR：</strong></h2>
+<div style="margin-left: 2em;">
+<p>- deepseek-ai/DeepEP：通过条件编译解决了 NVSHMEM 3.5.19 升级导致的定义链接错误，确保与 NVSHMEM 设备 API 兼容。</p>
+</div>
+            
+<h2><strong>Contents</strong></h2>
+<ul style="list-style-type: circle; top: 50%; transform: translateY(-50%); font-size: 18px; margin-left: 2em;">
+<li><a href="#repo-deepseek-ai-deepep" style="text-decoration: none; color: #007bff;">deepseek-ai/DeepEP</a></li>
+<li><a href="#repo-nvidia-nccl" style="text-decoration: none; color: #007bff;">NVIDIA/nccl</a></li>
+</ul>
+            
+<h1><strong>Details</strong></h1>
+        
+<h2 name="repo-deepseek-ai-deepep" id="repo-deepseek-ai-deepep" style="scroll-margin-top: 20px;"><strong>deepseek-ai/DeepEP</strong></h2>
+            
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/deepseek-ai/DeepEP/pull/557" style="text-decoration: none; color: #007bff;">#557</a>: Fix linking error with nvidia-nvshmem-cu12 3.5.19 [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在升级到 NVSHMEM 3.5.19 后，DeepEP 项目遇到了多个定义链接错误，原因是 NVSHMEM 3.5.19 需要使用 `-rdc=true` 编译选项，而 DeepEP 的主机编译器（g++）无法识别该选项。为了解决这一问题，该 PR 通过在 `device_host_transport/nvshmem_common_ibgda.h` 头文件中添加 `#ifdef __CUDACC__` 守卫，确保该头文件仅在 nvcc 编译设备代码时被包含，从而避免了主机编译器错误地定义符号。这一改动消除了重复符号错误，同时保持了与 NVSHMEM 设备 API 的兼容性。当前 PR 已解决该问题，未引入新的限制或配置项。
+</div>
+</div>
+                    
+<h2 name="repo-nvidia-nccl" id="repo-nvidia-nccl" style="scroll-margin-top: 20px;"><strong>NVIDIA/nccl</strong></h2>
+            
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/NVIDIA/nccl/pull/1998" style="text-decoration: none; color: #007bff;">#1998</a>: Update issues template [<strong>open</strong>]
+</div>
+                
+        
+
+  </div>
+</body>
+</html>

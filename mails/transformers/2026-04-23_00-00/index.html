@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-23 00:00</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-23 00:00</h1>
+  <p><time>2026-04-23</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-23 00:00 周四</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (4个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45582" style="text-decoration: none; color: #007bff;">#45582</a>: generate: drop stale num_return_sequences warning on continuous batching path [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在 `generate` 的 continuous-batching 分支中，`num_return_sequences` 与 `num_beams` 一起使用时会触发警告，尽管 `generate_batch()` 已经支持 `num_return_sequences`。该 PR 去除了 `num_return_sequences` 相关的警告，保留了 `num_beams` 的限制，以避免误导用户并减少日志中的冗余信息。此改动不会影响现有功能的使用，但会改善用户体验。当前 PR 已修复 #45563。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45581" style="text-decoration: none; color: #007bff;">#45581</a>: Add automated reviewer assignment script [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45579" style="text-decoration: none; color: #007bff;">#45579</a>: Update assign_reviewers.py [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45580" style="text-decoration: none; color: #007bff;">#45580</a>: [`Privacy Filter`] Add model [<strong>closed</strong>]
+</div>
+
+  </div>
+</body>
+</html>

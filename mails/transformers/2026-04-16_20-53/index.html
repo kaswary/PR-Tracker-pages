@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-16 20:53</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-16 20:53</h1>
+  <p><time>2026-04-16</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-16 20:51 周四</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<div style="margin-bottom: 20px; padding: 15px; background-color: #fff3cd; border-left: 4px solid #ffc107;">
+<h3 style="margin-top: 0; color: #856404;"><strong>🎯 关键词相关PR (1个)</strong></h3>
+<p style="margin: 5px 0;"><strong>#45441: fix(DSV3): parity between nativeDeepseekV3MoEand remote official implementation</strong><br>
+<span style="color: #666; font-size: 0.9em;">相关：deepseek v4, deepseek-v4, deepseekv4。PR标题中提到"nativeDeepseekV3MoE"，与deepseek v4系列相关。</span></p>
+</div>
+<h2><strong>完整PR列表 (42个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1; color: #dc3545;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45441" style="text-decoration: none; color: #dc3545;"><strong>#45441</strong></a>: <span style="color: #dc3545;">fix(DSV3): parity between nativeDeepseekV3MoEand remote official implementation</span> [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45475" style="text-decoration: none; color: #007bff;">#45475</a>: chore(qa): split out mlinter [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45474" style="text-decoration: none; color: #007bff;">#45474</a>: chore: bump doc-builder SHA for main doc build workflow [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45473" style="text-decoration: none; color: #007bff;">#45473</a>: Fix EP: RouterParallel shape, tp_plan property, grouped_mm sentinels [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在使用 TRL 进行 Qwen3-30B-A3B SFT 训练时，发现三个与 Expert Parallelism (EP) 相关的 bug，导致结果错误或损失为 NaN。该 PR 旨在修复这些 bug，确保 EP 模式下的正确性和稳定性。核心改动包括：修复 `RouterParallel` 中的 score 和 index 配对问题，确保权重加载使用正确的计划，以及处理 `grouped_mm_experts_forward` 中的 EP 哨兵值。这些修复引入了多个测试用例，验证了修复效果。当前状态为已通过 8×H100 的端到端验证，与非 EP 模式下的结果一致。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45471" style="text-decoration: none; color: #007bff;">#45471</a>: Add EXAONE 4.5 implementations [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45470" style="text-decoration: none; color: #007bff;">#45470</a>: skip test_flash_attn_2_can_dispatch_composite_models tests for [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45469" style="text-decoration: none; color: #007bff;">#45469</a>: Fix: propagate interpolate_pos_encoding through Pixio model hierarchy [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45465" style="text-decoration: none; color: #007bff;">#45465</a>: [docs] contributing [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45463" style="text-decoration: none; color: #007bff;">#45463</a>: Fix response api support [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45462" style="text-decoration: none; color: #007bff;">#45462</a>: chore(sec): added a handful of security checks [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45461" style="text-decoration: none; color: #007bff;">#45461</a>: Remove redundant condition checks inget_image_sizemethod [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45454" style="text-decoration: none; color: #007bff;">#45454</a>: Gemma4 training with text-only samples [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在解决 #45200 问题，即某些模型在训练时不需要特定的前缀或后缀分离，而这一检查仅在 PG 模型中是必要的。PR 的目标是移除不必要的断言，以确保其他模型的训练过程不受影响。核心改动包括移除相关断言，并在 Gemma3 和 Gemma4 模型的测试中验证了这些改动的正确性。这些改动不会影响现有模型的构建或使用方式，但解决了 CI 测试中的一些失败问题。当前状态是 Gemma3 和 Gemma4 的慢速测试已通过，可以安全合并。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45453" style="text-decoration: none; color: #007bff;">#45453</a>: Draft commit [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45452" style="text-decoration: none; color: #007bff;">#45452</a>: refactor: replace wildcard imports with explicit imports in model __init__.py files [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 `models/X/__init__.py` 文件中使用 `from .module import *` 导致静态分析工具无法识别实际导出符号的问题。目标是通过将所有通配符导入替换为显式导入，提高代码的可维护性和静态分析工具的准确性。核心改动是通过解析 `TYPE_CHECKING` 块并读取子模块的 `__all__` 属性，自动生成显式导入。这些改动仅影响类型检查分支，运行时行为保持不变。当前状态是 446 个模型的 `__init__.py` 文件已更新，但部分无法自动解析的通配符导入需在后续 PR 中处理。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45450" style="text-decoration: none; color: #007bff;">#45450</a>: chore: bump doc-builder SHA for PR upload workflow [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45448" style="text-decoration: none; color: #007bff;">#45448</a>: [loading] Clean way to add/remove full parts in checkpoint names [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在模型权重转换过程中，移除模型名称前缀后无法恢复的问题。通过引入 `PrefixChange` 类和一个标志位，PR 确保了在保存模型时可以正确处理前缀的添加和移除。这些改动使得模型在加载时能够根据之前的转换记录恢复前缀，避免了信息丢失。当前状态良好，测试通过，文档已更新，但需进一步确认在特定场景下的行为一致性。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45443" style="text-decoration: none; color: #007bff;">#45443</a>: Raise 400 on model mismatch whentransformers serveis pinned [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+当使用 `transformers serve` 启动服务并指定模型时，服务器会静默覆盖每个请求中的 `"model"` 字段，导致客户端请求的模型被忽略。此 PR 通过在 `_resolve_model` 函数中返回 `400 Bad Request` 错误来解决这一问题，当客户端请求的模型与服务端固定的模型不一致时，将返回错误信息。现有客户端如果未指定模型或发送空值，仍会默认使用固定模型，因此不会受到影响。当前 PR 已经通过测试，确认了行为变化。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45438" style="text-decoration: none; color: #007bff;">#45438</a>: Add Gemma4ForSequenceClassification [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在使用 `AutoModelForSequenceClassification` 时，由于 `Gemma4Config` 和 `Gemma4TextConfig` 未注册导致的 `ValueError` 问题。目标是使 Gemma 4 与之前的 Gemma 版本保持一致，支持序列分类任务。核心改动包括将 `Gemma4PreTrainedModel` 的 `base_model_prefix` 设置为 "model"，以确保模型加载时的键匹配。这些改动对现有使用方式没有显著影响，但需要进一步讨论和标准化，以支持多模态模型的序列分类。当前 PR 已通过初步测试，但因涉及多模态模型的复杂性，需等待内部通用解决方案的完成。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45436" style="text-decoration: none; color: #007bff;">#45436</a>: Add expert parallelism (EP) support for Qwen3 MoE + fix GroupedGemmParallel for 2D meshes [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在使用 2D 设备网格（TP+EP 结合 FSDP2）时，专家并行（EP）无法正常工作的问题。通过在 `Qwen3MoeConfig` 中添加 `base_model_ep_plan`，并修复 `GroupedGemmParallel` 中的两个小错误，实现了对专家并行的支持。这些改动确保了在不同并行配置下（如 TP=2, DP=4 和 TP=4, DP=2）的前向和后向传播正确性，以及专家权重的正确分片。当前状态良好，测试通过，但存在关于 EP 和 TP 结合时的限制，建议在 `base_model_ep_plan` 中仅使用专家并行，以保持灵活性。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45435" style="text-decoration: none; color: #007bff;">#45435</a>: do not index past decoded chars with special tokens [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45433" style="text-decoration: none; color: #007bff;">#45433</a>: SonicMoe [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45432" style="text-decoration: none; color: #007bff;">#45432</a>: chore(qa): split pipeline and add type checking [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45472" style="text-decoration: none; color: #007bff;">#45472</a>: fix(testing_utils): guard get_device_capability with torch.cuda.is_available() [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在 CUDA 安装但无 GPU 的系统上 `get_device_properties()` 函数调用 `torch.cuda.get_device_capability()` 时引发的崩溃问题。目标是确保在没有实际 GPU 设备的情况下，测试基础设施不会因调用该函数而失败。核心改动是在 `get_device_properties()` 函数中添加了一个检查，确保在调用 `get_device_capability()` 之前先验证 `torch.cuda.is_available()`。这一改动防止了在 CPU-only 环境中因 CUDA 库存在而引发的错误。当前状态为已修复，无已知限制。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45467" style="text-decoration: none; color: #007bff;">#45467</a>: Fix MPS SDPA output shape when value head dim differs from query head dim [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在 Apple Silicon (MPS 后端) 上，`torch.nn.functional.scaled_dot_product_attention` 在值张量的头维度与查询张量的头维度不匹配时会产生错误输出，影响了 DeepSeek 模型和其他多查询注意力模型。此 PR 的目标是通过在 `sdpa_attention_forward` 中添加一个 workaround 来解决这个问题，具体包括检测 MPS 后端和头维度不匹配的情况，对值张量进行填充以匹配查询张量的头维度，然后在 SDPA 调用后截断输出以恢复原始值头维度。这些改动确保了输出的正确性和形状，修复了 #44554 问题。当前状态良好，测试验证了修复效果。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45466" style="text-decoration: none; color: #007bff;">#45466</a>: fix: return empty tuple when protobuf not available [<strong>closed</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45460" style="text-decoration: none; color: #007bff;">#45460</a>: fix(tokenization): re-raise ImportError to allow RuntimeError/OSError fallback (#45459) [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+当 protobuf 未安装时，函数调用作为表达式使用，导致在 try 块中引发异常时，原始异常（如 RuntimeError 或 OSError）被静默吞掉。该 PR 的目标是确保在 protobuf 未安装时，用户能够获得正确的错误信息而不是模糊的 protobuf ImportError。核心改动是将函数调用替换为直接表达式，使原始异常能够传递到适当的回退处理程序。这一改动确保了在 protobuf 未安装时，用户能够看到明确的错误信息。当前状态是该 PR 已修复 issue #45459。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45457" style="text-decoration: none; color: #007bff;">#45457</a>: Allow loading Qwen Thinker 'base' models without generative head [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+当前 qwen2_5_omni 和 qwen3_omni_moe 模型仅支持加载包含音频输出的 Talker 变体，限制了这些模型在仅需 token 嵌入的场景中的使用。此 PR 的目标是扩展这些模型的加载方式，使其可以通过 AutoModel 或 AutoModelForImageTextToText 等类加载，而无需使用 `trust_remote_code`。核心改动包括将 Qwen2_5OmniThinkerForConditionalGeneration 类映射到 `MODEL_FOR_MULTIMODAL_LM_MAPPING_NAMES`，从而支持多模态模型的加载。这些改动使得 Sentence Transformers 等工具可以更灵活地使用这些模型，而无需依赖特定的配置。当前状态良好，已通过相关测试，可以合并。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45456" style="text-decoration: none; color: #007bff;">#45456</a>: refactor(qa): extend extras so ty can run on server modules [<strong>closed</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45455" style="text-decoration: none; color: #007bff;">#45455</a>: [fix] Make Qwen2_5OmniProcessor warning a lot less noisy via warning_once [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在使用非默认系统提示时，每次输入处理都会重复输出警告的问题。目标是减少不必要的警告信息，提高用户体验。核心改动包括将重复警告改为仅警告一次，并移除了 `apply_chat_template` 函数。这些改动消除了重复警告，简化了代码。当前状态是已删除相关警告和函数，建议在合并前运行特定的测试任务以确保稳定性。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45451" style="text-decoration: none; color: #007bff;">#45451</a>: Fix 'seperate' typo in qwen3/glm video-model docstrings [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 修复了 Qwen3-VL、Qwen3.5、GLM4V、GLM4.6V、GLM-OCR 及其 MoE 变体中的文档字符串和注释中的拼写错误，将 `seperate` 改为 `separate`。这些更改不会影响行为或功能，仅限于文本修正。建议在合并前运行相关模型的慢速测试以确保无误。当前状态为等待合并，建议维护者考虑内部统一清理拼写错误。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45449" style="text-decoration: none; color: #007bff;">#45449</a>: Addstep3_vltoMODELS_WITH_INCORRECT_HUB_TOKENIZER_CLASS [<strong>closed</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45445" style="text-decoration: none; color: #007bff;">#45445</a>: Update Torch version check for flex attention [<strong>closed</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45444" style="text-decoration: none; color: #007bff;">#45444</a>: [fix] Always early return for non-Mistral models in _patch_mistral_regex [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在加载非 Mistral 模型时错误地触发 Mistral 相关警告的问题。具体来说，当 `transformers_version` 为 4.57.3 或更高版本时，即使模型类型不是 Mistral，也会错误地触发警告。为了解决这个问题，PR 重新调整了版本检查的边界，确保只有在 `transformers_version` 低于 5.0.0 时才进行 Mistral 相关的检查。这一改动消除了对非 Mistral 模型的误报警告，提高了代码的健壮性和准确性。当前状态良好，已通过相关测试。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45442" style="text-decoration: none; color: #007bff;">#45442</a>: Update workflow references to new commit hash [<strong>closed</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45439" style="text-decoration: none; color: #007bff;">#45439</a>: feat: bump min safetensors version to0.8.0-rc.0 [<strong>closed</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45437" style="text-decoration: none; color: #007bff;">#45437</a>: Fix spurious position_ids warnings for at least 40 architectures [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了多个 BERT 相关模型加载时出现的 `position_ids` 警告问题。这些警告在 v5 发布后开始出现，尽管不影响模型功能，但可能会让用户感到困惑。PR 通过移除或忽略这些不必要的 `position_ids` 来消除警告，确保用户在加载模型时不再看到这些无用的提示。经过测试，54 个受影响的模型中有 45 个已成功消除了警告，且没有引入新的问题。当前状态良好，建议运行指定的测试以进一步验证。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45434" style="text-decoration: none; color: #007bff;">#45434</a>: better grad acc tests [<strong>closed</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45430" style="text-decoration: none; color: #007bff;">#45430</a>: [Doc] Correct checkpoint path in Dinov2 model_docs [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 修复了 Dinov2 模型文档中错误的检查点路径。之前使用的检查点（google/dinov2-base-patch16-224）不存在，已更改为正确的检查点（facebook/dinov2-base）。这一改动确保了文档中的路径正确，避免了用户在尝试使用该模型时遇到问题。当前 PR 已通过初步审查，建议运行 dinov2 相关的慢速测试以进一步验证。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45427" style="text-decoration: none; color: #007bff;">#45427</a>: fix(testing_utils): guard get_device_capability() with torch.cuda.is_available() [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在某些环境中，`get_device_properties()` 会因调用 `torch.cuda.get_device_capability()` 而引发 `RuntimeError`，即使 CUDA 驱动已安装但没有物理 GPU。该 PR 的目标是修复这一问题，确保在没有 CUDA 设备时不会调用 `get_device_capability()`。核心改动是在条件判断中添加了 `torch.cuda.is_available()`，以确保仅在 CUDA 设备可用时才调用该函数。这一改动不会影响现有功能，且在没有 GPU 的环境中不会引发错误。当前状态为已修复，无需额外配置。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45418" style="text-decoration: none; color: #007bff;">#45418</a>: [serve] Forwardtool_calls/tool_call_idin processor inputs [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在多轮工具使用对话中，`get_processor_inputs_from_messages` 函数会丢弃 `tool_calls` 和 `tool_call_id` 字段，导致 `apply_chat_template` 无法正确渲染工具使用上下文。此 PR 的目标是修复这一问题，确保这些字段被正确传递。核心改动是修改 `get_processor_inputs_from_messages` 函数，使其在构建消息字典时保留 `tool_calls` 和 `tool_call_id`。这一改动使得多轮工具使用对话能够正确显示工具调用的上下文，不影响现有使用方式。当前 PR 已通过代码审查并进行了样式修复。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45409" style="text-decoration: none; color: #007bff;">#45409</a>: from_pretrained orchestration + distributed save/load [<strong>closed</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45408" style="text-decoration: none; color: #007bff;">#45408</a>: MoE expert parallelism + sequence parallelism [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 延伸了 TPStyle API，增加了 MoE 专家并行和序列并行的支持。通过引入 `PackedColwiseParallel`、`MoEExpertsParallel`、`PrepareModuleInputOutput` 和 `_AllReduceBackward` 等自定义 `ParallelStyle` 子类，扩展了 `TPStyle` 的功能。这些改动确保了 MoE 专家的正确分片和序列并行的实现，并对 `core_model_loading.py` 进行了相应调整。测试计划包括验证 MoE 专家分片的正确性、测试序列并行的 allgather/split 钩子以及运行现有 TP 混合测试以确保没有回归。当前状态良好，建议在合并前运行指定的测试任务。
+</div>
+</div>
+</div>
+
+  </div>
+</body>
+</html>

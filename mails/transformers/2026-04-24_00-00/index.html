@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-24 00:00</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-24 00:00</h1>
+  <p><time>2026-04-24</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-24 00:00 周五</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (5个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45609" style="text-decoration: none; color: #007bff;">#45609</a>: make it possible to ser/deser HF MoE models with torchao [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45608" style="text-decoration: none; color: #007bff;">#45608</a>: Python code in model docs [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45607" style="text-decoration: none; color: #007bff;">#45607</a>: Add regression test for Gemma4 audio relative positional range [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45606" style="text-decoration: none; color: #007bff;">#45606</a>: [gemma4] infer from config instead of hardcoding [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45605" style="text-decoration: none; color: #007bff;">#45605</a>: Processing Utils: continue when content is a string [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在调用 `apply_chat_template` 方法时，由于 `messages` 结构中的 `content` 字段包含非字符串类型而导致的崩溃问题。目标是确保该方法能够正确处理包含不同类型内容的消息结构。核心改动是修改了 `apply_chat_template` 方法中的内容处理逻辑，使其能够正确识别和处理 `content` 字段中的不同数据类型。此改动不会影响现有使用方式，但解决了特定输入结构下的崩溃问题。当前 PR 已经通过了初步讨论，并更新了相关文档。
+</div>
+</div>
+</div>
+
+  </div>
+</body>
+</html>

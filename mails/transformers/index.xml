@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Transformers on PR Tracker Mail Archive</title>
+    <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/</link>
+    <description>Recent content in Transformers on PR Tracker Mail Archive</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Fri, 24 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://kaswary.github.io/PR-Tracker-pages/mails/transformers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Transformers PR Tracker - 2026-04-24 00:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-24_00-00/</link>
+      <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-24_00-00/</guid>
+      <description>2026-04-24 00:00 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (5个) ○ #45609: make it possible to ser/deser HF MoE models with torchao [open] ○ #45608: Python code in model docs [open] ○ #45607: Add regression test for Gemma4 audio relative positional range [open] ○ #45606: [gemma4] infer from config instead of hardcoding [open] ○ #45605: Processing Utils: continue when content is a string [closed] 该 PR 解决了在调用 `apply_chat_template` 方法时，由于 `messages` 结构中的 `content` 字段包含非字符串类型而导致的崩溃问题。目标是确保该方法能够正确处理包含不同类型内容的消息结构。核心改动是修改了 `apply_chat_template` 方法中的内容处理逻辑，使其能够正确识别和处理 `content` 字段中的不同数据类型。此改动不会影响现有使用方式，但解决了特定输入结构下的崩溃问题。当前 PR 已经通过了初步讨论，并更新了相关文档。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-24 02:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-24_02-00/</link>
+      <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-24_02-00/</guid>
+      <description>2026-04-24 02:00 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45610: Fix configuration reading and error handling for kernels [open] 该 PR 解决了在运行 Qwen3.6 FP8 模型时遇到的多个问题，包括缺少必要的 `WeightConverter`、未安装 `kernels` 时的不明确错误以及配置名称在初始化时的提前读取问题。通过引入 `getattr` 方法和改进配置读取逻辑，确保了在缺少特定属性时能够正确处理，避免了不友好的错误信息。这些改动提高了模型的稳定性和易用性，当前 PR 已通过审查并准备合并。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-24 04:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-24_04-00/</link>
+      <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-24_04-00/</guid>
+      <description>2026-04-24 04:00 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45612: [docs] update model cards [open] ○ #45611: Raise clear error for `problem_type=&#34;single_label_classification&#34;` with `num_labels=1` [open] 该 PR 解决了在 `problem_type=&#34;single_label_classification&#34;` 且 `num_labels=1` 时构建序列分类模型导致的零交叉熵损失问题。目标是通过在 `PreTrainedConfig.__post_init__` 中添加验证，防止这种无效配置，并提供明确的错误信息指导用户。核心改动是在配置初始化时检查 `num_labels` 和 `problem_type` 的组合，如果检测到无效配置则抛出 `ValueError`。这一改动不影响有效配置的使用，但会阻止包含无效配置的模型加载，确保用户不会遇到无声失败的情况。当前状态是所有相关测试通过，且与现有配置的兼容性得到验证。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-24 06:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-24_06-00/</link>
+      <pubDate>Fri, 24 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-24_06-00/</guid>
+      <description>2026-04-24 06:00 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45613: [New Model] Add MiniCPM3 support [open] 该 PR 旨在为 Hugging Face Transformers 库添加对 MiniCPM3 模型架构的支持。MiniCPM3 结合了 DeepSeek-V2 的多头潜在注意力（MLA）机制和标准的密集 MLP，同时引入了三种缩放机制：嵌入缩放（scale_emb）、残差连接缩放（scale_depth）和 logits 缩放（dim_model_base）。通过继承 Llama 和 DeepSeek-V2 的模块化设计，该 PR 实现了 MiniCPM3 的配置和建模类，并将其注册到 AutoConfig、AutoModel 及相关类中。此 PR 已通过小规模配置的前向传递验证，建议在合并前运行指定的 CircleCI 测试任务。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 00:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_00-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_00-00/</guid>
+      <description>2026-04-23 00:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (4个) ○ #45582: generate: drop stale num_return_sequences warning on continuous batching path [open] 在 `generate` 的 continuous-batching 分支中，`num_return_sequences` 与 `num_beams` 一起使用时会触发警告，尽管 `generate_batch()` 已经支持 `num_return_sequences`。该 PR 去除了 `num_return_sequences` 相关的警告，保留了 `num_beams` 的限制，以避免误导用户并减少日志中的冗余信息。此改动不会影响现有功能的使用，但会改善用户体验。当前 PR 已修复 #45563。 ○ #45581: Add automated reviewer assignment script [open] ○ #45579: Update assign_reviewers.py [open] ○ #45580: [`Privacy Filter`] Add model [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 02:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_02-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_02-00/</guid>
+      <description>2026-04-23 02:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45583: Update dev version [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 04:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_04-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_04-00/</guid>
+      <description>2026-04-23 04:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45586: Add Audio-Visual Flamingo model [open] ○ #45585: qa: bumped mlinter and allow local override [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 08:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_08-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_08-00/</guid>
+      <description>2026-04-23 08:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45587: [docs] cb memory management [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 10:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_10-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_10-00/</guid>
+      <description>2026-04-23 10:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (3个) ○ #45591: [nemotron_h] respect _no_reinit flag on dt_bias and out_proj.weight [open] 在 `NemotronHPreTrainedModel._init_weights` 方法中，每次调用时都会无条件地重置 `dt_bias` 和 `out_proj.weight` 参数，导致加载预训练模型时这些参数被随机值覆盖，从而影响模型的输出。该 PR 的目标是修复这一问题，确保在加载预训练模型时这些参数的训练值得以保留。核心改动包括在 `dt_bias` 分支中添加早期返回机制，以及在 `out_proj.weight` 分支中添加条件跳过和设置 `_no_reinit` 标志。这些改动不影响新模型的初始化，仅确保加载预训练模型时的参数一致性。测试计划已验证未打补丁和打补丁后的模型行为，确保问题得到解决。 ○ #45590: fix #45588: guard s_aux against None in flash_attention_forward [open] ○ #45589: Fix `AttributeError` on `s_aux=None` in `flash_attention_forward` [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 12:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_12-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_12-00/</guid>
+      <description>2026-04-23 12:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45592: fix padding side issue for fast_vlm tests [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 16:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_16-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_16-00/</guid>
+      <description>2026-04-23 16:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (4个) ○ #45597: Add Granite 4.1 Vision (granite4_vision) [open] 该 PR 为 Hugging Face Transformers 库添加了对 IBM 的 Granite 4.1 Vision 模型的支持。目标是集成这一多模态视觉-语言模型，以增强企业文档理解能力。核心改动包括引入 SigLIP2 作为视觉编码器、4×4 窗口 Q-Former 投影器、以及通过 LayerDeepstack 和 SpatialDeepstack 机制在多个层面上注入视觉特征。这些改动对模型的构建和使用方式产生了影响，新增了多个文件和配置，同时通过自动注册和测试确保了集成的完整性和正确性。当前状态是所有单元测试通过，建议在合并前运行特定的 CircleCI 任务以进一步验证。 ○ #45596: fix 2 failed test cases for blt model on XPU [open] ○ #45595: Add unified Cache-layer management for GLM-5 DSA Indexer keys [open] 该 PR 将 GLM-5 DSA IndexCache 的自管理缓存机制迁移到标准的 `past_key_values` 缓存层中，以解决现有实现中的生命周期管理、缓存卸载和逻辑重复问题。通过在 `CacheLayerMixin` 和 `DynamicLayer` 中引入 `indexer_keys` 属性和相关方法，确保缓存键与注意力缓存同步管理。这不仅简化了下游模型的开发，还增强了对 beam-search 重排序、缓存裁剪、批量选择和重复等操作的支持。此改动对公共 API 无影响，现有检查点保持兼容。 ○ #45594: fix(utils): Resolve backbone utils test regressions [open] 该 PR 修复了两个回归问题。首先，删除了 `load_backbone` 中的 `use_pretrained_backbone` 参数，改为通过 `from_pretrained` 加载预训练权重，并更新了相关测试以匹配新的设计。其次，修正了 `out_indices` 始终返回列表的断言，使其与之前的 PR 改动一致。这些修复提高了 CI 覆盖率，并确保了测试的正确性。当前 PR 已通过 CI 测试，确认修复了预期的问题。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 18:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_18-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_18-00/</guid>
+      <description>2026-04-23 18:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (3个) ○ #45601: fix: compute auxiliary losses when denoising is disabled in D-FINE [open] 在 num_denoising=0 的情况下，DFineForObjectDetectionLoss 跳过了所有辅助损失，因为它们被包含在 if denoising_meta_values 语句中。该 PR 的目标是确保辅助损失在配置允许时始终计算，而不会因 denoising_meta_values 为空而被跳过。核心改动是将张量分割逻辑与辅助损失计算分离，仅在 denoising_meta_values 不为空时进行张量分割，而辅助损失始终在 config.auxiliary_loss=True 时计算。此改动不影响默认行为，但确保了辅助损失在 num_denoising=0 时仍能正确计算。测试验证了辅助损失键在 num_denoising=0 时存在。 ○ #45599: qa: more lazy loading [open] ○ #45598: Align latest model attention function dispatch [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 20:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_20-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_20-00/</guid>
+      <description>2026-04-23 20:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45602: [AMD CI] Fix expectations for Gemma3n [open] ○ #45603: [Auto] Pass kwargs to fixed_cross_entropy (cluster-43240-3): merged 2 of 2 PRs [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-23 22:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_22-00/</link>
+      <pubDate>Thu, 23 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-23_22-00/</guid>
+      <description>2026-04-23 22:00 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45604: Agent first cli with skill [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-22 00:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_00-00/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_00-00/</guid>
+      <description>2026-04-22 00:00 周三 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45552: Remove warnings for modernbert [open] ○ #45551: Add ForSequenceClassification heads for the OLMo family [open] 该 PR 解决了 Olmo、Olmo2 和 Olmo3 模型在使用 `AutoModelForSequenceClassification` 时无法正确加载的问题。通过引入 `ForSequenceClassification` 类并注册到 `MODEL_FOR_SEQUENCE_CLASSIFICATION_MAPPING_NAMES`，确保了这些模型可以用于序列分类任务。核心改动包括在 `modular_olmo.py`、`modular_olmo2.py` 和 `modular_olmo3.py` 中定义相应的子类，并通过 `make fix-repo` 生成更新的 `modeling_*.py` 文件。这些改动不影响现有使用方式，但新增了对序列分类的支持。当前状态为所有测试通过，包括 GPU 验证和 LoRA 微调测试。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-22 02:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_02-00/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_02-00/</guid>
+      <description>2026-04-22 02:00 周三 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45554: [docs] multi-turn tool calling [open] ○ #45553: [docs] per-request sampling params [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-22 04:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_04-00/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_04-00/</guid>
+      <description>2026-04-22 04:00 周三 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45556: Add image processors refactor to v5 migration guide [open] ○ #45555: perf(`gemma3`): Avoid recomputing `rotary_emb` for each layer [open] 该 PR 旨在优化 `self.rotary_emb` 的调用效率，减少不必要的重复调用。通过将多次调用优化为仅两次调用（全注意力机制和滑动窗口注意力机制），提高了模型的推理速度，特别是在 4B 模型中，推理速度可提升约 10%。核心改动是通过避免重复写入相同的字典键来实现效率提升。此优化对使用 `config.layer_types` 的模型特别有效，且已在部分模型中验证了其效果。当前状态良好，建议在合并前运行特定的测试任务以确保兼容性。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-22 14:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_14-00/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_14-00/</guid>
+      <description>2026-04-22 14:00 周三 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (4个) ○ #45567: Move some conversion mappings to PrefixChange [open] ○ #45566: fix: raise clear error when tokenizer config uses v5 list format on older versions [open] 在 transformers 版本低于 5.0 时，加载使用 v5 样式列表格式的 `extra_special_tokens` 的模型会导致 `_set_model_specific_special_tokens()` 方法抛出误导性的 `AttributeError`。该 PR 的目标是通过在 `_set_model_specific_special_tokens()` 方法中添加一个 `isinstance(special_tokens, list)` 检查，来明确提示用户升级到 transformers 5.0.0 或更高版本。这一改动将帮助用户更快地识别和解决版本不匹配问题，避免不必要的调试路径。当前 PR 已被标记为需要维护者审核。 ○ #45565: fix: remove stale num_return_sequences warning in paged generate [open] ○ #45564: Gemma3n and Gemma4 cannot use rotary kernel [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-22 18:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_18-00/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_18-00/</guid>
+      <description>2026-04-22 18:00 周三 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45570: Fix whisper long-form generation when eos_token_id is a list [open] 该 PR 修复了 Whisper 生成代码中的一个 bug，当 `generation_config.eos_token_id` 是 `list[int]` 而不是 `int` 时会出现问题，这种情况可能在调用 `align_special_tokens` 后发生。修复方法是将 `eos_token_id` 规范化为列表，并使用成员检查而不是等值检查。此更改不会影响现有使用方式，但解决了特定情况下的错误。当前状态为等待审查，建议运行的测试包括 run-slow: whisper。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-22 20:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_20-00/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_20-00/</guid>
+      <description>2026-04-22 20:00 周三 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (4个) ○ #45575: fix(generation): remove stale warning for num_return_sequences in paged generate [open] 在当前实现中 generate 函数在使用 paged 缓存时错误地警告 num_return_sequences 不支持连续批处理 但实际上 generate_batch 已经支持通过 generation_config.num_return_sequences 扩展请求数量 该 PR 的目标是修正这一错误警告 通过在 src/transformers/generation/utils.py 中拆分 guard 逻辑 保留 num_beams &gt; 1 时的警告 而移除 num_return_sequences 的警告 这一改动不会影响现有行为 但消除了不必要的警告信息 当前 PR 已经通过测试验证了预期行为 ○ #45574: Fix typos [open] ○ #45573: fix transformers + torchao nvfp4 serialization [open] 该 PR 解决了 torchao 在 NVIDIA B200 上的 NVFP4 序列化问题，并修复了 float8 测试的预期输出。同时，改进了 torchao 序列化测试的命名，使其更易于调试。这些改动确保了所有 torchao 配置的测试命令都能通过。此 PR 由 Claude 协助开发，测试计划已验证通过。当前状态良好，未发现相关问题。 ○ #45572: refactor(Dots1): drop Dots1MoE override to `pass` (inherits from DSV3 MoE) [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-22 22:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_22-00/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-22_22-00/</guid>
+      <description>2026-04-22 22:00 周三 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (3个) ○ #45578: Remove attribute_map from GptOssConfig [open] ○ #45577: Allow for registered experts from kernels hub [open] ○ #45576: docs(pipeline): fix num_workers docstring default from 8 to 0 [open] 该 PR 解决了文档与实际运行时行为不一致的问题。具体来说，`build_pipeline_init_args()` 中 `num_workers` 的默认值在文档中描述为 8，而实际运行时默认值为 0。此 PR 更新了文档字符串，使其准确反映运行时行为，避免用户在性能调优时产生混淆。此更改不会影响现有代码的行为，但会提高文档的准确性。该 PR 已通过社区审查，无需进一步讨论。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-21 00:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_00-00/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_00-00/</guid>
+      <description>2026-04-21 00:00 周二 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45534: ALM base model class [open] ○ #45533: Fix AMD CI: rebuild torchvision with libjpeg + refresh expectations [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-21 08:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_08-00/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_08-00/</guid>
+      <description>2026-04-21 08:00 周二 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45537: NVFP4 quantization: streaming loader, fused MoE experts (Qwen + Llama… [open] 该 PR 引入了对 NVIDIA 4 位浮点量化格式（NVFP4）的支持，旨在解决在 Blackwell 类硬件上加载和微调大型 Mixture-of-Experts (MoE) 模型时的内存问题和格式不兼容问题。核心改动包括实现 NVFP4 线性层模块、融合的 MoE 专家容器、流式权重放置工具以及对不同模型格式的量化尺度处理。这些改动显著降低了加载大型模型时的内存峰值，并确保了不同模型家族的兼容性。当前状态包括对 Qwen 3.5 和 Llama-4 模型的验证，但 LoRA 适配器仅支持注意力层，且流式加载器尚未集成到 `from_pretrained` 中。 ○ #45535: [Sam3LiteText] Remove unnecessary modules/configs [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-21 10:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_10-00/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_10-00/</guid>
+      <description>2026-04-21 10:00 周二 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (3个) ○ #45541: Fix local_files_only tokenizer fallback when tokenizer files are missing (Issue 45538) [open] 该 PR 解决了在使用 `from_pretrained(..., local_files_only=True)` 时，如果缺少 tokenizer 文件，会错误地初始化一个带有巨大 `model_max_length` 的 stub tokenizer 的问题。目标是确保在这种情况下抛出 `OSError` 而不是继续初始化。核心改动是在 `PreTrainedTokenizerBase.from_pretrained` 中添加了一个检查，确保所有必要的 tokenizer 资产文件都已解析，否则抛出异常。这一改动影响了使用 `local_files_only=True` 参数加载 tokenizer 的行为，使其更加严格和可靠。当前状态是 PR 已通过本地测试，等待社区成员审查。 ○ #45540: Fix cross-attention cache layer type for T5Gemma2 long inputs [open] 该 PR 解决了在 `T5Gemma2ForConditionalGeneration` 模型中，当输入长度超过滑动窗口大小（默认 4096）时生成过程中出现的 `RuntimeError`。问题的根源在于 `T5Gemma2ForConditionalGeneration._prepare_cache_for_generation` 方法中错误地删除了 `cross_attn_config` 的 `sliding_window` 和 `layer_types` 属性，导致缓存的跨注意力层在更新时截断了编码器的 K/V 状态。为了解决这个问题，PR 明确设置了 `sliding_window` 为 `None` 并将 `layer_types` 设置为全注意力层。此外，PR 添加了测试用例以验证修复效果，并确认了修复后的模型在不同输入长度下均能正常运行。 ○ #45539: Revert #45045: changes break modular&#39;s purpose [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-21 16:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_16-00/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_16-00/</guid>
+      <description>2026-04-21 16:00 周二 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45544: fix table upate versions [open] 在本地运行 `3.10.19` 时，`make fix-repo` 命令跳过了表更新，导致 `mlinter` 分割时依赖项未正确更新。此 PR 修复了这一行为并更新了表。修复后，`make fix-repo` 将在 `3.10.19` 版本中正确更新表。当前状态为已修复，无已知限制。 ○ #45543: ci: OTEL support [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-21 18:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_18-00/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_18-00/</guid>
+      <description>2026-04-21 18:00 周二 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45547: Add disable_mmap kwarg to from_pretrained with hf-mount auto-detection [open] 该 PR 解决了在 FUSE 文件系统上加载 safetensors 模型时可能导致 Python 进程死锁的问题。通过引入 `disable_mmap` 参数，用户可以选择禁用内存映射，从而避免因并发页面故障导致的死锁。核心改动包括添加 `_is_on_hf_mount` 辅助函数来检测路径是否在特定的 FUSE 挂载点上，并在 `load_state_dict` 和 `LoadStateDictConfig` 中引入 `disable_mmap` 参数。这些改动对现有用户的行为没有影响，除非他们在 FUSE 文件系统上使用该参数。测试用例确保了新功能的正确性和兼容性。 ○ #45546: feat: Add GGUF loading support for Llama 4 (text) [open] 该 PR 解决了 Llama 4 文本模型不支持 GGUF 格式加载的问题。通过添加对 GGUF 格式的支持，用户现在可以使用 `AutoModelForCausalLM.from_pretrained` 方法加载 Llama 4 模型的 GGUF 文件。此改动与现有的 gemma3_text GGUF 路径保持一致，仅支持文本部分，不包括视觉张量。此 PR 已经得到了相关维护者的关注和审查请求。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-21 20:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_20-00/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_20-00/</guid>
+      <description>2026-04-21 20:00 周二 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45549: fix: apply channel averaging correctly in audio feature extractors [open] 该 PR 修复了多个音频特征提取器中通道平均计算的错误。错误导致批处理张量输入在最后一个维度上进行平均而不是在通道维度上，以及批处理序列输入的平均结果未正确写回 raw_speech。此更改通过在通道维度上使用 mean(1) 并将单声道转换后的样本写回 raw_speech 来解决这些问题。这些修复不会改变现有 API 的使用方式，但会确保输出的正确性。当前状态为等待指定的测试任务运行。 ○ #45548: Fix EP + DeepSpeed ZeRO-3 loading via accelerate launch [open] 在使用 Expert Parallelism (EP) 和 DeepSpeed ZeRO-3 时，通过 `accelerate launch` 加载模型会因为两者初始化方式的冲突而挂起。该 PR 的目标是解决这一问题，使 EP 和 ZeRO-3 能够兼容工作。核心改动包括在 `from_pretrained` 中为 EP+DS 路径使用标准的非 ZeRO-3 初始化方式，确保 EP 的 sharding hooks 正常工作，并在模型加载后通过 `deepspeed.</description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-21 22:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_22-00/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-21_22-00/</guid>
+      <description>2026-04-21 22:00 周二 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45550: Add runner selection for mi325 GPU type [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-20 02:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_02-00/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_02-00/</guid>
+      <description>2026-04-20 02:00 周一 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45516: T5Gemma2: fixprepare_decoder_input_ids_from_labels [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-20 14:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_14-00/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_14-00/</guid>
+      <description>2026-04-20 14:00 周一 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45524: utils: handle flash_attn missing from importlib packages_distributions without crashing [open] 在某些环境中，如 Python 3.13 和 ComfyUI 设备上，`flash_attn` 包的导入检查会因 `packages_distributions()` 中缺少相应键而引发 `KeyError`，导致整个导入过程失败。该 PR 的目标是修复这一问题，确保在 `flash_attn` 包未正确安装时不会引发异常。核心改动是将四个引发异常的字典访问替换为 `.get(name, [])`，从而避免 `KeyError`。这一改动不会影响现有行为，仅在 `flash_attn` 包未正确安装时返回 `False`。当前状态良好，无需额外配置或回退机制。 ○ #45523: Fix Seq2SeqLM ExecuTorch export: add encoder_attention_mask to decoder and use static encoder shapes [open] 该 PR 解决了 `src/transformers/integrations/executorch.py` 中的两个 bug，这些 bug 导致 T5 模型在 ExecuTorch 导出时无法正确运行。第一个 bug 是 `encoder_attention_mask` 未传递给解码器，导致输出错误。第二个 bug 是动态编码器维度与静态 KV 缓存冲突，导致运行时错误。为了解决这些问题，PR 修改了相关模块的前向传播方法，添加了 `encoder_attention_mask` 参数，并去除了动态编码器维度。这些改动确保了 T5 模型在 ExecuTorch 导出后的输出与 HuggingFace `model.</description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-20 19:54</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_19-54/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_19-54/</guid>
+      <description>2026-04-20 19:54 周一 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (3个) ○ #45530: [CB] Changes for long generation [open] ○ #45528: chore: fix consistency [open] ○ #45527: Reapply modular to examples [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-20 20:10</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_20-10/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_20-10/</guid>
+      <description>2026-04-20 20:10 周一 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45530: [CB] Changes for long generation [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-20 20:16</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_20-16/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_20-16/</guid>
+      <description>2026-04-20 20:16 周一 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45530: [CB] Changes for long generation [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-20 22:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_22-00/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-20_22-00/</guid>
+      <description>2026-04-20 22:00 周一 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45532: [Model] Add SLANet Model Support [open] ○ #45531: Revert &#34;Fix: modular image processors (#45492)&#34; [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-19 06:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_06-00/</link>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_06-00/</guid>
+      <description>2026-04-19 06:00 周日 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45508: [Doc] Fix &#39;tokenized&#39; -&gt; &#39;tokenizer&#39; typo in streamer docstrings [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-19 08:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_08-00/</link>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_08-00/</guid>
+      <description>2026-04-19 08:00 周日 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45509: Fix get_device_properties crash when CUDA is installed but no GPU [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-19 16:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_16-00/</link>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_16-00/</guid>
+      <description>2026-04-19 16:00 周日 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45510: cache_utils: fix QuantizedLayer to correctly propagate reorder_cache, crop, and batch ops to quantized buffers [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-19 18:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_18-00/</link>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_18-00/</guid>
+      <description>2026-04-19 18:00 周日 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (3个) ○ #45513: [Qwen3.5] Fix Qwen3.5 linear attention multi-token cached forward [open] ○ #45512: [OutputRecorder] re.search on layer_name [open] ○ #45511: Fix NaN in Gemma3/EmbeddingGemma when batching mixed-length sequences… [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-19 20:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_20-00/</link>
+      <pubDate>Sun, 19 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-19_20-00/</guid>
+      <description>2026-04-19 20:00 周日 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45515: Fix CUDA availability check in get_device_properties() [open] ○ #45514: Fix GraniteMoeHybrid _update_mamba_mask crash on attention-only models [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-18 00:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_00-00/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_00-00/</guid>
+      <description>2026-04-18 00:00 周六 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45494: Fix: propagate quantization_config to text sub-config for composite models in AutoModelForCausalLM [open] 该 PR 解决了加载量化复合模型时出现的问题。问题在于，当使用 `AutoModelForCausalLM.from_pretrained` 加载复合模型时，`auto_factory.py` 会将复合配置替换为文本子配置，导致量化配置丢失。这使得 `modeling_utils.py` 无法正确识别预量化模型，从而引发 `ValueError`。为了解决这个问题，PR 在交换到文本子配置后，如果父复合配置中存在量化配置且文本子配置中没有，则将量化配置传播到文本子配置。这确保了量化方法能够正确识别和处理预量化模型。建议在合并前运行 `run-slow: auto` 以验证修复效果。 ○ #45495: revert sha commit pointing to main for transformers_amd_ci_ workflows [closed] 该 PR 更新了 AMD 调度 CI 工作流，使其引用 `huggingface/hf-workflows` 仓库的 `main` 分支，而不是固定的提交 SHA。这一改动旨在使调度的 CI 运行跟踪最新的上游工作流定义。然而，使用可变引用（如 `@main`）可能会导致 CI 行为在没有本地代码更改的情况下发生变化，影响可重现性并可能意外中断调度运行。当前状态是已更新相关工作流文件，但需要注意潜在的可重现性和安全性问题。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-18 08:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_08-00/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_08-00/</guid>
+      <description>2026-04-18 08:00 周六 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45497: Add V-JEPA 2.1 inference support [open] 该 PR 旨在为 Meta V-JEPA 2.1 预训练模型提供推理支持和检查点转换，扩展了现有的 `VJEPA2Model`。主要目标是支持 V-JEPA 2.1 的四个预训练编码器（ViT-B、ViT-L、ViT-g 和 ViT-G），并确保与 V-JEPA 2.0 的向后兼容性。核心改动包括在配置文件中添加了 8 个新字段，修正了 RoPE 实现，引入了可学习的模态嵌入和分层特征提取，并更新了转换脚本以处理新的模型变体。这些改动对模型的使用方式和行为产生了影响，特别是对预测器的输出和多层预测的支持。当前状态是所有测试通过，且已验证与 Meta 参考实现的一致性。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-18 10:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_10-00/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_10-00/</guid>
+      <description>2026-04-18 10:00 周六 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45499: .4021378118068288:94a295563cf6b5aa7d67bd0f2c0cd7a7_69e2df7342c82e665fe03edd.69e2df7542c82e665fe03ee1.69e2df758b8bd167e2faa23c:Trae CN.T(2026/4/18 09:33:41) [open] ○ #45498: .4021378118068288:98296403e0cd6dedb7b420b80d0fe80b_69e2ce7c42c82e665fe03e0c.69e2ce9842c82e665fe03e10.69e2ce988b8bd167e2faa239:Trae CN.T(2026/4/18 08:21:44) [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-18 12:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_12-00/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_12-00/</guid>
+      <description>2026-04-18 12:00 周六 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (5个) ○ #45504: .4021378118068288:1e40fd96a800b4038c914120b0aa85c2_69e2faf342c82e665fe04170.69e2faf642c82e665fe04174.69e2faf6d18af355a624eac3:Trae CN.T(2026/4/18 11:31:02) [open] ○ #45503: .4021378118068288:aafb9167aaa6b321205f754209b0cbcb_69e2f25642c82e665fe0407f.69e2f43542c82e665fe04083.69e2f435d18af355a624eac1:Trae CN.T(2026/4/18 11:02:13) [open] ○ #45502: .4021378118068288:4da7ed27ccaa5f974fe4a552e2b67bb6_69e2eea842c82e665fe04002.69e2eec142c82e665fe04006.69e2eec18b8bd167e2faa241:Trae CN.T(2026/4/18 10:38:57) [open] ○ #45501: .4021378118068288:e3506c3c5a98ec3a50332c6102362804_69e2e58842c82e665fe03f65.69e2e58c42c82e665fe03f69.69e2e58b8b8bd167e2faa23e:Trae CN.T(2026/4/18 09:59:40) [open] ○ #45500: Add full GGUF loading support for GPT‑OSS (fixes #43366, supersedes #43757) latest [open] 该 PR 解决了 GPT-OSS 模型（20B/120B）在 GGUF 格式下加载时的架构不匹配问题。目标是使 Transformers 和 vLLM 能够直接加载 GPT-OSS GGUF 文件，而不会回退到错误的架构。核心改动包括在 GGUF 映射中注册架构、实现自定义的 GptOssTensorProcessor 以处理 MoE 专家拆分和门/上层交织、从扁平的 GGUF 元数据中重建嵌套的 rope_scaling（YaRN），并添加了快速注册测试和使用真实 20B GGUF 文件的慢速集成测试。这些改动确保了模型加载的正确性和性能，当前状态为等待社区审查，建议在合并前运行 ggml 慢速测试。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-18 18:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_18-00/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_18-00/</guid>
+      <description>2026-04-18 18:00 周六 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45506: Add full GGUF loading support for GPT‑OSS (fixes #43366, supersedes #43757) latest [open] 该 PR 解决了 GPT-OSS 模型在 GGUF 格式下加载时的架构不匹配问题，确保 Transformers 和 vLLM 能够正确加载 20B 和 120B 的 GPT-OSS GGUF 文件。核心改动包括在 GGUF 映射中注册架构、实现自定义的 `GptOssTensorProcessor` 以处理 MoE 专家拆分和门/上层交错，以及从扁平的 GGUF 元数据中重建嵌套的 `rope_scaling`。这些改动对模型加载和推理行为有直接影响，确保了模型的正确性和性能。当前 PR 已通过相关测试，建议运行慢速测试以进一步验证。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-18 20:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_20-00/</link>
+      <pubDate>Sat, 18 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-18_20-00/</guid>
+      <description>2026-04-18 20:00 周六 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (6个) ○ #45504: .4021378118068288:1e40fd96a800b4038c914120b0aa85c2_69e2faf342c82e665fe04170.69e2faf642c82e665fe04174.69e2faf6d18af355a624eac3:Trae CN.T(2026/4/18 11:31:02) [closed] ○ #45503: .4021378118068288:aafb9167aaa6b321205f754209b0cbcb_69e2f25642c82e665fe0407f.69e2f43542c82e665fe04083.69e2f435d18af355a624eac1:Trae CN.T(2026/4/18 11:02:13) [closed] ○ #45502: .4021378118068288:4da7ed27ccaa5f974fe4a552e2b67bb6_69e2eea842c82e665fe04002.69e2eec142c82e665fe04006.69e2eec18b8bd167e2faa241:Trae CN.T(2026/4/18 10:38:57) [closed] ○ #45501: .4021378118068288:e3506c3c5a98ec3a50332c6102362804_69e2e58842c82e665fe03f65.69e2e58c42c82e665fe03f69.69e2e58b8b8bd167e2faa23e:Trae CN.T(2026/4/18 09:59:40) [closed] ○ #45499: .4021378118068288:94a295563cf6b5aa7d67bd0f2c0cd7a7_69e2df7342c82e665fe03edd.69e2df7542c82e665fe03ee1.69e2df758b8bd167e2faa23c:Trae CN.T(2026/4/18 09:33:41) [closed] ○ #45498: .4021378118068288:98296403e0cd6dedb7b420b80d0fe80b_69e2ce7c42c82e665fe03e0c.69e2ce9842c82e665fe03e10.69e2ce988b8bd167e2faa239:Trae CN.T(2026/4/18 08:21:44) [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-17 11:10</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_11-10/</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_11-10/</guid>
+      <description>2026-04-17 11:10 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45487: Fix model parallel issue for altclip model and ChineseClip model [open] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-17 11:13</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_11-13/</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_11-13/</guid>
+      <description>2026-04-17 11:13 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (5个) ○ #45487: Fix model parallel issue for altclip model and ChineseClip model [open] ○ #45486: fix: return empty tuple from import_protobuf_decode_error when protobuf is unavailable [open] 在某些情况下，`import_protobuf_decode_error()` 会因 protobuf 未安装而引发 `ImportError`，导致实际的 tokenizer 构造器异常被掩盖。该 PR 的目标是确保在 protobuf 未安装时，真实异常能够正确传播。为此，PR 修改了 `import_protobuf_decode_error()`，使其在 protobuf 不可用时返回 `()`，从而使 except 子句不匹配任何异常。此外，PR 添加了两个新测试用例以验证修复效果。当前 PR 已通过测试，状态良好。 ○ #45485: [serve] Update tool call to switch toparse_response [open] ○ #45484: Minor update [closed] ○ #45463: Fix response api support [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-17 11:24</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_11-24/</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_11-24/</guid>
+      <description>2026-04-17 11:23 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (5个) ○ #45487: Fix model parallel issue for altclip model and ChineseClip model [open] ○ #45486: fix: return empty tuple from import_protobuf_decode_error when protobuf is unavailable [open] 在某些情况下，`import_protobuf_decode_error()` 会因 protobuf 未安装而引发 `ImportError`，导致实际的 tokenizer 构造器异常被掩盖。该 PR 的目标是确保在 protobuf 未安装时，真实异常能够正确传播。为此，PR 修改了 `import_protobuf_decode_error()`，使其在 protobuf 不可用时返回 `()`，从而使 except 子句不匹配任何异常。此外，PR 添加了两个新测试用例以验证修复效果。当前 PR 已通过测试，状态良好。 ○ #45485: [serve] Update tool call to switch toparse_response [open] ○ #45484: Minor update [closed] ○ #45463: Fix response api support [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-17 12:12</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_12-12/</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_12-12/</guid>
+      <description>2026-04-17 12:12 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (0个) </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-17 18:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_18-00/</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_18-00/</guid>
+      <description>2026-04-17 18:00 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (2个) ○ #45489: Align gemma3n cache sharing to gemma4 [open] ○ #45474: chore: bump doc-builder SHA for main doc build workflow [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-17 20:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_20-00/</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_20-00/</guid>
+      <description>2026-04-17 20:00 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (1个) ○ #45481: Add check-auto in repo-consistency and fix sorting [closed] </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-17 22:00</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_22-00/</link>
+      <pubDate>Fri, 17 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-17_22-00/</guid>
+      <description>2026-04-17 22:00 周五 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (4个) ○ #45493: [WIP] Major processing refactor [open] ○ #45492: Fix: modular image processors [open] 在最近的图像处理重构中，由于包依赖关系的修复，导致在代码中重复定义了同一个类。该 PR 的目标是删除重复的类定义，以避免潜在的冲突和冗余。核心改动是删除了重复的类定义，确保类在代码中只定义一次。这一改动不会对现有使用方式或行为产生影响。当前状态良好，建议在合并前运行 run-slow: llava_onevision 以确保稳定性。 ○ #45490: Add ctsm model [open] ○ #45461: Remove redundant condition checks inget_image_sizemethod [closed] 该 PR 旨在移除 `get_image_size` 方法中的冗余条件检查。这些检查原本用于避免在不需要调整大小时进行不必要的张量分配，但经过讨论确认这些条件是多余的。核心改动是删除了 `if resize_height == height and resize_width == width` 的条件判断。这一改动可能会在高吞吐量推理管道中增加一些开销，但具体影响需要进一步基准测试。当前 PR 已经通过审核并合并，建议在合并前运行 `make fix-repo` 以确保更改在 `modular` 系统中正确传播。 </description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-16 20:34</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-16_20-34/</link>
+      <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-16_20-34/</guid>
+      <description>2026-04-16 20:31 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;🎯 关键词相关PR (1个) #45441: fix(DSV3): parity between nativeDeepseekV3MoEand remote official implementation&#xA;相关：deepseek v4, deepseek-v4, deepseekv4。PR标题中提到&#34;nativeDeepseekV3MoE&#34;，与deepseek v4系列相关。&#xA;完整PR列表 (42个) ○ #45441: fix(DSV3): parity between nativeDeepseekV3MoEand remote official implementation [open] ○ #45475: chore(qa): split out mlinter [open] ○ #45474: chore: bump doc-builder SHA for main doc build workflow [open] ○ #45473: Fix EP: RouterParallel shape, tp_plan property, grouped_mm sentinels [open] 在使用 TRL 进行 Qwen3-30B-A3B SFT 训练时，发现三个与 Expert Parallelism (EP) 相关的 bug，导致结果错误或损失为 NaN。该 PR 旨在修复这些 bug，确保 EP 模式下的正确性和稳定性。核心改动包括：修复 `RouterParallel` 中的 score 和 index 配对问题，确保权重加载使用正确的计划，以及处理 `grouped_mm_experts_forward` 中的 EP 哨兵值。这些修复引入了多个测试用例，验证了修复效果。当前状态为已通过 8×H100 的端到端验证，与非 EP 模式下的结果一致。 ○ #45471: Add EXAONE 4.</description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-16 20:53</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-16_20-53/</link>
+      <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-16_20-53/</guid>
+      <description>2026-04-16 20:51 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;🎯 关键词相关PR (1个) #45441: fix(DSV3): parity between nativeDeepseekV3MoEand remote official implementation&#xA;相关：deepseek v4, deepseek-v4, deepseekv4。PR标题中提到&#34;nativeDeepseekV3MoE&#34;，与deepseek v4系列相关。&#xA;完整PR列表 (42个) ○ #45441: fix(DSV3): parity between nativeDeepseekV3MoEand remote official implementation [open] ○ #45475: chore(qa): split out mlinter [open] ○ #45474: chore: bump doc-builder SHA for main doc build workflow [open] ○ #45473: Fix EP: RouterParallel shape, tp_plan property, grouped_mm sentinels [open] 在使用 TRL 进行 Qwen3-30B-A3B SFT 训练时，发现三个与 Expert Parallelism (EP) 相关的 bug，导致结果错误或损失为 NaN。该 PR 旨在修复这些 bug，确保 EP 模式下的正确性和稳定性。核心改动包括：修复 `RouterParallel` 中的 score 和 index 配对问题，确保权重加载使用正确的计划，以及处理 `grouped_mm_experts_forward` 中的 EP 哨兵值。这些修复引入了多个测试用例，验证了修复效果。当前状态为已通过 8×H100 的端到端验证，与非 EP 模式下的结果一致。 ○ #45471: Add EXAONE 4.</description>
+    </item>
+    <item>
+      <title>Transformers PR Tracker - 2026-04-16 21:20</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-16_21-20/</link>
+      <pubDate>Thu, 16 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/transformers/2026-04-16_21-20/</guid>
+      <description>2026-04-16 21:20 周四 邮件汇总：https://kaswary.github.io/PR-Tracker/mails/&#xA;huggingface/transformers 仓库 Pull Request 更新如下：&#xA;完整PR列表 (6个) ○ #45475: chore(qa): split out mlinter [open] ○ #45474: chore: bump doc-builder SHA for main doc build workflow [open] ○ #45457: Allow loading Qwen Thinker &#39;base&#39; models without generative head [closed] 当前 qwen2_5_omni 和 qwen3_omni_moe 模型仅支持加载包含音频输出的 Talker 变体，限制了这些模型在仅需 token 嵌入的场景中的使用。此 PR 的目标是扩展这些模型的加载方式，使其可以通过 AutoModel 或 AutoModelForImageTextToText 等类加载，而无需使用 `trust_remote_code`。核心改动包括将 Qwen2_5OmniThinkerForConditionalGeneration 类映射到 `MODEL_FOR_MULTIMODAL_LM_MAPPING_NAMES`，从而支持多模态模型的加载。这些改动使得 Sentence Transformers 等工具可以更灵活地使用这些模型，而无需依赖特定的配置。当前状态良好，已通过相关测试，可以合并。 ○ #45455: [fix] Make Qwen2_5OmniProcessor warning a lot less noisy via warning_once [closed] 该 PR 解决了在使用非默认系统提示时，每次输入处理都会重复输出警告的问题。目标是减少不必要的警告信息，提高用户体验。核心改动包括将重复警告改为仅警告一次，并移除了 `apply_chat_template` 函数。这些改动消除了重复警告，简化了代码。当前状态是已删除相关警告和函数，建议在合并前运行特定的测试任务以确保稳定性。 ○ #45444: [fix] Always early return for non-Mistral models in _patch_mistral_regex [closed] 该 PR 解决了在加载非 Mistral 模型时错误地触发 Mistral 相关警告的问题。具体来说，当 `transformers_version` 为 4.</description>
+    </item>
+  </channel>
+</rss>

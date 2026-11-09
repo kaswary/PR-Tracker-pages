@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-22 20:00</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-22 20:00</h1>
+  <p><time>2026-04-22</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-22 20:00 周三</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (4个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45575" style="text-decoration: none; color: #007bff;">#45575</a>: fix(generation): remove stale warning for num_return_sequences in paged generate [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在当前实现中 generate 函数在使用 paged 缓存时错误地警告 num_return_sequences 不支持连续批处理 但实际上 generate_batch 已经支持通过 generation_config.num_return_sequences 扩展请求数量 该 PR 的目标是修正这一错误警告 通过在 src/transformers/generation/utils.py 中拆分 guard 逻辑 保留 num_beams > 1 时的警告 而移除 num_return_sequences 的警告 这一改动不会影响现有行为 但消除了不必要的警告信息 当前 PR 已经通过测试验证了预期行为
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45574" style="text-decoration: none; color: #007bff;">#45574</a>: Fix typos [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45573" style="text-decoration: none; color: #007bff;">#45573</a>: fix transformers + torchao nvfp4 serialization [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 torchao 在 NVIDIA B200 上的 NVFP4 序列化问题，并修复了 float8 测试的预期输出。同时，改进了 torchao 序列化测试的命名，使其更易于调试。这些改动确保了所有 torchao 配置的测试命令都能通过。此 PR 由 Claude 协助开发，测试计划已验证通过。当前状态良好，未发现相关问题。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45572" style="text-decoration: none; color: #007bff;">#45572</a>: refactor(Dots1): drop Dots1MoE override to `pass` (inherits from DSV3 MoE) [<strong>closed</strong>]
+</div>
+
+  </div>
+</body>
+</html>

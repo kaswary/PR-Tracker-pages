@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-18 12:00</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-18 12:00</h1>
+  <p><time>2026-04-18</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-18 12:00 周六</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (5个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45504" style="text-decoration: none; color: #007bff;">#45504</a>: .4021378118068288:1e40fd96a800b4038c914120b0aa85c2_69e2faf342c82e665fe04170.69e2faf642c82e665fe04174.69e2faf6d18af355a624eac3:Trae CN.T(2026/4/18 11:31:02) [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45503" style="text-decoration: none; color: #007bff;">#45503</a>: .4021378118068288:aafb9167aaa6b321205f754209b0cbcb_69e2f25642c82e665fe0407f.69e2f43542c82e665fe04083.69e2f435d18af355a624eac1:Trae CN.T(2026/4/18 11:02:13) [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45502" style="text-decoration: none; color: #007bff;">#45502</a>: .4021378118068288:4da7ed27ccaa5f974fe4a552e2b67bb6_69e2eea842c82e665fe04002.69e2eec142c82e665fe04006.69e2eec18b8bd167e2faa241:Trae CN.T(2026/4/18 10:38:57) [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45501" style="text-decoration: none; color: #007bff;">#45501</a>: .4021378118068288:e3506c3c5a98ec3a50332c6102362804_69e2e58842c82e665fe03f65.69e2e58c42c82e665fe03f69.69e2e58b8b8bd167e2faa23e:Trae CN.T(2026/4/18 09:59:40) [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45500" style="text-decoration: none; color: #007bff;">#45500</a>: Add full GGUF loading support for GPT‑OSS (fixes #43366, supersedes #43757) latest [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 GPT-OSS 模型（20B/120B）在 GGUF 格式下加载时的架构不匹配问题。目标是使 Transformers 和 vLLM 能够直接加载 GPT-OSS GGUF 文件，而不会回退到错误的架构。核心改动包括在 GGUF 映射中注册架构、实现自定义的 GptOssTensorProcessor 以处理 MoE 专家拆分和门/上层交织、从扁平的 GGUF 元数据中重建嵌套的 rope_scaling（YaRN），并添加了快速注册测试和使用真实 20B GGUF 文件的慢速集成测试。这些改动确保了模型加载的正确性和性能，当前状态为等待社区审查，建议在合并前运行 ggml 慢速测试。
+</div>
+</div>
+</div>
+
+  </div>
+</body>
+</html>

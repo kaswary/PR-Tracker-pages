@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-24 04:00</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-24 04:00</h1>
+  <p><time>2026-04-24</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-24 04:00 周五</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (2个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45612" style="text-decoration: none; color: #007bff;">#45612</a>: [docs] update model cards [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45611" style="text-decoration: none; color: #007bff;">#45611</a>: Raise clear error for `problem_type="single_label_classification"` with `num_labels=1` [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在 `problem_type="single_label_classification"` 且 `num_labels=1` 时构建序列分类模型导致的零交叉熵损失问题。目标是通过在 `PreTrainedConfig.__post_init__` 中添加验证，防止这种无效配置，并提供明确的错误信息指导用户。核心改动是在配置初始化时检查 `num_labels` 和 `problem_type` 的组合，如果检测到无效配置则抛出 `ValueError`。这一改动不影响有效配置的使用，但会阻止包含无效配置的模型加载，确保用户不会遇到无声失败的情况。当前状态是所有相关测试通过，且与现有配置的兼容性得到验证。
+</div>
+</div>
+</div>
+
+  </div>
+</body>
+</html>

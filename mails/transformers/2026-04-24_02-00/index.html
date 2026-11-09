@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-24 02:00</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-24 02:00</h1>
+  <p><time>2026-04-24</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-24 02:00 周五</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (1个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45610" style="text-decoration: none; color: #007bff;">#45610</a>: Fix configuration reading and error handling for kernels [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在运行 Qwen3.6 FP8 模型时遇到的多个问题，包括缺少必要的 `WeightConverter`、未安装 `kernels` 时的不明确错误以及配置名称在初始化时的提前读取问题。通过引入 `getattr` 方法和改进配置读取逻辑，确保了在缺少特定属性时能够正确处理，避免了不友好的错误信息。这些改动提高了模型的稳定性和易用性，当前 PR 已通过审查并准备合并。
+</div>
+</div>
+</div>
+
+  </div>
+</body>
+</html>

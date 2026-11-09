@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-21 10:00</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-21 10:00</h1>
+  <p><time>2026-04-21</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-21 10:00 周二</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (3个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45541" style="text-decoration: none; color: #007bff;">#45541</a>: Fix local_files_only tokenizer fallback when tokenizer files are missing (Issue 45538) [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在使用 `from_pretrained(..., local_files_only=True)` 时，如果缺少 tokenizer 文件，会错误地初始化一个带有巨大 `model_max_length` 的 stub tokenizer 的问题。目标是确保在这种情况下抛出 `OSError` 而不是继续初始化。核心改动是在 `PreTrainedTokenizerBase.from_pretrained` 中添加了一个检查，确保所有必要的 tokenizer 资产文件都已解析，否则抛出异常。这一改动影响了使用 `local_files_only=True` 参数加载 tokenizer 的行为，使其更加严格和可靠。当前状态是 PR 已通过本地测试，等待社区成员审查。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45540" style="text-decoration: none; color: #007bff;">#45540</a>: Fix cross-attention cache layer type for T5Gemma2 long inputs [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在 `T5Gemma2ForConditionalGeneration` 模型中，当输入长度超过滑动窗口大小（默认 4096）时生成过程中出现的 `RuntimeError`。问题的根源在于 `T5Gemma2ForConditionalGeneration._prepare_cache_for_generation` 方法中错误地删除了 `cross_attn_config` 的 `sliding_window` 和 `layer_types` 属性，导致缓存的跨注意力层在更新时截断了编码器的 K/V 状态。为了解决这个问题，PR 明确设置了 `sliding_window` 为 `None` 并将 `layer_types` 设置为全注意力层。此外，PR 添加了测试用例以验证修复效果，并确认了修复后的模型在不同输入长度下均能正常运行。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45539" style="text-decoration: none; color: #007bff;">#45539</a>: Revert #45045: changes break modular's purpose [<strong>open</strong>]
+</div>
+
+  </div>
+</body>
+</html>

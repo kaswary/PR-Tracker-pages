@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-23 10:00</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-23 10:00</h1>
+  <p><time>2026-04-23</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-23 10:00 周四</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (3个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45591" style="text-decoration: none; color: #007bff;">#45591</a>: [nemotron_h] respect _no_reinit flag on dt_bias and out_proj.weight [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在 `NemotronHPreTrainedModel._init_weights` 方法中，每次调用时都会无条件地重置 `dt_bias` 和 `out_proj.weight` 参数，导致加载预训练模型时这些参数被随机值覆盖，从而影响模型的输出。该 PR 的目标是修复这一问题，确保在加载预训练模型时这些参数的训练值得以保留。核心改动包括在 `dt_bias` 分支中添加早期返回机制，以及在 `out_proj.weight` 分支中添加条件跳过和设置 `_no_reinit` 标志。这些改动不影响新模型的初始化，仅确保加载预训练模型时的参数一致性。测试计划已验证未打补丁和打补丁后的模型行为，确保问题得到解决。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45590" style="text-decoration: none; color: #007bff;">#45590</a>: fix #45588: guard s_aux against None in flash_attention_forward [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45589" style="text-decoration: none; color: #007bff;">#45589</a>: Fix `AttributeError` on `s_aux=None` in `flash_attention_forward` [<strong>open</strong>]
+</div>
+
+  </div>
+</body>
+</html>

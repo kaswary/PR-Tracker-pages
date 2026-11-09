@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-17 11:24</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-17 11:24</h1>
+  <p><time>2026-04-17</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-17 11:23 周五</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (5个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45487" style="text-decoration: none; color: #007bff;">#45487</a>: Fix model parallel issue for altclip model and ChineseClip model [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45486" style="text-decoration: none; color: #007bff;">#45486</a>: fix: return empty tuple from import_protobuf_decode_error when protobuf is unavailable [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在某些情况下，`import_protobuf_decode_error()` 会因 protobuf 未安装而引发 `ImportError`，导致实际的 tokenizer 构造器异常被掩盖。该 PR 的目标是确保在 protobuf 未安装时，真实异常能够正确传播。为此，PR 修改了 `import_protobuf_decode_error()`，使其在 protobuf 不可用时返回 `()`，从而使 except 子句不匹配任何异常。此外，PR 添加了两个新测试用例以验证修复效果。当前 PR 已通过测试，状态良好。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45485" style="text-decoration: none; color: #007bff;">#45485</a>: [serve] Update tool call to switch toparse_response [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45484" style="text-decoration: none; color: #007bff;">#45484</a>: Minor update [<strong>closed</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45463" style="text-decoration: none; color: #007bff;">#45463</a>: Fix response api support [<strong>closed</strong>]
+</div>
+
+  </div>
+</body>
+</html>

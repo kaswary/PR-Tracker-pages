@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-21 08:00</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-21 08:00</h1>
+  <p><time>2026-04-21</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-21 08:00 周二</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (2个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45537" style="text-decoration: none; color: #007bff;">#45537</a>: NVFP4 quantization: streaming loader, fused MoE experts (Qwen + Llama… [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 引入了对 NVIDIA 4 位浮点量化格式（NVFP4）的支持，旨在解决在 Blackwell 类硬件上加载和微调大型 Mixture-of-Experts (MoE) 模型时的内存问题和格式不兼容问题。核心改动包括实现 NVFP4 线性层模块、融合的 MoE 专家容器、流式权重放置工具以及对不同模型格式的量化尺度处理。这些改动显著降低了加载大型模型时的内存峰值，并确保了不同模型家族的兼容性。当前状态包括对 Qwen 3.5 和 Llama-4 模型的验证，但 LoRA 适配器仅支持注意力层，且流式加载器尚未集成到 `from_pretrained` 中。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45535" style="text-decoration: none; color: #007bff;">#45535</a>: [Sam3LiteText] Remove unnecessary modules/configs [<strong>open</strong>]
+</div>
+
+  </div>
+</body>
+</html>

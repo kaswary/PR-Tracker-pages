@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-16 21:20</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-16 21:20</h1>
+  <p><time>2026-04-16</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-16 21:20 周四</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (6个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45475" style="text-decoration: none; color: #007bff;">#45475</a>: chore(qa): split out mlinter [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45474" style="text-decoration: none; color: #007bff;">#45474</a>: chore: bump doc-builder SHA for main doc build workflow [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45457" style="text-decoration: none; color: #007bff;">#45457</a>: Allow loading Qwen Thinker 'base' models without generative head [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+当前 qwen2_5_omni 和 qwen3_omni_moe 模型仅支持加载包含音频输出的 Talker 变体，限制了这些模型在仅需 token 嵌入的场景中的使用。此 PR 的目标是扩展这些模型的加载方式，使其可以通过 AutoModel 或 AutoModelForImageTextToText 等类加载，而无需使用 `trust_remote_code`。核心改动包括将 Qwen2_5OmniThinkerForConditionalGeneration 类映射到 `MODEL_FOR_MULTIMODAL_LM_MAPPING_NAMES`，从而支持多模态模型的加载。这些改动使得 Sentence Transformers 等工具可以更灵活地使用这些模型，而无需依赖特定的配置。当前状态良好，已通过相关测试，可以合并。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45455" style="text-decoration: none; color: #007bff;">#45455</a>: [fix] Make Qwen2_5OmniProcessor warning a lot less noisy via warning_once [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在使用非默认系统提示时，每次输入处理都会重复输出警告的问题。目标是减少不必要的警告信息，提高用户体验。核心改动包括将重复警告改为仅警告一次，并移除了 `apply_chat_template` 函数。这些改动消除了重复警告，简化了代码。当前状态是已删除相关警告和函数，建议在合并前运行特定的测试任务以确保稳定性。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45444" style="text-decoration: none; color: #007bff;">#45444</a>: [fix] Always early return for non-Mistral models in _patch_mistral_regex [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在加载非 Mistral 模型时错误地触发 Mistral 相关警告的问题。具体来说，当 `transformers_version` 为 4.57.3 或更高版本时，即使模型类型不是 Mistral，也会错误地触发警告。为了解决这个问题，PR 重新调整了版本检查的边界，确保只有在 `transformers_version` 低于 5.0.0 时才进行 Mistral 相关的检查。这一改动消除了对非 Mistral 模型的误报警告，提高了代码的健壮性和准确性。当前状态良好，已通过相关测试。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45437" style="text-decoration: none; color: #007bff;">#45437</a>: Fix spurious position_ids warnings for at least 40 architectures [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了多个 BERT 相关模型加载时出现的 `position_ids` 警告问题。这些警告在 v5 发布后开始出现，尽管不影响模型功能，但可能会让用户感到困惑。PR 通过移除或忽略这些不必要的 `position_ids` 来消除警告，确保用户在加载模型时不再看到这些无用的提示。经过测试，54 个受影响的模型中有 45 个已成功消除了警告，且没有引入新的问题。当前状态良好，建议运行指定的测试以进一步验证。
+</div>
+</div>
+</div>
+
+  </div>
+</body>
+</html>

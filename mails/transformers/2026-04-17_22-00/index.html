@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Transformers PR Tracker - 2026-04-17 22:00</title>
+</head>
+<body>
+  <h1>Transformers PR Tracker - 2026-04-17 22:00</h1>
+  <p><time>2026-04-17</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    <h1><strong>2026-04-17 22:00 周五</strong></h1>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/mails/" style="color: #007bff;">https://kaswary.github.io/PR-Tracker/mails/</a></p>
+<p>huggingface/transformers 仓库 Pull Request 更新如下：</p>
+<h2><strong>完整PR列表 (4个)</strong></h2>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45493" style="text-decoration: none; color: #007bff;">#45493</a>: [WIP] Major processing refactor [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45492" style="text-decoration: none; color: #007bff;">#45492</a>: Fix: modular image processors [<strong>open</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在最近的图像处理重构中，由于包依赖关系的修复，导致在代码中重复定义了同一个类。该 PR 的目标是删除重复的类定义，以避免潜在的冲突和冗余。核心改动是删除了重复的类定义，确保类在代码中只定义一次。这一改动不会对现有使用方式或行为产生影响。当前状态良好，建议在合并前运行 run-slow: llava_onevision 以确保稳定性。
+</div>
+</div>
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45490" style="text-decoration: none; color: #007bff;">#45490</a>: Add ctsm model [<strong>open</strong>]
+</div>
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/huggingface/transformers/pull/45461" style="text-decoration: none; color: #007bff;">#45461</a>: Remove redundant condition checks inget_image_sizemethod [<strong>closed</strong>]
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在移除 `get_image_size` 方法中的冗余条件检查。这些检查原本用于避免在不需要调整大小时进行不必要的张量分配，但经过讨论确认这些条件是多余的。核心改动是删除了 `if resize_height == height and resize_width == width` 的条件判断。这一改动可能会在高吞吐量推理管道中增加一些开销，但具体影响需要进一步基准测试。当前 PR 已经通过审核并合并，建议在合并前运行 `make fix-repo` 以确保更改在 `modular` 系统中正确传播。
+</div>
+</div>
+</div>
+
+  </div>
+</body>
+</html>

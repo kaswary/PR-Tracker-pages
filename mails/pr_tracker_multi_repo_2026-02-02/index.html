@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PR Tracker Weekly Report</title>
+</head>
+<body>
+  <h1>PR Tracker Weekly Report</h1>
+  <p><time>2026-02-02</time></p>
+
+  <hr />
+
+  <div class="mail-content">
+    
+
+<h1><strong>Summary</strong></h1>
+<p>本次汇总覆盖 2026-01-26 – 2026-02-02 时间范围，涉及仓库 deepseek-ai/DeepSeek-OCR-2, sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, ROCm/mori, deepseek-ai/DeepEP, deepseek-ai/DeepSeek-V3, deepseek-ai/DeepSeek-Coder-V2，共计 119 个 PR。</p>
+<p><strong><span style="color: red;">deepseek发布了新仓库：DeepSeek-OCR-2</span></strong></p>
+<p><strong>邮件汇总：</strong><a href="https://kaswary.github.io/PR-Tracker/">https://kaswary.github.io/PR-Tracker/</a></p>
+            
+<h2><strong>TL;DR：</strong></h2>
+<div style="margin-left: 2em;">
+<p>- deepseek-ai/DeepSeek-OCR-2：修复文件名处理和路径拼接问题，提高跨平台兼容性和代码健壮性。<br>- sgl-project/sglang：优化 Mamba 模型推理吞吐量，增强在线权重更新稳定性，支持新模型和功能，提升性能和代码质量。<br>- vllm-project/vllm：修复调度器和模型处理中的多个问题，优化性能和内存使用，提高系统吞吐量和稳定性。<br>- NVIDIA/nccl：修复 A100 GPU 上的树图搜索问题，提升多节点训练性能。<br>- ROCm/mori：引入 VMM 堆支持，优化 RDMA 设备资源释放，提供低开销的 GPU 内核性能分析工具。<br>- deepseek-ai/DeepEP：移除自定义 ibgda_device.cu 文件，支持多种传输后端，提高性能和兼容性。</p>
+</div>
+            
+<h2><strong>Contents</strong></h2>
+<ul style="list-style-type: circle; font-size: 18px; margin-left: 2em; line-height: 1.6;">
+<li><a href="#repo-deepseek-ai-deepseek-ocr-2">deepseek-ai/DeepSeek-OCR-2</a></li>
+<li><a href="#repo-sgl-project-sglang">sgl-project/sglang</a></li>
+<li><a href="#repo-vllm-project-vllm">vllm-project/vllm</a></li>
+<li><a href="#repo-nvidia-nccl">NVIDIA/nccl</a></li>
+<li><a href="#repo-rocm-mori">ROCm/mori</a></li>
+<li><a href="#repo-deepseek-ai-deepep">deepseek-ai/DeepEP</a></li>
+<li><a href="#repo-deepseek-ai-deepseek-v3">deepseek-ai/DeepSeek-V3</a></li>
+<li><a href="#repo-deepseek-ai-deepseek-coder-v2">deepseek-ai/DeepSeek-Coder-V2</a></li>
+</ul>
+            
+<h1><strong>Details</strong></h1>
+        
+<h2 name="repo-deepseek-ai-deepseek-ocr-2" id="repo-deepseek-ai-deepseek-ocr-2" style="scroll-margin-top: 20px;"><strong>deepseek-ai/DeepSeek-OCR-2</strong></h2>
+            
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/deepseek-ai/DeepSeek-OCR-2/pull/14" style="text-decoration: none; color: #007bff;">#14</a>: Fix fragile filename generation in run_dpsk_ocr2_pdf.py [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在处理文件名时，发现手动字符串替换导致输出文件名错误，且在 Windows 系统上手动拼接路径可能引发问题。该 PR 的目标是修复这些问题，确保文件名生成的正确性和跨平台兼容性。核心改动是使用 os.path 库中的 basename、splitext 和 join 函数来安全地处理文件名和路径。这些改动不会影响现有使用方式，但提高了代码的健壮性和可移植性。当前 PR 已完成，未发现已知限制。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/deepseek-ai/DeepSeek-OCR-2/pull/10" style="text-decoration: none; color: #007bff;">#10</a>: 标注 eval(outputs) 在非字典输出下会崩溃 [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/deepseek-ai/DeepSeek-OCR-2/pull/3" style="text-decoration: none; color: #007bff;">#3</a>: Fix typos in image_process.py [<strong>open</strong>]
+</div>
+                
+<h2 name="repo-sgl-project-sglang" id="repo-sgl-project-sglang" style="scroll-margin-top: 20px;"><strong>sgl-project/sglang</strong></h2>
+            
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18088" style="text-decoration: none; color: #007bff;">#18088</a>: Perf/fuse mamba state scatter mtp verify [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在优化 Mamba 模型在 Multi-Token Prediction (MTP) 验证阶段的状态散射操作，通过引入一个新的融合 Triton 内核 `fused_mamba_state_scatter_with_mask`，将多个 `index_elementwise_kernel` 调用合并为一个，显著减少了内核启动开销，提高了整体推理吞吐量。核心改动包括在 `mamba_state_scatter_triton.py` 中实现新内核，并在 `hybrid_linear_attn_backend.py` 中更新后端以使用该内核。测试结果显示，优化后模型的输出吞吐量提高了 3.9%，内核启动次数减少了 25%。此外，还添加了单元测试以确保新内核的正确性和性能。当前 PR 需要进行代码审查和 CI 测试，以确保其质量和稳定性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18085" style="text-decoration: none; color: #007bff;">#18085</a>: Fix nvfp4 weight update [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了现有 nvfp4 `/update_weights_from_disk` 端点无法正常工作的问题。通过引入 `_copy_or_rebind_param` 函数，确保在更新模型参数时保持内存和身份的一致性，从而支持 CUDA 图形重用和热加载。核心改动包括替换直接的 `Parameter` 赋值为调用 `_copy_or_rebind_param`，并移除删除原始权重和尺度的 `del` 语句。这些改动增强了在线权重更新的稳定性和可靠性，确保了模型在更新后的准确性和性能。当前 PR 已通过测试，验证了其有效性和性能提升。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18084" style="text-decoration: none; color: #007bff;">#18084</a>: add Step-3.5-Flash model support [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 引入了对 Step3.5 Flash 模型及其 Multi-Token Predictor (MTP) 变体的全面支持。目标是扩展系统以支持这一新模型，包括其基础架构和 MTP 版本。核心改动包括新增 `Step3p5Config` 配置、实现 `Step3p5MLP`、`Step3p5MoEMLP`、`Step3p5Attention` 和 `Step3p5DecoderLayer` 等核心组件，并集成了 MoE 和注意力机制的增强功能。此外，实现了 `Step3p5MTP` 以支持多令牌预测，尽管当前设计中 MTP 隐藏状态直接从目标模型获取，未来将进行调整。这些改动确保了新模型的配置、加载和使用，并集成了投机解码功能，提升了性能。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18083" style="text-decoration: none; color: #007bff;">#18083</a>: feat(docs): add markdown/notebook export targets for downstream integration [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18082" style="text-decoration: none; color: #007bff;">#18082</a>: feat: Add LoRA CUDA graph support for FlashAttention and FlashInfer backends [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在启用 LoRA 时非 LoRA 批次的性能问题。当 LoRA 启用时，所有批次都会经过 LoRA 代码路径，导致非 LoRA 批次的性能下降。为了解决这一问题，PR 引入了对 LoRA 和非 LoRA 批次的独立 CUDA 图捕获和回放机制。通过在支持的后端中扩展图键以包含 LoRA 状态，并在运行时动态选择合适的图，非 LoRA 批次现在可以使用非 LoRA 图路径，而 LoRA 批次则使用 LoRA 专用图路径。这不仅恢复了非 LoRA 批次的基线性能，还保持了 LoRA 功能的完整性。当前状态良好，已通过准确性和速度测试，确保了模型输出的一致性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18076" style="text-decoration: none; color: #007bff;">#18076</a>: [AMD] Fix aiter version in rocm image [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 ROCm Docker 镜像构建过程中 AITER 版本被 SGLang 版本覆盖的问题。目标是确保 AITER 和 SGLang 在构建过程中各自正确确定其版本。核心改动包括在安装 AITER 之前显式取消设置 `SETUPTOOLS_SCM_PRETEND_VERSION` 环境变量，并在 SGLang 安装时仅局部设置该变量。这些改动确保了依赖库的版本不会被错误覆盖，从而避免了构建过程中版本冲突的问题。当前 PR 已通过准确性测试，建议在合并前进行 CI 测试以确保所有改动符合预期。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18075" style="text-decoration: none; color: #007bff;">#18075</a>: use a unified support_triton interface [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在通过引入 `support_triton` 函数来简化和集中 Triton 支持的检查逻辑。具体来说，它将 `get_last_loc` 函数中的条件判断替换为统一的 `support_triton` 接口，从而提高代码的可读性和可维护性。这一改动减少了冗余的函数调用，并使代码与其他部分保持一致。此 PR 不会改变现有功能的行为，但会提升代码的整洁度和一致性。当前 PR 已获得积极的代码审查反馈，处于待合并状态。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18073" style="text-decoration: none; color: #007bff;">#18073</a>: [Diffsuion & JIT_kernel] QKNorm cross heads kernel [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在优化 SGLang Diffusion 模型中的跨头 QK Normalization 操作。当前实现使用标准 PyTorch 方法，但性能不佳。通过引入新的 JIT-编译 CUDA 内核，该 PR 实现了显著的性能提升，特别是在 H200 和 B200 GPU 上。核心改动包括高级向量化和合作组归约，以减少冗余计算和共享内存写入。新内核通过 Python API 集成，提供方便的调用方式，并附带了详细的基准测试和单元测试。当前状态良好，但存在一些优化空间，如减少寄存器使用以提高占用率。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18070" style="text-decoration: none; color: #007bff;">#18070</a>: Feat/add fi selective state update kernel call [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在增强 Mamba Selective State Update (SSU) 内核的性能灵活性，通过引入一个动态调度系统，允许用户在 Triton 和 FlashInfer 实现之间进行选择。核心改动包括新增 `ssu_dispatch.py` 调度器，支持 FlashInfer 的优化内核，并引入 `--mamba-backend` CLI 参数和 `mamba_backend` 服务器参数以配置后端选择。调度器会自动检测环境并选择合适的内核，确保在启用 speculative decoding 时回退到 Triton 内核。当前状态包括一些性能和正确性问题，如热路径上的低效导入和默认值设置问题，需要修复以确保功能正常运行。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18068" style="text-decoration: none; color: #007bff;">#18068</a>: Refactor MoE SwiGLU variants and fix speculative decoding bugs [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在通过重构 SwiGLU 激活函数和增强多模型支持来改进 Mixture-of-Experts (MoE) 层的处理。具体目标是提高代码的模块性和清晰度，同时支持多模型推理中的 speculative decoding。核心改动包括将通用的 `swiglu_with_alpha_and_limit` 函数拆分为两个专门的函数 `_swiglu_silu_clamp_mul` 和 `_swiglu_gpt_oss_sigmoid_alpha`，并在模型加载和 speculative decoding 工作器中引入 `draft_model_idx` 参数。这些改动对现有行为的影响较小，但提高了代码的可维护性和多模型支持的灵活性。当前状态良好，但存在代码重复问题，建议进一步重构以提高维护性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18067" style="text-decoration: none; color: #007bff;">#18067</a>: [Kernel] Migrate GPTQ-Marlin GEMM kernel to JIT [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 将 GPTQ-Marlin 量化 GEMM 内核从提前编译（AOT）迁移到即时编译（JIT）框架下，以提高内核的灵活性和适应性。主要改动包括将 CUDA 源文件和相关工具迁移到新的目录结构，添加 Python 包装器和量化类型定义，以及实现全面的测试和性能基准测试。这些改动确保了 JIT 内核在准确性和性能上与 AOT 内核保持一致。当前 PR 已通过所有测试，性能基准测试显示 JIT 和 AOT 内核在不同批次大小下的性能相当。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18065" style="text-decoration: none; color: #007bff;">#18065</a>: [Bugfix] Fix Mistral Large 3 NVFP4 TRTLLM MoE [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 修复了 TRTLLM MoE 重构引入的 Mistral Large 3 NVFP4 MoE 支持问题。通过在 `CompressedTensorsMoEMethod` 类中整合 `flashinfer_trtllm` 和 `cutlass_moe_fp4` 执行路径，修复了受影响模型的正确运行。主要改动包括将 `apply_with_router_logits` 方法的功能合并到 `apply` 方法中，并移除了冗余方法。这些改动确保了模型的兼容性和正确性，同时简化了类结构。当前 PR 已通过代码审查，建议进一步将 `apply` 方法拆分为更小的私有辅助方法以提高可维护性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18064" style="text-decoration: none; color: #007bff;">#18064</a>: fix kimi k2.5's moe gemm config init [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 `--moe-runner-backend flashinfer_trtllm` 在 `kimi k2.5` 模型上无法正确初始化的问题。目标是修复 MoE GEMM 配置的初始化逻辑，确保多模态模型的 `text_config` 属性被正确识别。核心改动包括在初始化时检查 `text_config` 属性中的 `num_experts_per_tok`，从而解决了功能问题并显著提升了性能，TPS 从约 80 提高到 180。当前 PR 已通过代码审查，建议的改进已采纳，并触发了 CI 测试。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18063" style="text-decoration: none; color: #007bff;">#18063</a>: [Attention] Add HPC attention backend for improved performance on SM90 GPUs [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在通过集成 HPC-Ops 作为新的 'hpc' 注意力后端，提升 SGLang 在 SM90 GPU 上的性能。具体目标是为用户提供一个更快的注意力计算选项。核心改动包括添加 `hpc_backend.py` 文件以实现 HPC 后端逻辑，注册该后端到注意力注册表，并在服务器参数中自动配置必要的设置。使用时，用户可以通过 `--attention-backend hpc` 选项启用该后端，系统会自动设置 `page_size=64` 和 `disable_cuda_graph=True`。当前状态良好，但代码中存在一些冗余，建议进行重构以提高可维护性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18062" style="text-decoration: none; color: #007bff;">#18062</a>: [Diffusion] Fix Ring Parallel bug with FA4 [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在使用 Flash Attention 4 和环形并行时出现的 `AttributeError`，该错误是由于 `logsumexp` 张量未被返回导致的。通过在 `_flash_attn_fwd` 调用中强制设置 `return_lse=True`，确保了 `logsumexp` 张量在推理过程中始终可用，从而修复了下游操作中的 `NoneType` 错误。此改动对现有使用方式没有影响，但提高了分布式推理的稳定性和正确性。当前 PR 已通过 CI 测试，等待合并。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18061" style="text-decoration: none; color: #007bff;">#18061</a>: Add DeepGEMM BF16 support [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在为 DeepGEMM 添加 BF16 数据类型支持，以优化未量化线性层和批处理不变矩阵乘法的性能。通过引入新的环境变量、内核类型和预处理逻辑，PR 实现了对 BF16 DeepGEMM 的集成和优化。这些改动包括添加 `SGLANG_USE_DEEPGEMM_BF16_GEMM` 环境变量、新的 BF16 内核类型和预处理函数，以及对 MoE 路径的支持。使用这些功能需要显式启用，且在某些工作负载下，BF16 DeepGEMM MoE 可能会比 Triton MoE 慢，但提供了更高的灵活性和未来的优化潜力。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18056" style="text-decoration: none; color: #007bff;">#18056</a>: Add debug statements for flaky EAGLE radix attention test [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在解决 EAGLE 投机解码测试中 `torch.gather` 函数出现的间歇性索引越界错误。为了提高问题的可复现性和调试信息的丰富性，PR 引入了随机种子的记录、测试数据统计的记录以及在 `torch.gather` 调用前的索引验证。这些改动不会改变系统的原有逻辑或行为，但能提供更多的上下文信息，帮助定位和解决间歇性错误。当前 PR 已经通过了初步审查，需要解决一些代码质量改进建议，如调整导入语句的位置。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18055" style="text-decoration: none; color: #007bff;">#18055</a>: Quick demo for SGLang platform refactor [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在通过引入统一的平台抽象层 `sglang.platforms` 来解决 SGLang 项目中平台检测和管理逻辑分散的问题。目标是提高代码的模块化、可维护性和扩展性，同时保持向后兼容性。核心改动包括将平台检测、能力和后端选择集中到新模块中，并引入了懒加载设计和更健壮的 CUDA 平台处理。这些改动简化了新硬件平台的集成，同时通过重新导出组件确保现有代码的平滑迁移。当前状态良好，已获得积极的代码审查反馈，建议对 NVML 错误检测进行进一步优化。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18054" style="text-decoration: none; color: #007bff;">#18054</a>: Improve Per Commit Test job filtering for sglang-kernel [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18048" style="text-decoration: none; color: #007bff;">#18048</a>: Add unused var precommit rule and allowlist existing violations [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在通过引入新的 pre-commit 检查规则来提高代码质量和可维护性。具体目标是通过启用 `ruff` 中的 `F841` 规则，检测并移除未使用的局部变量和不必要的导入。核心改动包括更新 `ruff` 配置以包含 `F841` 规则，并对代码库中的多个文件进行清理，移除未使用的导入和局部变量。这些改动提高了代码的可读性和调试性，同时扩展了 pre-commit 检查的范围，覆盖了 `.github/` 和 `scripts/` 目录。当前状态是 PR 已通过初步审查，建议进一步处理特定异常以增强代码的健壮性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18046" style="text-decoration: none; color: #007bff;">#18046</a>: [Fix/RFC] throw error if got adapter with added_tokens and refactor adapter load logic [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在解决当前 LoRA 适配器加载功能中对新增词汇支持不完善的问题。目标是通过引入临时限制，防止加载带有新增词汇的 LoRA 适配器，同时对适配器加载逻辑进行重构，以提高代码的可维护性和扩展性。核心改动包括添加验证检查以抛出错误，以及引入 `LoRATensorPayload` 数据类和统一的 `load_lora_adapter` 方法。这些改动不会影响现有功能，但会阻止不支持的新增词汇加载。当前 PR 已通过代码审查，逻辑清晰且改进了代码结构。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18041" style="text-decoration: none; color: #007bff;">#18041</a>: [diffusion]: Add warning for quantized models in sgl-diffusion [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18040" style="text-decoration: none; color: #007bff;">#18040</a>: Model: Support IBM Granite (Dense/Mamba + MoE) [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 SGLang 无法支持 IBM Granite 4.0 模型的问题。目标是通过引入新的模型配置和实现，使 SGLang 能够运行 IBM Granite 4.0 的混合 Mamba-MoE 和密集变体。核心改动包括定义 `GraniteMoeHybridConfig` 配置类，实现 `GraniteMoeHybridModel` 和 `GraniteMoeHybridForCausalLM`，并适配 SGLang 的执行管道以处理这些复杂模型。这些改动确保了模型在 SGLang 中的正确性和性能，与 vLLM 实现相当。当前状态良好，已提供详细的基准测试和性能数据，但建议提取重复的 MoE 和共享 MLP 逻辑以提高代码可维护性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18038" style="text-decoration: none; color: #007bff;">#18038</a>: [diffusion] CI: deprecate WarmupRunner in CI [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在简化扩散模型测试中的预热机制，消除冗余的自定义预热逻辑。通过移除 `WarmupRunner` 类并统一使用 `--warmup` 命令行参数，确保了预热请求不会被记录，从而避免了性能指标的不准确。此外，该 PR 还扩展了预热功能的覆盖范围，包括视频模型。这些改动简化了代码结构，提高了性能测量的准确性，并确保了更一致的预热行为。当前 PR 已通过代码审查，建议移除注释掉的代码行并调整长行参数以提高可读性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18037" style="text-decoration: none; color: #007bff;">#18037</a>: Add warning for SGLANG_DISABLE_TP_MEMORY_INBALANCE_CHECK [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18069" style="text-decoration: none; color: #007bff;">#18069</a>: [diffusion] fix: fix missing component names for VAELoader [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 `VAELoader` 无法正确识别视频 VAE 模块的问题。目标是确保视频 VAE 组件在多模态生成工作流中被正确处理。核心改动是将 "video_vae" 添加到 `VAELoader` 的 `component_names` 列表中，以确保这些组件被正确识别和管理。这一改动不会影响现有使用方式，但确保了视频 VAE 模块的兼容性和正确性。当前 PR 已通过代码审查，确认了改动的必要性和正确性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18060" style="text-decoration: none; color: #007bff;">#18060</a>: Move deleted 8-GPU tests to test/manual/ [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 是对之前迁移 4-GPU/8-GPU 工作流任务的后续处理，旨在保留两个具有独特配置的 8-GPU 模型测试文件 `test_mistral_large3_basic.py` 和 `test_kimi_k2_models.py`，而不是删除它们。这些测试文件被移动到 `test/manual/models/` 目录，以便在手动调试时使用，同时不影响自动化的 CI 流程。核心改动包括将测试文件重新定位，并确保它们使用直接的 `popen_launch_server` 方法进行调试。此外，代码审查中提出了一些改进建议，如在缓存刷新请求中添加错误检查，并使用 `unittest.mock.patch.dict` 管理环境变量，以提高测试的健壮性。当前 PR 已经通过了初步审查，建议的改进措施正在讨论中。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18059" style="text-decoration: none; color: #007bff;">#18059</a>: Reset evict swa status when retract [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了调度管理器中请求重置时内部状态变量未正确重置的问题。目标是确保在请求被重置时，相关状态变量如 `swa_evicted_seqlen`、`extend_batch_idx` 和 `decode_batch_idx` 被重新初始化为零，以防止因陈旧状态导致的错误。核心改动是在 `reset_for_retract` 方法中显式重置这些变量。这些改动提高了请求重置时的状态管理一致性，避免了潜在的 KV 缓存驱逐和批处理逻辑错误。当前 PR 已通过代码审查，等待 CI 测试通过和合并。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18057" style="text-decoration: none; color: #007bff;">#18057</a>: Disable test_mla_int8_deepseek_v3.py temporarily [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在解决 CI 环境中因 Hugging Face 令牌缺乏私有仓库访问权限而导致的 `test_mla_int8_deepseek_v3.py` 测试失败问题。通过暂时禁用该测试，PR 希望恢复 CI 管道的正常运行，确保其他测试不受影响。核心改动是在 `register_cuda_ci` 调用中添加 `disabled` 参数，并建议在禁用原因中添加 `TODO` 以方便后续跟踪和重新启用。此改动不会影响现有构建或使用行为，但需注意后续需解决令牌权限问题以重新启用该测试。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18053" style="text-decoration: none; color: #007bff;">#18053</a>: Improve error output in tnightly tets [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在改进夜间测试的错误报告，通过提供更详细的失败总结来提高调试效率。具体来说，它增强了错误输出，使其能够明确指出每个模型的哪些测试组件（如性能、准确性、工具调用）失败，并附带具体的错误消息。核心改动包括简化错误检测逻辑和优化错误字符串的格式化，以避免输出冗余信息。这些改进将使开发者能够更快地定位和解决测试失败问题。当前 PR 已经得到了初步审查，建议对代码进行一些小的优化以提高可读性和健壮性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18051" style="text-decoration: none; color: #007bff;">#18051</a>: [Fix] Remove no use code in MiMo-V2-Flash [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18050" style="text-decoration: none; color: #007bff;">#18050</a>: Fix installation script for H200 runners [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在提高 CI 安装脚本的可靠性，特别是在 H200 跑者上。通过引入全面的错误处理和验证步骤，确保 `apt-get` 操作在面对环境问题时更加稳定。核心改动包括为 `apt-get install` 命令添加回退逻辑，允许 `apt update` 命令失败而不中断脚本执行，并使用 `--no-install-recommends` 标志减少不必要的依赖安装。这些改动提高了 CI 管道的稳定性和成功率，减少了因环境问题导致的构建失败。当前 PR 已通过初步审查，建议进一步优化代码以减少重复并提高可维护性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18049" style="text-decoration: none; color: #007bff;">#18049</a>: [metric] Optional extra metric labels [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18047" style="text-decoration: none; color: #007bff;">#18047</a>: [TestFix] rewrite LoRA overlap loading tests [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在解决现有 LoRA 重叠加载测试的不稳定性问题。通过重构测试代码，利用现有的测试工具和实用函数，提高了测试的可靠性和可维护性。具体改动包括更新 `lora_utils.py` 文件，增加 `enable_lora_overlap_loading` 参数，以控制测试中的重叠加载功能。这些改动使得测试更加稳定，减少了之前 CI 运行中出现的 flakiness。当前 PR 已通过初步审查，并触发了 CI 测试，等待进一步的批准和合并。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18045" style="text-decoration: none; color: #007bff;">#18045</a>: Update python/sglang/README.md [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18044" style="text-decoration: none; color: #007bff;">#18044</a>: [CI] Fix AMD CI by inlining dummy_grok config [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 AMD CI 作业因无法访问 Azure Blob 存储上的配置文件而失败的问题。目标是通过内联配置文件来稳定 CI 流程，避免外部依赖导致的 403 错误。核心改动是移除了 `wget` 命令，使用 heredoc 将 `dummy_grok.json` 的内容直接嵌入到 `amd_ci_install_dependency.sh` 脚本中。这确保了 CI 作业的安装步骤能够成功执行，不再依赖于 Azure Blob 存储。当前状态是 PR 已经实现主要功能，但建议进一步优化脚本，通过管道直接将配置文件传递到 Docker 容器中，以避免在主机上创建临时文件。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18043" style="text-decoration: none; color: #007bff;">#18043</a>: [Tiny] Fix grammar in shared experts fusion log messages [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在通过纠正 `deepseek_v2.py` 和 `glm4_moe_lite.py` 中的几个语法错误，提高日志消息的可读性和专业性。具体来说，这些更改将 "not support" 替换为 "does not support"，将 "can not" 替换为 "cannot"，以确保用户在遇到共享专家融合优化不可用时，能够获得更清晰和语法正确的解释。这些改动不会影响系统的功能或行为，仅提升了日志的表达质量。当前 PR 已获得批准，可以合并。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18042" style="text-decoration: none; color: #007bff;">#18042</a>: [LSC] Add unused var check in precommit [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在通过引入 `ruff` 检查来提高代码质量和可维护性，具体目标是防止未使用的变量出现在代码中。核心改动包括在 pre-commit 配置中添加了 `ruff-unused-variable` 检查，并对现有代码进行了全面清理，移除了大量未使用的变量。此外，还简化了一些不必要的异常处理代码。然而，审查过程中发现了一个关键的逻辑错误，需要修复 `benchmark/hicache/bench_mix.py` 中的排序插入逻辑，并移除一些无效果的语句。当前 PR 需要修复这些问题后重新提交。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18039" style="text-decoration: none; color: #007bff;">#18039</a>: Fix swa kv cache memory allocation [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了两个与 SWA KV 缓存内存分配相关的问题。首先，它修正了由于在全层计算中错误地添加 SWA 层内存而导致的 cell_size 过高估计问题，从而避免了 GPU 内存的未充分利用。其次，它现在正确考虑了 SWA 层和全层可能具有不同的 num_heads 和 dim，确保了不同模型架构下的准确内存分配。通过引入 swa_head_dim 和 swa_v_head_dim 属性，并修订了混合 SWA 令牌分配逻辑，该 PR 优化了 KV 缓存令牌的分布，提高了内存利用率。当前状态良好，已通过代码审查并触发了 CI 测试。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18036" style="text-decoration: none; color: #007bff;">#18036</a>: [diffusion] cli: introduce generic attention backend configuration in ServerArgs [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18035" style="text-decoration: none; color: #007bff;">#18035</a>: [MUSA] Update 3rd party dir to build/_deps [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在解决 MUSA 构建过程中第三方依赖项管理不一致的问题，这些依赖项之前被克隆到 `sgl-kernel/third_party/` 目录，导致源代码树污染并需要显式添加 `.gitignore` 条目。PR 的目标是将第三方依赖项的默认目录从 `sgl-kernel/third_party/` 更改为 `build/_deps/`，以匹配 CUDA CMake 构建的行为，并利用现有的 `.gitignore` 规则。核心改动包括在 `sgl-kernel/setup_musa.py` 中更改默认目录、引入 `SGLANG_MUSA_THIRD_PARTY_DIR` 环境变量以允许自定义路径、重命名 `SKIP_THIRD_PARTY` 环境变量以保持命名一致，以及在 `mkdir()` 调用中添加 `parents=True` 以确保目录层次结构的创建。这些改动简化了构建环境，减少了源代码树的污染，并提高了可维护性。然而，代码审查中发现了一个路径构造问题，可能会影响构建，建议进行修复。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18034" style="text-decoration: none; color: #007bff;">#18034</a>: [Auto Sync] Update test_deterministic.py (20260131) [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18033" style="text-decoration: none; color: #007bff;">#18033</a>: [Auto Sync] Update elementwise.py (20260131) [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 同步了 `elementwise.py` 文件中的更改，主要解决了 Triton 内核中程序 ID (`pid`) 的类型处理问题。通过将 `pid` 显式转换为 `tl.int64`，防止了在处理大批次输入时可能出现的整数溢出。然而，审查发现类似问题在其他内核函数中也存在，建议在这些函数中也应用相同的类型转换以确保一致性。当前 PR 已经实现了关键的类型转换，但需要进一步扩展以覆盖所有相关内核。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18027" style="text-decoration: none; color: #007bff;">#18027</a>: [AMD] Fix AMD CI install dependencies [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 AMD CI 安装依赖过程中遇到的问题，通过注释掉与 `dummy_grok.json` 文件相关的安装命令，避免了潜在的错误。核心改动包括注释掉创建目录、下载 JSON 文件和将其复制到 Docker 容器的命令。这将简化 AMD CI 管道的安装过程，提高稳定性。建议进一步评估是否可以完全移除这些不再需要的代码，以减少技术债务。当前 PR 已经通过注释方式解决了问题，但需要进一步审查和测试以确保没有负面影响。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18022" style="text-decoration: none; color: #007bff;">#18022</a>: add reasoning_tokens usage test for tool call [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18021" style="text-decoration: none; color: #007bff;">#18021</a>: Fix .gitignore may ignore files like core_attention.py [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18019" style="text-decoration: none; color: #007bff;">#18019</a>: npu-openeuler Dockerfile Adapt [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18018" style="text-decoration: none; color: #007bff;">#18018</a>: Add ROCm + Mori docker build instructions in rocm.Dockerfile [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18017" style="text-decoration: none; color: #007bff;">#18017</a>: [NPU] fix sgl-kernel-npu package url error in npu.Dockerfile [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/sgl-project/sglang/pull/18014" style="text-decoration: none; color: #007bff;">#18014</a>: doc update for CANN version [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 更新了 MindSpore 模型文档中推荐的 CANN 软件版本，从 8.3.RC2 变更为 8.5，以保持与官方 Ascend NPU 安装指南的一致性。目标是确保用户能够获取准确的软件要求信息。核心改动包括在 `mindspore_models.md` 文件中更新 CANN 版本信息。此变更不会影响现有功能或使用方式，但提高了文档的准确性和一致性。当前状态为待合并，建议根据 reviewer 的建议优化文档的可读性。
+</div>
+</div>
+                    
+<h2 name="repo-vllm-project-vllm" id="repo-vllm-project-vllm" style="scroll-margin-top: 20px;"><strong>vllm-project/vllm</strong></h2>
+            
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33530" style="text-decoration: none; color: #007bff;">#33530</a>: [Nightly CI] Remove CT Model [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33529" style="text-decoration: none; color: #007bff;">#33529</a>: Triton MLA GQA perf fixes (4x improvement at 80k context) [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33527" style="text-decoration: none; color: #007bff;">#33527</a>: Adds padding and perf improvements to wvSplitK_fp8 [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33525" style="text-decoration: none; color: #007bff;">#33525</a>: Update get_expert_mapping to include self parameter [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 修复了 `Glm4MoeLiteForCausalLM` 类中 `get_expert_mapping` 方法的一个 `TypeError`，原因是 `SharedFusedMoE.make_expert_params_mapping` 调用时缺少了 `self` 参数。这一改动解决了因缺少 `model` 参数导致的类型错误，确保了方法调用的正确性。此修复与代码库中的其他类似实现保持一致，不会对现有使用方式或行为产生影响。当前 PR 已通过代码审查，确认修复了问题。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33522" style="text-decoration: none; color: #007bff;">#33522</a>: [Core][Scheduler] Fix FCFS queue ordering for skipped waiting requests [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 vLLM v1 调度器中 FCFS 队列顺序违规的问题，确保在资源压力下跳过的请求不会插队到队列前端。通过将 `prepend_request` 替换为 `add_request`，跳过的请求被正确地添加到队列尾部，从而保持了请求的到达顺序。这一改动对 API 和配置没有影响，但显著改善了 p99 和 p100 尾延迟，并消除了请求饥饿的风险。当前状态良好，所有相关测试均已通过。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33521" style="text-decoration: none; color: #007bff;">#33521</a>: Fix mistral sliding window parsing [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 `voxtral_streaming.py` 中滑动窗口解析错误的问题，导致该模型错误地使用了全注意力机制。通过将 `sliding_window` 属性的解析逻辑移动到 `adapt_config_dict` 函数中，修复了这一问题。然而，新的 `_remap_mistral_sliding_window` 函数存在潜在的 `ZeroDivisionError` 风险，需要进一步处理空配置列表的情况。此更改确保了所有 Mistral 模型检查点在 Hugging Face Hub 上的正确行为。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33520" style="text-decoration: none; color: #007bff;">#33520</a>: [Bugfix] Fix tool call streaming for gpt-oss/Harmony models [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 修复了 gpt-oss 模型在使用 Harmony 流式解析器时的多个工具调用处理问题。主要目标是解决流式生成中的 IndexError、非流式响应中缺少工具调用 ID 以及流式模式下工具调用被拆分的问题。核心改动包括在访问 prev_tool_call_arr 之前添加 auto_tools_called 检查、为命名工具选择和自动工具选择生成正确的 ID、以及通过按接收者名称存储工具调用 ID 和合并相同索引的 DeltaToolCalls 来避免拆分。这些改动确保了工具调用在流式和非流式模式下都能正确处理和合并。当前 PR 需要解决合并冲突并通过 pre-commit 检查。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33518" style="text-decoration: none; color: #007bff;">#33518</a>: [Bugfix] Fix NVFP4 MoE weight shapes for non-gated MLPs (Nemotron-Nano) [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在修复 `prepare_static_weights_for_trtllm_fp4_moe` 函数在处理非门控 MLP 模型时的权重形状计算错误，特别是针对 `nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-NVFP4` 模型。目标是通过引入 `is_act_and_mul` 参数来区分门控和非门控 MLP，并正确调整权重重塑逻辑。核心改动包括在函数中添加 `is_act_and_mul` 参数，并根据该参数调整 `intermediate_size` 和权重重塑的乘数。然而，代码审查发现存在两个关键问题：硬编码的维度未更新和非门控情况下的权重排列逻辑错误，这些问题需要进一步修正。当前 PR 尚未完全解决这些问题，需要进一步修改和测试。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33517" style="text-decoration: none; color: #007bff;">#33517</a>: [Kernel] Add enable_sm120_or_later for SM121 (DGX Spark) CUTLASS support [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 DGX Spark GB10 (SM121) 无法使用 CUTLASS 内核的问题，因为现有的 `enable_sm120_only` 包含了对架构的精确匹配。为了解决这一问题，PR 引入了新的 `enable_sm120_or_later` 包装器，通过检查 `__CUDA_ARCH__ >= 1200` 来支持 SM120 及更高版本的架构。这一改动使得 SM121 及后续兼容架构能够使用这些内核。代码审查建议增加一个上限检查 `__CUDA_ARCH__ &lt; 1300` 以确保未来架构的兼容性。当前状态为已测试并通过初步审查。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33516" style="text-decoration: none; color: #007bff;">#33516</a>: [Bugfix] Add SM110/SM120 device capability checks for NVFP4 MoE backends [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在 PR #33417 中未更新的文件导致 NVFP4 MoE 模型在 RTX Blackwell 和 DGX Spark GPU 上运行失败的问题。目标是扩展设备能力检查，以支持 SM100、SM110 和 SM120 GPU 家族。核心改动是在相关文件中添加了对这些 GPU 家族的显式检查，确保模型在这些设备上能够正常运行。这些改动影响了多个文件，包括 `flashinfer_fp4_moe.py`、`flashinfer_trtllm_moe.py`、`flashinfer_cutedsl_moe.py` 和 `flashinfer_utils.py`。当前状态是已通过测试，修复了多个相关问题，并且代码审查建议使用 `any()` 函数来减少代码重复，提高可维护性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33514" style="text-decoration: none; color: #007bff;">#33514</a>: [Bugfix] Fix gpt-oss chat format mismatch with HuggingFace [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 gpt-oss 模型在使用 HuggingFace `apply_chat_template` 时的聊天格式不匹配问题。具体来说，系统和开发者消息内容被错误地输出为单独的块，并且消息顺序不正确。为了解决这些问题，PR 提取了系统和开发者消息内容并传递给 `get_developer_message` 函数，同时过滤掉这些消息以避免重复输出。这些改动通过新增的测试用例得到了验证，确保了系统和开发者消息的正确处理。当前 PR 需要解决 pre-commit 检查失败的问题，特别是 `mypy` 和 `markdownlint` 检查。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33513" style="text-decoration: none; color: #007bff;">#33513</a>: Fix reasoning_tokens for text-based parsers in Responses API [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了文本推理模型在 Responses API 中 reasoning_tokens 始终为零的问题。目标是为 `&lt;think>...&lt;/think>` 风格的模型实现推理 token 计数。核心改动包括添加 `ReasoningParser.count_reasoning_tokens` 钩子并在 `BaseThinkingReasoningParser` 中实现 span 计数，同时在 Simple 和 Parsable 上下文中累积输出 token ID 并在 Harmony 通道跟踪不可用时回填 reasoning_tokens。这些改动不影响现有的 Harmony 通道计数机制，主要针对文本推理解析器。当前状态良好，但建议改进对嵌套推理标签的处理和访问累积 token ID 的方式以提高健壮性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33511" style="text-decoration: none; color: #007bff;">#33511</a>: fix(ROCm): Make flash_attn import optional in MLA attention [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在 ROCm 平台上，非 MLA 模型因 attention/init.py 中的 MLAAttention 无条件导入 flash_attn 而无法加载。此 PR 通过在 mla_attention.py 中引入 try/except 机制，使 flash_attn 的导入变为可选，并在缺少 flash_attn 时提供明确的错误信息。这些改动允许非 MLA 模型在没有 flash_attn 的情况下正常运行。然而，代码审查指出当前的错误信息和调试日志存在误导，建议更新这些消息以避免混淆。当前 PR 已经解决了主要问题，但需要进一步修改错误信息以确保准确性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33509" style="text-decoration: none; color: #007bff;">#33509</a>: [FIX] guidance: use max(vocab_size, len(tokenizer)) for n_vocab [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在使用 Gemma 等模型进行引导生成时，由于 tokenizer 的词汇表大小（包括特殊 token）超过模型配置中的 `vocab_size` 而导致的崩溃问题。核心改动是使用 `max(self.vocab_size, len(self.tokenizer))` 来确定 `llguidance` 后端的词汇表大小，确保兼容添加了特殊 token 的模型。这一改动不会影响模型的 logits 尺寸，但需要确保 bitmask 的大小与 logits 一致，以避免潜在的形状不匹配问题。当前状态良好，但建议进一步验证 bitmask 的处理逻辑。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33506" style="text-decoration: none; color: #007bff;">#33506</a>: Support FI fused MoE non gated FP8 & NVFP4 [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33505" style="text-decoration: none; color: #007bff;">#33505</a>: [Feature]: Qwen3-Next dual-stream execution in_proj_qkvz in_proj_ba [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33504" style="text-decoration: none; color: #007bff;">#33504</a>: Add **kwargs parameter to v1 FlashAttentionImpl as catch-all [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33503" style="text-decoration: none; color: #007bff;">#33503</a>: feat(spec_decode): fuse EAGLE step slot mapping and metadata updates [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在 EAGLE 自回归解码过程中，多个小的 PyTorch 操作导致了频繁的 GPU 内核启动，增加了开销。该 PR 通过引入一个融合的 Triton 内核，将位置更新、槽映射和元数据更新合并为一个操作，以减少内核启动开销。核心改动包括创建新的 Triton 内核 `eagle_step_slot_mapping_metadata_kernel` 并更新 Python 代码以使用该内核。测试结果显示，新的内核在单元测试中通过，并与 Python 参考实现匹配。当前状态良好，但建议在 CUDA 机器上进行全面验证。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33499" style="text-decoration: none; color: #007bff;">#33499</a>: Scheduler: skip KV-blocked requests to prevent blocking (#31731) [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在多租户推理工作负载中，由于 KV 缓存压力导致的头阻塞问题。具体目标是通过跳过 KV 分配失败的请求，允许队列中较轻的请求立即执行，从而减少尾部延迟并提高系统吞吐量。核心改动是在调度器中引入了跳过逻辑，当 KV 分配失败时，将请求从等待队列中移出并重新排队，确保不会发生请求饥饿。此改动完全向后兼容，不会影响现有 API 和配置，且已通过新增的回归测试和现有测试套件验证。当前状态良好，无已知限制。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33498" style="text-decoration: none; color: #007bff;">#33498</a>: [Experimental][Refactor] Refactor vision chunk modality processing for unification [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33496" style="text-decoration: none; color: #007bff;">#33496</a>: [Bugfix] Fix assertion error in flashmla backend with fullgraph enabled [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在使用 `flashmla` 后端且 `fullgraph` 启用时出现的断言错误。问题的根源在于 `_build_attention_metadata` 被调用时传递了未填充的 `num_tokens_unpadded`，而其他参数在 `pad_attn` 为真时是填充的，导致了不一致。PR 通过在 `pad_attn` 为真时传递 `num_tokens_padded` 来修复这一问题，确保所有参数的一致性。此更改不会影响现有使用方式，但解决了潜在的断言错误。当前 PR 已通过初步代码审查，但尚未触发全面的 CI 测试。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33495" style="text-decoration: none; color: #007bff;">#33495</a>: [Feature] Support 'int8' in CacheConfig validation [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33494" style="text-decoration: none; color: #007bff;">#33494</a>: [Doc]: update paths for Offline/Online/Others example sections [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在修复文档中示例概述部分的导航问题，此前由于路径错误导致链接失效。通过更新链接路径以匹配当前目录结构，用户现在可以直接点击链接访问 Offline Inference、Online Serving 和 Others 示例，而不会遇到 404 错误。核心改动包括修复相对路径和移除重复的纯文本引用。测试结果显示所有链接均能正确导航至目标目录。然而，代码审查中提到链接指向外部可能影响用户体验，建议在文档中添加新页面以解决此问题。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33493" style="text-decoration: none; color: #007bff;">#33493</a>: Perf tuning and expansion of cases covered for wvSplitKrc [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33491" style="text-decoration: none; color: #007bff;">#33491</a>: Sort safetensors files to ensure deterministic loading order [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在通过显式排序 safetensors 文件来优化 TPU 执行中的内存使用和初始化。当前实现通过按文件名排序，确保权重按层加载，从而支持 TPU 的分层内存分配。然而，代码审查指出当前的字典序排序可能不适用于所有文件命名约定，建议使用自然排序以避免潜在的加载问题。当前 PR 需要修复 pre-commit 检查失败的问题，特别是 `mypy` 和 `markdownlint` 检查。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33531" style="text-decoration: none; color: #007bff;">#33531</a>: Merge pull request #3 from janhq/sync-upstream [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33524" style="text-decoration: none; color: #007bff;">#33524</a>: [Fix] prefix cache hit rate == 0 bug with gpt-oss style models [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 gpt-oss 风格模型在启用 EAGLE 投机解码时的前缀缓存命中率问题。这些模型包含一个全注意力组和一个 SWA 组，PR 通过识别这种简单混合模型并跳过收敛检查循环，避免了错误的块丢弃逻辑多次应用。测试用例经过重构和扩展，确保了对 EAGLE 启用的混合模型场景的全面覆盖。当前实现已通过测试，适用于现有模型，但对更复杂模型的全面修复仍需进一步研究。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33523" style="text-decoration: none; color: #007bff;">#33523</a>: [Models] Step-3.5-Flash [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33510" style="text-decoration: none; color: #007bff;">#33510</a>: Add MoE config for Super B200 TP2 [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+在 NVIDIA B200 GPU 上运行 Nemotron Super 时，出现默认 MoE 配置性能不佳的警告。该 PR 通过使用 `benchmark_moe.py` 脚本生成特定硬件的优化配置文件，旨在提升 MoE 模型的性能。测试结果显示，在不同批处理大小下，性能提升显著，最高可达 24.9%。此改动对用户透明，仅需确保配置文件存在即可享受性能提升。当前 PR 已通过代码审查和性能测试，状态良好。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33502" style="text-decoration: none; color: #007bff;">#33502</a>: [Redo] #33110 with threading limit [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33501" style="text-decoration: none; color: #007bff;">#33501</a>: Fix DeepSeek V2 RoPE initialization error [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了在 TPU 上加载 DeepSeek V2 模型时遇到的 `NotImplementedError` 问题。问题的根源在于 XLA 后端不支持 RoPE 初始化中使用的一个操作。通过在 TPU 上运行时在 CPU 上创建必要的张量，该 PR 提供了一个有效的解决方案。这一改动确保了模型在 TPU 上的正常加载和运行，而不会影响其他平台的使用。当前 PR 已通过代码审查，但需要修复 pre-commit 检查失败的问题。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33500" style="text-decoration: none; color: #007bff;">#33500</a>: [Critical] Revert #33110 [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在解决由于在初始化时调用 `get_max_tokens_per_item_by_modality` 导致的 MM 模型启动挂起问题。通过回退引入该问题的 PR #33110，移除了相关代码和验证逻辑，从而解决了启动挂起的问题。此更改不会影响现有功能，但会导致首次请求的处理时间变长。当前 PR 已通过代码审查，确认无问题。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33492" style="text-decoration: none; color: #007bff;">#33492</a>: [ROCm][CI] Update huggingface-hub pin [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33489" style="text-decoration: none; color: #007bff;">#33489</a>: Change defaults for vllm bench startup [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 调整了 vllm 基准测试的默认参数，以减少其执行时间。具体来说，降低了冷启动、预热和热启动阶段的迭代次数。为了确保预热阶段的稳定性，建议将预热迭代次数从 1 次增加到 2 次，以提高结果的可靠性。这些改动使得基准测试能够在合理的时间内完成，同时保持了测试的准确性。当前 PR 已经提出了具体的参数调整建议，但尚未合并。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33488" style="text-decoration: none; color: #007bff;">#33488</a>: fix: only include Authorization header when OPENAI_API_KEY is set [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了当 `OPENAI_API_KEY` 环境变量未设置时，`vllm bench serve` 发送的请求因包含 `Authorization: Bearer None` 头而失败的问题。通过引入 `_get_headers` 函数，仅在 `OPENAI_API_KEY` 存在时添加 `Authorization` 头，避免了不必要的认证错误。这一改动确保了在不需要认证的情况下，请求能够正常发送。测试结果显示，修复后请求头不再包含无效的 `Authorization` 头，且在需要时正确添加了 `Content-Type` 头。当前 PR 已通过代码审查，未发现相关文档需要更新。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33482" style="text-decoration: none; color: #007bff;">#33482</a>: [CI/Build] Replaceseed_everything [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33481" style="text-decoration: none; color: #007bff;">#33481</a>: [Bugfix] Fix inconsistent handling of cache reset [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 `vllm bench sweep` 和 `pause_generation` 命令中未能正确调用 `reset_encoder_cache` 的问题，并移除了未使用的 `OpenAIServing.reset_mm_cache` 方法。核心改动包括将 `reset_mm_cache` 和 `reset_encoder_cache` 转发到 Model Runner V2 的编码器模型运行器，并更新了相关文档。这些改动确保了缓存重置操作的一致性和正确性，但目前 `EncoderRunner` 中的 `reset_mm_cache` 方法仍为空操作。当前状态显示，模型初始化和示例测试在主分支上存在超时问题，需要进一步调查。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33479" style="text-decoration: none; color: #007bff;">#33479</a>: [Refactor] Make Renderer an abstract class [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 的背景是 `RendererLike` 作为一个协议或接口，存在大量默认实现，导致代码冗余。目标是通过将 `RendererLike` 重命名为 `BaseRenderer` 并将其转换为抽象基类，来减少代码重复并提高代码可维护性。核心改动包括将 `RendererLike` 转换为 `BaseRenderer`，并在其中提供默认实现，同时确保所有子类正确继承和实现抽象方法。这一改动对现有代码的使用方式没有显著影响，但提高了代码的结构清晰度和可扩展性。当前状态是代码审查已完成，没有进一步的修改建议。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33477" style="text-decoration: none; color: #007bff;">#33477</a>: [Deprecation] Remove deprecated items related to pooling [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 主要针对 v0.15 版本中计划移除的若干已废弃功能，包括 `reward` 和 `mm_encoder_only` 转换类型，以及 `PoolingParams` 中的 `softmax` 和 `activation` 参数。同时，开始对在线 Embedding API 中的 `normalize` 参数进行弃用，推荐使用 `use_activation` 替代。核心改动包括删除上述废弃功能和参数，并引入 `normalize` 参数的弃用逻辑。这些改动将影响使用这些功能的用户，需要更新相关代码以避免未来版本中的兼容性问题。当前 PR 已通过代码审查，但需注意 `normalize` 参数的弃用逻辑在某些地方应用不一致，建议进一步修正。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33476" style="text-decoration: none; color: #007bff;">#33476</a>: [Doc] Update plugin deprecation notices [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33475" style="text-decoration: none; color: #007bff;">#33475</a>: [Bugfix] Fix incompatibility between #33372 and #32863 [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了由于 #32863 合并时未考虑 #33372 的变化而导致的 `kwargs` 未定义错误。目标是修复由此引发的 `NameError`，并提高代码的可维护性。核心改动包括移除导致错误的代码行，并将设置 `return_dict=False` 的逻辑集中到 `vllm/renderers/params.py` 中。这些改动不会影响现有使用方式，但提高了代码的一致性和可读性。当前状态为已通过代码审查，确认修复了问题。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33474" style="text-decoration: none; color: #007bff;">#33474</a>: [Misc] Replace deprecated interface seed_everything [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33473" style="text-decoration: none; color: #007bff;">#33473</a>: Updatehuggingface-hubpin for the last time before Transformers v5 [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33467" style="text-decoration: none; color: #007bff;">#33467</a>: [ModelRunner V2] Misc minor simplifications and optimizations [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33466" style="text-decoration: none; color: #007bff;">#33466</a>: [Distributed] Add async P2P overlap for pipeline parallelism [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 实现了 vLLM V1 管道并行性中异步 P2P 通信的最小可行变更，旨在通过重叠通信与计算减少管道气泡并提高吞吐量。关键改动包括在 `DeviceCommunicatorBase` 和 `CudaCommunicator` 中添加 `send_async` 和 `recv_async` 方法，在 `GroupCoordinator` 中添加 `send_tensor_dict_async` 和 `recv_tensor_dict_async` 方法，并在 `GPUModelRunner` 中引入 `pp_comm_stream` 用于专用 PP 通信。这些改动使得在 `execute_model` 完成后可以异步发送张量，并在下一次接收前确保前一次发送完成，从而提高性能。当前状态包括在多 GPU 环境中进行测试，验证正确性并基准测试延迟改进，但存在一些关键问题，如 CPU 张量发送失败和未导入 `torch.distributed`，需要进一步修复。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33462" style="text-decoration: none; color: #007bff;">#33462</a>: [Misc] Fix flashinfer related tests [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33452" style="text-decoration: none; color: #007bff;">#33452</a>: Support clear mm and encoder cache [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 引入了 `reset_encoder_cache` 方法，用于清除 vLLM 堆栈中各层的编码器缓存，适用于模型权重更新等场景。然而，当前实现存在兼容性问题，`EncoderCacheManager` 的 `reset` 方法与子类 `EncoderDecoderCacheManager` 不兼容，可能导致 `AttributeError`。此外，作者需要修复 pre-commit 检查失败的问题，并在文档中添加警告信息，提示在有未完成请求时重置缓存可能导致内部缓存不同步。当前 PR 还需要更新 v1 编码器缓存测试以覆盖新功能。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33444" style="text-decoration: none; color: #007bff;">#33444</a>: [Misc] offest -> offset in comments and variable names [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在修正代码中多处拼写错误，将 "offest" 改为 "offset"。主要涉及三个文件：mamba2_attn.py、detokenizer.py 和 eagle.py。其中，detokenizer.py 中的变量名更正可能修复了在变量未初始化前访问导致的潜在运行时错误。其他更改仅涉及注释和变量名，对代码行为无影响。当前 PR 已获得批准，所有更改均已完成。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33442" style="text-decoration: none; color: #007bff;">#33442</a>: Fix/sm120 rtx blackwell support nvfp4/fp8 moe [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 主要解决了对新 GPU 架构（如 Blackwell sm120）的支持问题，特别是针对 NVFP4 和 FP8 MoE 内核。目标是更新设备能力检查，以支持新的计算能力家族，并修复特定量化方案的设备能力检查错误。核心改动包括在 `cutlass_moe.py` 和 `flashinfer_cutlass_moe.py` 中添加对新架构的支持，以及移除并整合 `nvfp4_moe_support.py` 中的内核可用性逻辑。这些改动提高了功能性和代码的可维护性，对现有使用方式没有显著影响。当前状态良好，没有已知的限制或回退机制。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/vllm-project/vllm/pull/33441" style="text-decoration: none; color: #007bff;">#33441</a>: [fix][torch.compile] Fix cold-start compilation time increase by adding kv cache update to splitting ops [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了由 #25954 引入的冷启动时间回归问题。通过将 `unified_kv_cache_update` 添加到 `splitting_ops` 中，并确保 `unified_kv_cache_update` 和 `unified_attention` 在同一个 splitting 图中，减少了分段后端的开销。这些改动显著降低了冷启动时间，同时对 warm start 和 median latency 没有负面影响。当前状态良好，已通过测试验证，包括 CI 和高吞吐量场景的测试。
+</div>
+</div>
+                    
+<h2 name="repo-nvidia-nccl" id="repo-nvidia-nccl" style="scroll-margin-top: 20px;"><strong>NVIDIA/nccl</strong></h2>
+            
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/NVIDIA/nccl/pull/2004" style="text-decoration: none; color: #007bff;">#2004</a>: Create SKILL.md for NCCL [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/NVIDIA/nccl/pull/1952" style="text-decoration: none; color: #007bff;">#1952</a>: Fix tree-graph search failures on sm80 (A100) [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+NCCL 2.25+ 在 A100 GPU 上的树图搜索因架构检查问题无法从 BALANCED_TREE 回退到 TREE 模式，导致性能严重下降。此 PR 通过将架构检查条件从 `ccMin >= 90` 修改为 `ccMin >= 80`，使 A100 能够使用已验证的回退机制，从而显著提升多节点训练性能。这一最小化的一行代码改动不影响其他架构，且经过全面测试，确保了稳定性和性能提升。当前状态良好，建议合并。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/NVIDIA/nccl/pull/1951" style="text-decoration: none; color: #007bff;">#1951</a>: feat: Allow P2P communication across different PIDs [<strong>closed</strong>]
+</div>
+                
+<h2 name="repo-rocm-mori" id="repo-rocm-mori" style="scroll-margin-top: 20px;"><strong>ROCm/mori</strong></h2>
+            
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/ROCm/mori/pull/155" style="text-decoration: none; color: #007bff;">#155</a>: Feat: mori_shmem support vmm heap [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 引入了 Virtual Memory Management (VMM) 堆支持，以提高 MORI-SHMEM 的动态内存分配效率和内存复用能力。通过集成 HIP VMM API，实现了大虚拟地址空间的预留和按需物理内存分配，支持跨进程共享和多模式内存管理。新增的 VA 管理器和三模式架构（isolation、static_heap、vmm_heap）提供了灵活的内存管理选项，同时增强了 RDMA 集成和 ROCm 版本兼容性。该 PR 还进行了代码重构，提高了代码的可读性和维护性，并通过环境变量配置支持多种内存模式和大小。所有测试均通过，确保了功能的正确性和稳定性。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/ROCm/mori/pull/154" style="text-decoration: none; color: #007bff;">#154</a>: [WIP] fp8 combine support [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/ROCm/mori/pull/157" style="text-decoration: none; color: #007bff;">#157</a>: Refactor allgather and all2all to support Python scenarios [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/ROCm/mori/pull/156" style="text-decoration: none; color: #007bff;">#156</a>: Fix: internode inconsistency test failed on gfx950 [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/ROCm/mori/pull/153" style="text-decoration: none; color: #007bff;">#153</a>: Refactor: add acknowledgements for SDMA [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/ROCm/mori/pull/152" style="text-decoration: none; color: #007bff;">#152</a>: Feat kernel trace test [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/ROCm/mori/pull/151" style="text-decoration: none; color: #007bff;">#151</a>: Feat: merge & adapt profiler for epv1 kernel [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/ROCm/mori/pull/150" style="text-decoration: none; color: #007bff;">#150</a>: fix: resource dealloc issue [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 解决了 RDMA 设备上下文析构函数中的资源释放问题，确保在释放保护域之前正确清理内存区域、队列对和完成队列池。具体改动包括在 RdmaDeviceContext 中添加内存区域注销和池清理，在 IonicDeviceContext 和 BnxtDeviceContext 的析构函数中实现队列对和完成队列池的清理。这些改动确保了资源的正确释放，避免了潜在的内存泄漏。当前状态良好，已解决代码风格问题，建议合并。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/ROCm/mori/pull/140" style="text-decoration: none; color: #007bff;">#140</a>: Add Kernel Profiler with Warp-Level Tracing and Perfetto Integration [<strong>closed</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 引入了一个低开销的 warp 级别内核性能分析器，旨在帮助开发者通过高粒度的 GPU 内核执行跟踪和 Perfetto 可视化来识别性能瓶颈。核心改动包括在 Mori 中实现 RAII 风格的性能分析器类、自动生成 C++ 枚举和 Python 绑定，以及使用每 warp 的循环缓冲区记录事件。启用性能分析器后，构建选项和代码生成确保了对现有构建流程的最小影响，同时提供了详细的性能分析数据。测试结果显示，性能分析器在启用和禁用状态下均能正常工作，并且生成的 Perfetto JSON 文件能够正确显示 dispatch/combine 内核的执行模式。
+</div>
+</div>
+                    
+<h2 name="repo-deepseek-ai-deepep" id="repo-deepseek-ai-deepep" style="scroll-margin-top: 20px;"><strong>deepseek-ai/DeepEP</strong></h2>
+            
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/deepseek-ai/DeepEP/pull/574" style="text-decoration: none; color: #007bff;">#574</a>: Replace custom ibgda usage with nvshmem native apis [<strong>open</strong>]
+</div>
+                
+<div style="margin-bottom: 15px; margin-left: 3em;">
+<div style="padding: 10px 15px; background-color: #f8f9fa; border-left: 4px solid #007bff;">
+该 PR 旨在通过移除 DeepEP 中的自定义 ibgda_device.cu 文件并切换到新的公共 nvshmem_qp API，以支持多种传输后端（如 IBRC、IBDEVX 和 libfabric）。这一改动不仅保留了 IBGDA 作为默认传输，除非用户指定了其他传输，而且在某些情况下（2N、4N）性能优于 IBGDA。对于无序传输如 libfabric + EFA，需要在 put_signal 操作前添加 fence 以确保功能正常，但当前性能仍低于 IB 传输。未来 NVSHMEM 版本将提供多路径支持和优化，以改善 libfabric + EFA 的性能。
+</div>
+</div>
+                    
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/deepseek-ai/DeepEP/pull/572" style="text-decoration: none; color: #007bff;">#572</a>: [BUG FIX] fix int32 overflow, add switch for experimental features [<strong>closed</strong>]
+</div>
+                
+<h2 name="repo-deepseek-ai-deepseek-v3" id="repo-deepseek-ai-deepseek-v3" style="scroll-margin-top: 20px;"><strong>deepseek-ai/DeepSeek-V3</strong></h2>
+            
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/deepseek-ai/DeepSeek-V3/pull/1098" style="text-decoration: none; color: #007bff;">#1098</a>: fix: fix triton kernel tiling and fp8_gemm swizzle [<strong>open</strong>]
+</div>
+                
+<h2 name="repo-deepseek-ai-deepseek-coder-v2" id="repo-deepseek-ai-deepseek-coder-v2" style="scroll-margin-top: 20px;"><strong>deepseek-ai/DeepSeek-Coder-V2</strong></h2>
+            
+<div style="margin-bottom: 15px; position: relative; padding-left: 28px; margin-left: 1em;">
+<span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 20px; line-height: 1;">○</span>
+<a href="https://github.com/deepseek-ai/DeepSeek-Coder-V2/pull/97" style="text-decoration: none; color: #007bff;">#97</a>: feat: implement production-ready app with complete functionality [<strong>open</strong>]
+</div>
+                
+        
+
+  </div>
+</body>
+</html>
