@@ -6,8 +6,15 @@
     <description>Recent content in Mails on PR Tracker Mail Archive</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://kaswary.github.io/PR-Tracker-pages/mails/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-11-16/</link>
+      <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-11-16/</guid>
+      <description>Summary 本次汇总覆盖 2026-11-09 – 2026-11-16 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, sgl-project/sgl-flash-attn, vllm-project/flash-attention, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/DeepSeek-V3, deepseek-ai/awesome-deepseek-integration, deepseek-ai/DeepSeek-Prover-V1.5, deepseek-ai/Janus, deepseek-ai/3FS, deepseek-ai/awesome-deepseek-agent, deepseek-ai/DeepJIT, deepseek-ai/deepseek-recipe, deepseek-ai/DeepGEMM-Ascend, deepseek-ai/DeepEP-Ascend, deepseek-ai/DeepInfer, deepseek-ai/chat-demo，共计 3189 个 PR。&#xA;deepseek发布了新仓库：chat-demo&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker-pages/mails/&#xA;TL;DR： - sgl-project/sglang：本周期聚焦推理正确性与性能：修复缓存与稀疏注意力缺陷，新增融合内核与量化支持，加强Rust前端及流式解析校验，提升多模态与分布式场景稳定性。&#xA;- vllm-project/vllm：优化量化MoE、投机解码与采样内核性能，修复工具调用、KV缓存、LoRA图回放等正确性缺陷，加固SSRF与对等准入安全，重构P/D暂停语义支持异步RL更新。&#xA;- NVIDIA/nccl：NCCL 本周期发布 v2.32.6-1，引入流水线成本模型、Vera Rubin 调优、实验性 Flow 设备 API 与 Windows Arm64 支持；修复广播算法选择、通信器释放后使用、PAT 缩放、IB 带宽误估等缺陷，优化注册表查找与 LL 发送性能，并大规模清理 Clang 编译告警。&#xA;- sgl-project/sgl-flash-attn：将 FA3 内核从 sglang-kernel 中剥离并打包为独立的 sgl-fa3 wheel，支持 Python 3.10 并行加载；通过裁剪不可达 kernel 实例消除重复编译，wheel 由 344MB 降至 57MB，构建时间大幅缩短；同时优化 SM90 FP8 两级累加实现，在保持精度修复的前提下消除寄存器溢出，目标路径获得约 2 倍性能恢复。</description>
+    </item>
     <item>
       <title>PR Tracker Weekly Report</title>
       <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-11-09/</link>
