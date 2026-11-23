@@ -6,8 +6,15 @@
     <description>Recent content on PR Tracker Mail Archive</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 16 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://kaswary.github.io/PR-Tracker-pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-11-23/</link>
+      <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-11-23/</guid>
+      <description>Summary 本次汇总覆盖 2026-11-16 – 2026-11-23 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, sgl-project/sgl-flash-attn, vllm-project/flash-attention, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/DeepSeek-Coder, deepseek-ai/awesome-deepseek-integration, deepseek-ai/3FS, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent, deepseek-ai/DeepJIT, deepseek-ai/deepseek-recipe, deepseek-ai/clangd-ascend, deepseek-ai/DeepGEMM-Ascend, deepseek-ai/DeepEP-Ascend, deepseek-ai/DeepInfer, deepseek-ai/chat-demo，共计 3559 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker-pages/mails/&#xA;TL;DR： - sgl-project/sglang：本周期工作集中于修复量化权重加载（AWQ/compressed-tensors 融合层 skip 判定、FP8 MoE 未对齐分片）、补齐多硬件 Triton 调优配置、优化 DeepGEMM warmup 与 FlashInfer 采样预编译以降低启动延迟；同时改进 MoE/注意力内核（Gemma3 图像双向注意力、多模态填充批次 NaN 修复）、收敛采样管线、强化 profiling 与路径安全防护，并修复 PD 分离、跨 GPU 传输等多处稳定性问题。&#xA;- vllm-project/vllm：本周期聚焦推理性能与稳定性：优化多平台（ROCm/XPU/Hopper）MoE、注意力及投机解码内核，显著降低解码与预填充延迟；修复调度、执行器竞态及KV缓存污染等稳定性缺陷；完善流式解析、API状态与多硬件兼容行为。&#xA;- NVIDIA/nccl：聚焦稳定性与兼容：修复分组泄漏、初始化中断回收、设备等待挂起及静态库构建，补齐落盘与数据绑定校验，缩减共享库并降低主机开销。&#xA;- sgl-project/sgl-flash-attn：sgl-fa3 升级至 Torch 2.11 stable ABI，boxed adapter 注册 dispatcher、load_library 加载，依赖放宽 torch&gt;=2.</description>
+    </item>
     <item>
       <title>PR Tracker Weekly Report</title>
       <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-11-16/</link>
