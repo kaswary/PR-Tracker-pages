@@ -6,8 +6,15 @@
     <description>Recent content on PR Tracker Mail Archive</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 23 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 26 Nov 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://kaswary.github.io/PR-Tracker-pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PR Tracker Weekly Report</title>
+      <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-11-26/</link>
+      <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
+      <guid>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-11-26/</guid>
+      <description>Summary 本次汇总覆盖 2026-11-22 – 2026-11-26 时间范围，涉及仓库 sgl-project/sglang, vllm-project/vllm, NVIDIA/nccl, vllm-project/flash-attention, huggingface/transformers, ggml-org/llama.cpp, ROCm/mori, deepseek-ai/DeepGEMM, deepseek-ai/DeepEP, deepseek-ai/FlashMLA, deepseek-ai/awesome-deepseek-integration, deepseek-ai/3FS, deepseek-ai/TileKernels, deepseek-ai/awesome-deepseek-agent, deepseek-ai/DeepJIT, deepseek-ai/DeepGEMM-Ascend, deepseek-ai/DeepEP-Ascend, deepseek-ai/DeepInfer, deepseek-ai/chat-demo，共计 1743 个 PR。&#xA;邮件汇总：https://kaswary.github.io/PR-Tracker-pages/mails/&#xA;TL;DR： - sgl-project/sglang：本周期聚焦推理性能与多硬件适配：统一缓存引入权重epoch与布局哈希杜绝旧KV和跨配置误读，XPU/ROCm/NPU（含MI35x、昇腾A3）补齐权重共享、MoE融合、token并行预热等能力，并修复调度器内存泄漏、增量流重复输出、语法约束边界等多处稳定性缺陷，端到端吞吐最高提升超30%。&#xA;- vllm-project/vllm：vLLM 本期主线：推测解码与线性注意力内核按层可配化，新增会话级 KV 复用与稀疏 prefill staging 提升吞吐；多项 ROCm/AMD 修复与调优（MLA 元数据、EPLB、AITER wheel、MoE 内核）；强化请求准入、渲染及多模态输入的边界校验；CRIU 检查点、NIXL 双向 KV 传输与异步调度时序等稳定性改进。&#xA;- NVIDIA/nccl：强化跨子网初始化容错，调优Vera Rubin性能，降低profiler与缓冲区注册开销，新增对称内存上限配置，扩展PCIe P2P自定义AllReduce。&#xA;- vllm-project/flash-attention：修复SM90滑窗+动态因果下的注意力正确性问题；通过FP8寄存器调优、滑窗GQA的KV复用与decode拆分启发式改进，decode显著提速，vLLM受益。&#xA;- huggingface/transformers：本周期核心进展：连续批处理稳定性（取消请求、张量并行多线程、CUDA图预热线程模型）与性能优化（varlen打包注意力提速数倍、MoE 4-bit量化大幅降显存）；新增Voxtral TTS、Nemotron-Parse、MiniCPM5、Phi-3-vision等原生模型支持；建立looped模型缓存层统一约定；修复多项加载、分词、掩码与CI问题。&#xA;- ggml-org/llama.cpp：周期发布 v1.1.0：新增 Inkling 2 及语音等多模态模型，深化算子融合与量化推理优化，推进 batch 接口迁移和自定义算子 API，修复大张量溢出、CUDA 13 构建等兼容性问题。</description>
+    </item>
     <item>
       <title>PR Tracker Weekly Report</title>
       <link>https://kaswary.github.io/PR-Tracker-pages/mails/pr_tracker_multi_repo_2026-11-23/</link>
